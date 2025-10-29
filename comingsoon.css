@@ -68,7 +68,7 @@ body {
 /* Logo / Nav */
 .nav-bar {
   position: absolute;
-  top: 150px;
+  top: 30px;
   left: 50%;
   transform: translateX(-50%);
 }

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Casino Site Reviews | Coming Soon</title>
+  <link rel="stylesheet" href="comingsoon.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="/website/images/casinofavicon.png" type="image/x-icon">
+</head>
+
+<body class="dark-mode">
+  <button id="theme-toggle" class="dark-mode-btn" aria-label="Toggle dark mode">🌙</button>
+
+  <section class="hero">
+    <div class="overlay"></div>
+    <nav class="nav-bar">
+      <img class="logo" src="/website/images/casinologobright-Photoroom.png" alt="logo">
+    </nav>
+
+    <div class="content">
+      <h1>Our Website is Launching Soon</h1>
+      <p>We’re preparing something exciting and trustworthy for casino players in the UK 🎰</p>
+      <div class="loading-bar">
+        <div class="progress"></div>
+      </div>
+      <p class="subtext">Stay tuned — we’ll be live soon.</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; <span id="year"></span> Casino Site Reviews. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Dark mode toggle
+    const btn = document.getElementById('theme-toggle');
+    btn.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+    });
+
+    // Auto year
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

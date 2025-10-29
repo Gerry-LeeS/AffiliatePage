@@ -160,3 +160,64 @@ body {
 .dark-mode .footer {
   background: #181818;
 }
+
+/* Mobile / Smartphone Styles */
+@media (max-width: 600px) {
+  /* Hero Section */
+  .hero {
+    height: 80vh; /* slightly smaller hero */
+    padding: 0 10px;
+  }
+
+  .hero .overlay {
+    background: rgba(0, 0, 0, 0.6);
+  }
+
+  .nav-bar{
+    top: 20px;
+    left: 50%;
+  }
+
+  /* Logo */
+  .logo {
+    height: 280px; /* smaller logo for mobile */
+    
+  }
+
+  /* Content */
+  .content h1 {
+    margin-top: 60px;
+    font-size: 1.8rem;
+  }
+
+  .content p {
+    font-size: 1rem;
+  }
+
+  .subtext {
+    font-size: 0.9rem;
+  }
+
+  /* Dark Mode Button */
+  .dark-mode-btn {
+    top: 15px;
+    right: 10px;
+    padding: 8px 12px;
+    font-size: 1rem;
+  }
+
+  /* Loading bar */
+  .loading-bar {
+    width: 200px;
+    height: 5px;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 1rem;
+  }
+
+  .footer p {
+    font-size: 0.8rem;
+  }
+}

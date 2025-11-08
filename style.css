@@ -270,20 +270,24 @@ body {
 
 .card-left {
 	position: relative;
+	width: 200px;
+	aspect-ratio: 2 / 3;
+	overflow: hidden;
 }
 
 .card-left img {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-	z-index: 0;
+	display: block;
 }
 
 .info-button {
 	position: absolute;
-	bottom: 20%;
+	bottom: 15%;
 	left: 50%;
-	color: #fff;
+	color: rgba(255, 215, 0, 1);
+	text-shadow: 0 0 3px rgba(0, 0, 0, 0.7), 1px 1px 2px rgba(0, 0, 0, 0.6);
 	transform: translate(-50%, -50%);
 	transition: background 0.3s ease;
 	z-index: 1;
@@ -373,6 +377,35 @@ body {
 .card-right h4 {
 	margin: 0 0 0.5rem 0;
 	color: #ffce54;
+	font-size: 1.4rem;
+	padding-bottom: 0;
+}
+
+.our-rating {
+	font-size: 1rem;
+	text-transform: uppercase;
+	margin: 0;
+	padding: 0;
+}
+.card-right span {
+	font-size: 1rem;
+}
+
+.out-of-what {
+	position: relative;
+	bottom: 5px;
+}
+
+.span-left {
+	position: relative;
+	bottom: 5px;
+	right: 2px;
+}
+
+.span-right {
+	position: relative;
+	top: 8px;
+	left: 3px;
 }
 
 .card-right img {
@@ -413,7 +446,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
-	gap: 2rem;
+	gap: 1.2rem;
 	justify-content: space-between;
 }
 
@@ -423,17 +456,18 @@ body {
 	color: #f4f4f4;
 	padding-top: 1rem;
 	border-top: 3px solid rgb(255, 206, 84, 0.3);
-	margin-bottom: 1rem;
+	margin-bottom: 0;
 }
 
 .itembox h3 {
+	font-size: 1.4rem;
 	font-weight: 600;
-	color: #ffce54; /* match your card accents */
+	color: #ffce54;
 	margin-bottom: 0.5rem;
 }
 
 .itembox p {
-	font-size: 0.9rem;
+	font-size: 1rem;
 	color: #ccc;
 	margin-bottom: 1rem;
 }
@@ -719,9 +753,14 @@ body {
 	justify-content: center;
 	align-items: center;
 	margin: -10px 0 0 0;
+	flex-wrap: nowrap;
 
 	svg {
 		width: 18px;
+		height: 18px;
+		flex-shrink: 0;
+		display: inline-block;
+		fill: gold;
 	}
 
 	p {
@@ -1128,6 +1167,21 @@ body {
 
 .tandcs a {
 	color: #f4f4f4;
+}
+
+/* MISC */
+
+.contain-image {
+	object-fit: contain !important;
+	background-color: rgb(31, 31, 31) !important;
+}
+
+.ladbrokes {
+	background-color: #fff !important;
+}
+
+.coral {
+	background-color: rgba(0, 78, 141) !important;
 }
 
 /* MEDIA QUERIES */

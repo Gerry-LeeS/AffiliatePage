@@ -1184,6 +1184,10 @@ body {
 	background-color: rgba(0, 78, 141) !important;
 }
 
+.temp-fix-margin {
+	margin-left: 0px;
+}
+
 /* MEDIA QUERIES */
 
 @media (max-width: 1338px) {

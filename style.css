@@ -251,6 +251,12 @@ body {
 	margin: 0 auto;
 }
 
+.claim-buttons {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
 .card {
 	display: flex;
 	flex-direction: row;
@@ -359,6 +365,12 @@ body {
 	color: #ccc;
 	line-height: 1.4;
 	margin-top: 0.5rem;
+}
+
+.card-middle .bonus-termsandconditions {
+	font-size: 0.6rem;
+	margin: 0;
+	padding: 0;
 }
 
 /* Right Section */
@@ -1262,6 +1274,10 @@ body {
 		);
 	}
 
+	.nav-bar .logo {
+		padding-right: 40px !important;
+	}
+
 	.nav-bar .nav-ul {
 		gap: 80px; /* smaller gap for tablets */
 	}
@@ -1275,7 +1291,6 @@ body {
 	.dark-mode-btn {
 		top: 15px;
 		right: 15px;
-		padding: 8px 12px;
 		font-size: 1.1rem;
 	}
 
@@ -1342,6 +1357,12 @@ body {
 		bottom: 10px;
 	}
 
+	.claim-buttons {
+		display: flex;
+		gap: 15px;
+		flex-direction: row;
+	}
+
 	/* Search Page */
 
 	.search-header .header-background {
@@ -1399,6 +1420,9 @@ body {
 	}
 
 	/* NAVBAR */
+
+	.nav-bar {
+	}
 	.nav-bar .logo {
 		height: 140px;
 		width: auto;
@@ -1407,7 +1431,7 @@ body {
 	}
 
 	.nav-bar .nav-ul {
-		flex-direction: column;
+		flex-direction: row;
 		gap: 20px; /* smaller gap to fit smaller screens */
 		padding: 0;
 		margin: 0 auto;
@@ -1417,10 +1441,11 @@ body {
 	.nav-bar .nav-ul a {
 		font-size: 0.9rem;
 		word-break: break-word; /* prevents long links from overflowing */
+		margin-top: 30px;
 	}
 
 	.dark-mode-btn {
-		top: 15px;
+		top: -10px;
 		right: 10px;
 		padding: 8px 12px;
 		font-size: 2rem;
@@ -1429,7 +1454,7 @@ body {
 
 	/* HEADER */
 	.header-background {
-		height: 30vh;
+		height: 40vh;
 		width: 100%; /* ensure it never exceeds screen */
 	}
 
@@ -1441,13 +1466,17 @@ body {
 		box-sizing: border-box;
 	}
 
-	.header h1,
-	.header h3 {
-		font-size: 2rem;
+	.header h1 {
+		margin-top: 130px !important;
+		font-size: 1.8rem;
 		margin: 0 auto; /* center text */
 		max-width: 95%; /* prevent overflow */
 		text-align: center;
 		word-break: break-word; /* long text wraps */
+	}
+
+	.header h3 {
+		font-size: 1rem;
 	}
 
 	.subheader-text {
@@ -1625,10 +1654,11 @@ body {
 
 	/* NAVBAR */
 	.nav-bar .logo {
-		height: 120px; /* smaller logo */
+		height: 200px; /* smaller logo */
 		width: auto;
 		margin: 50px auto 0 auto;
 		display: block;
+		top: -20px;
 	}
 
 	.nav-bar .nav-ul {
@@ -1645,7 +1675,7 @@ body {
 	}
 
 	.dark-mode-btn {
-		top: 10px;
+		top: 60px;
 		right: 8px;
 		padding: 6px 10px;
 		font-size: 1.8rem;
@@ -1908,5 +1938,11 @@ body {
 		padding: 10px 20px;
 		margin: 5px 17px;
 		list-style: circle;
+	}
+
+	.payments-review {
+		margin-left: 100px;
+		padding-top: 20px;
+		gap: 10px;
 	}
 }

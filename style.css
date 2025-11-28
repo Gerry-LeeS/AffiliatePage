@@ -901,6 +901,16 @@ body {
 
 /* Review Pages */
 
+.casino-review,
+.overview,
+.review-flexbox,
+.bonus-container,
+.games-container,
+.top-review-flexbox,
+.prosandcons {
+	box-sizing: border-box;
+}
+
 .casino-review {
 	display: flex;
 	flex-direction: column;
@@ -1830,17 +1840,29 @@ body {
 
 	.casino-grid {
 		grid-template-columns: 1fr;
-	
 
-	.search-box {
-		width: 100%;
+		.search-box {
+			width: 100%;
+		}
+
+		.section-title {
+			font-size: 1rem;
+		}
+		.description-text {
+			font-size: 0.75rem;
+		}
 	}
 
-	.section-title {
-		font-size: 1rem;
-	}
-	.description-text {
-		font-size: 0.75rem;
+	.overview,
+	.review-flexbox,
+	.bonus-container,
+	.games-container,
+	.overview-column {
+		display: flex !important;
+		flex-direction: column !important;
+		align-items: center;
+		justify-content: center;
+		gap: 10% !important;
 	}
 }
 

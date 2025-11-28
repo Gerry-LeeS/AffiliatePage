@@ -1738,9 +1738,21 @@ body {
 		display: none;
 	}
 
+	.search-header-background {
+		height: 100% !important;
+	}
+
+	.search-header h1 {
+		padding: 0 !important;
+	}
+
+	.search-header h3 {
+		padding: 0 0 10% !important;
+	}
+
 	.review-cards-flexbox {
 		display: grid;
-		grid-template-columns: repeat(2, 1fr);
+		grid-template-columns: 1fr;
 		margin: 1rem 4rem;
 		gap: 1.5rem;
 	}
@@ -1818,7 +1830,7 @@ body {
 
 	.casino-grid {
 		grid-template-columns: 1fr;
-	}
+	
 
 	.search-box {
 		width: 100%;
@@ -1871,6 +1883,10 @@ body {
 		height: 100%;
 		padding-bottom: 10px;
 	}
+
+	.search-header h1 {
+		padding: 0 !important;
+	}
 }
 
 @media (max-width: 320px) {
@@ -1886,5 +1902,13 @@ body {
 
 	.header h3 {
 		padding-bottom: 5px;
+	}
+
+	.search-header-background {
+		height: 100% !important;
+	}
+
+	.search-header h1 {
+		margin-top: 15% !important;
 	}
 }

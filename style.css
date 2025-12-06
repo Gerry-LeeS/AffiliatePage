@@ -1904,6 +1904,7 @@ body {
 
 	.header h3 {
 		margin: 0 5%;
+		margin-bottom: 2rem;
 	}
 
 	.nav-bar .nav-ul {
@@ -1922,6 +1923,7 @@ body {
 	.header h3 {
 		font-size: clamp(0.9rem, 3.5vw, 1rem);
 		margin: 0 5%;
+		margin-bottom: 2rem;
 	}
 
 	.card-left img {
@@ -1940,7 +1942,7 @@ body {
 	}
 
 	.header h3 {
-		padding-bottom: 1rem;
+		padding-bottom: 1rem !important;
 	}
 }
 

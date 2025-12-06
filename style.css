@@ -1233,6 +1233,7 @@ body {
 	object-fit: contain !important;
 	position: static; /* Remove positioning */
 	transform: none; /* Remove transform */
+	transform: scale(1.6);
 }
 
 /* MEDIA QUERIES */

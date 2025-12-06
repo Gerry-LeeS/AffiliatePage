@@ -1938,6 +1938,10 @@ body {
 	.search-header h1 {
 		padding: 0 !important;
 	}
+
+	.header h3 {
+		padding-bottom: 1rem;
+	}
 }
 
 @media (max-width: 320px) {

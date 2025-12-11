@@ -285,8 +285,8 @@ body {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-	display: block;
 	object-position: center center;
+	display: block;
 }
 
 .info-button {
@@ -1376,12 +1376,13 @@ body {
 
 	.card-left {
 		width: 100%;
-		max-height: 250px;
+		height: 250px;
+		aspect-ratio: unset;
 	}
 
 	.card-left img {
 		width: 100%;
-		height: 250px;
+		height: 100%;
 		object-fit: cover;
 	}
 
@@ -1543,6 +1544,7 @@ body {
 	.card-left {
 		width: 100%;
 		aspect-ratio: 16/9;
+		height: auto;
 	}
 
 	.card-middle {
@@ -1891,6 +1893,13 @@ body {
 		min-width: 60px;
 	}
 
+	.card-left img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center center;
+	}
+
 	.review-card {
 		width: 100%;
 		margin-bottom: 15px;
@@ -1909,12 +1918,6 @@ body {
 		.description-text {
 			font-size: 0.75rem;
 		}
-	}
-
-	.card-left img {
-		max-height: 100%;
-		object-fit: cover;
-		object-position: center center;
 	}
 
 	.overview,
@@ -1969,8 +1972,14 @@ body {
 		margin-bottom: 2rem;
 	}
 
+	.card-left {
+		height: 150px;
+		aspect-ratio: unset;
+	}
+
 	.card-left img {
-		max-height: 150px;
+		width: 100%;
+		height: 100%;
 		object-fit: cover;
 		object-position: center center;
 	}

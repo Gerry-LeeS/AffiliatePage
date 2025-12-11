@@ -4,6 +4,8 @@ const casinoPages = [
 	{ title: 'Ladbrokes', url: '/Pages/CasinoReviews/ladbrokes.html' },
 	{ title: 'Coral', url: '/Pages/CasinoReviews/coral.html' },
 	{ title: 'NetBet', url: '/Pages/CasinoReviews/netBet.html' },
+	{ title: 'BoyleSports', url: '/Pages/CasinoReviews/boyleSports.html' },
+	{ title: 'Kwiff', url: '/Pages/CasinoReviews/kwiff.html' },
 	// Add new ones like this:
 	// { title: "New Casino Name Review", url: "/reviews/new-casino.html" }
 ];

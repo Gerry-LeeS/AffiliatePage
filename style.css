@@ -1236,6 +1236,31 @@ body {
 	transform: scale(1.6);
 }
 
+.boyle {
+	background: rgb(0, 29, 94) !important;
+}
+
+.kwiff {
+	background-color: rgb(122, 42, 244) !important;
+}
+
+.kwiff-logo {
+	width: 90%;
+	height: auto; /* controls how much room the logo gets */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden; /* prevents cropping issues */
+	background-color: rgb(122, 42, 244) !important;
+	border-radius: 10px;
+}
+
+.kwiff-logo img {
+	max-height: 100%; /* scale down to fit the container */
+	width: auto; /* maintain aspect ratio */
+	display: block;
+}
+
 /* MEDIA QUERIES */
 
 @media (max-width: 1338px) {
@@ -1852,6 +1877,10 @@ body {
 		margin: 0 5%;
 	}
 
+	.header h3 {
+		display: none;
+	}
+
 	.nav-links {
 		display: none;
 	}
@@ -1903,8 +1932,7 @@ body {
 	}
 
 	.header h3 {
-		margin: 0 5%;
-		margin-bottom: 2rem;
+		display: none;
 	}
 
 	.nav-bar .nav-ul {

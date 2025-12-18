@@ -7,6 +7,7 @@ const casinoPages = [
 	{ title: 'BoyleSports', url: '/Pages/CasinoReviews/boyleSports.html' },
 	{ title: 'Kwiff', url: '/Pages/CasinoReviews/kwiff.html' },
 	{ title: 'PlayOJO', url: '/Pages/CasinoReviews/playojo.html' },
+	{ title: 'BresBet', url: '/Pages/CasinoReviews/bresbet.html' },
 	// Add new ones like this:
 	// { title: "New Casino Name Review", url: "/reviews/new-casino.html" }
 ];

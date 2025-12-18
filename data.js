@@ -1,8 +1,8 @@
 const casinoPages = [
-	{ title: 'Gala Casino', url: '/Pages/CasinoReviews/galacasino.html' },
-	{ title: 'Gala Bingo', url: '/Pages/CasinoReviews/galabingo.html' },
-	{ title: 'Ladbrokes', url: '/Pages/CasinoReviews/ladbrokes.html' },
-	{ title: 'Coral', url: '/Pages/CasinoReviews/coral.html' },
+	// { title: 'Gala Casino', url: '/Pages/CasinoReviews/galacasino.html' },
+	// { title: 'Gala Bingo', url: '/Pages/CasinoReviews/galabingo.html' },
+	// { title: 'Ladbrokes', url: '/Pages/CasinoReviews/ladbrokes.html' },
+	// { title: 'Coral', url: '/Pages/CasinoReviews/coral.html' },
 	{ title: 'NetBet', url: '/Pages/CasinoReviews/netBet.html' },
 	{ title: 'BoyleSports', url: '/Pages/CasinoReviews/boyleSports.html' },
 	{ title: 'Kwiff', url: '/Pages/CasinoReviews/kwiff.html' },

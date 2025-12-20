@@ -58,7 +58,7 @@ const casinos = [
 			'Poker',
 		],
 		terms:
-			'8+. Opt in. Acc. games, game weighting & payment restrictions apply. 100 Free Spins: Exp. 01.12.26. New UK/ROI gaming players. Same day min. stake req. (€/£ 20/50/100 to get 20/50/100 Free Spins (FS)) by 23:59. FS Values £/€0.10 – 0.20. FS valid 72h.  Pragmatic Tournament: Tue 12:00 to Mon 23:59 BST. Play 10+ real money rounds on eligible games to qualify. Score based on multiplier wins, streaks (wins/losses). Max 200 rounds/day. FS value €/£0.10. Use within 48 hrs. T&Cs Apply.',
+			'18+. Opt in. Acc. games, game weighting & payment restrictions apply. 100 Free Spins: Exp. 01.12.26. New UK/ROI gaming players. Same day min. stake req. (€/£ 20/50/100 to get 20/50/100 Free Spins (FS)) by 23:59. FS Values £/€0.10 – 0.20. FS valid 72h.  Pragmatic Tournament: Tue 12:00 to Mon 23:59 BST. Play 10+ real money rounds on eligible games to qualify. Score based on multiplier wins, streaks (wins/losses). Max 200 rounds/day. FS value €/£0.10. Use within 48 hrs. T&Cs Apply.',
 		link: 'https://promo.boylesports.com/gaming/promo/game8?btag=54248|0f036f7746684ebb9a8e6752ee0e068a',
 		reviewLink: '/reviews/boylecasino.html',
 		exclusive: false,
@@ -75,7 +75,7 @@ const casinos = [
 			'There’s no company quite as generous as PlayOJO. From cashback on every spin, to personalised bonuses, and their daily Prize Twister which is your free chance to win free spins, bingo tickets, scratchcards, cash prizes. They’ve won plenty of awards so you know they’re a casino you can trust.',
 		features: ['Slots', 'Live Tables', 'Bingo', 'Blackjack', 'Roulette'],
 		terms:
-			'8+ First deposit only. This offer is only available for first time depositors. Min deposit is £10. 80 Free Spins on Big Bass Bonanza. Spin Value: £0.10. This offer cannot be used in conjunction with any other offer. T&Cs Apply.',
+			'18+ First deposit only. This offer is only available for first time depositors. Min deposit is £10. 80 Free Spins on Big Bass Bonanza. Spin Value: £0.10. This offer cannot be used in conjunction with any other offer. T&Cs Apply.',
 		link: 'https://site.gotoplayojo.com/index.php?aname=csreviews&zone_id=80spins_uk',
 		reviewLink: '/reviews/playojo.html',
 		exclusive: true,

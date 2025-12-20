@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Casino Bonus Calculator - Casino Site Reviews</title>
+		<meta
+			name="description"
+			content="Free casino bonus calculator. Calculate free spins value, match bonuses, and wagering requirements instantly. Understand the real value of any casino bonus."
+		/>
+		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="calculator.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<script>
+			// Apply saved theme immediately to prevent flash
+			const savedTheme = localStorage.getItem('theme') || 'dark';
+			if (savedTheme === 'light') {
+				document.body.classList.add('light-theme');
+			}
+		</script>
+		<!-- Navigation -->
+		<nav class="nav" id="nav">
+			<div class="nav-container">
+				<div class="nav-logo">
+					<img
+						src="images/casinofavicon.png"
+						alt="CSR Logo"
+						class="site-logo"
+					/>
+					<span class="logo-text">Casino Site Reviews</span>
+				</div>
+
+				<!-- Desktop Nav Links -->
+				<ul class="nav-links">
+					<li><a href="index.html" class="nav-link">Home</a></li>
+					<li><a href="exclusive.html" class="nav-link">Exclusive</a></li>
+					<li><a href="search.html" class="nav-link">Search</a></li>
+					<li>
+						<a href="calculator.html" class="nav-link active">Calculator</a>
+					</li>
+				</ul>
+
+				<!-- Desktop Theme Toggle -->
+				<button
+					class="theme-toggle desktop-theme-toggle"
+					id="themeToggle"
+					aria-label="Toggle theme"
+				>
+					<span class="theme-icon">☀</span>
+				</button>
+
+				<!-- Mobile Hamburger -->
+				<button class="hamburger" id="hamburger" aria-label="Toggle menu">
+					<span class="hamburger-line"></span>
+					<span class="hamburger-line"></span>
+					<span class="hamburger-line"></span>
+				</button>
+			</div>
+
+			<!-- Mobile Menu -->
+			<div class="mobile-menu" id="mobileMenu">
+				<ul class="mobile-menu-links">
+					<li><a href="index.html" class="mobile-nav-link">Home</a></li>
+					<li>
+						<a href="exclusive.html" class="mobile-nav-link">Exclusive</a>
+					</li>
+					<li><a href="search.html" class="mobile-nav-link">Search</a></li>
+					<li>
+						<a href="calculator.html" class="mobile-nav-link active"
+							>Calculator</a
+						>
+					</li>
+					<li class="mobile-theme-item">
+						<button
+							class="mobile-theme-toggle"
+							id="mobileThemeToggle"
+							aria-label="Toggle theme"
+						>
+							<span class="theme-icon">☀</span>
+							<span class="theme-label">Dark Mode</span>
+						</button>
+					</li>
+				</ul>
+			</div>
+		</nav>
+
+		<!-- Hero Section -->
+		<section class="calculator-hero">
+			<div class="container">
+				<h1>Casino Bonus Calculator</h1>
+				<p class="calculator-hero-subtitle">
+					Understand the real value of any casino bonus before you claim it
+				</p>
+
+				<div class="calculator-features">
+					<div class="calc-feature">
+						<span class="calc-feature-icon">🎰</span>
+						<span>Free Spins Value</span>
+					</div>
+					<div class="calc-feature">
+						<span class="calc-feature-icon">💰</span>
+						<span>Match Bonuses</span>
+					</div>
+					<div class="calc-feature">
+						<span class="calc-feature-icon">📊</span>
+						<span>Wagering Requirements</span>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Calculator Section -->
+		<section class="bonus-calculator-section">
+			<div class="container">
+				<div class="calculator-wrapper">
+					<div class="calculator-header">
+						<h2>💰 Bonus Value Calculator</h2>
+						<p>See what your casino bonus is really worth</p>
+						<button
+							class="calculator-help-btn"
+							id="calculatorHelpBtn"
+							aria-label="Help"
+						>
+							<span class="help-icon">?</span>
+						</button>
+					</div>
+
+					<div class="calculator-tabs">
+						<button class="calc-tab active" data-tab="spins">Free Spins</button>
+						<button class="calc-tab" data-tab="match">Match Bonus</button>
+					</div>
+
+					<!-- Free Spins Calculator -->
+					<div class="calculator-content active" id="spins-calc">
+						<div class="calculator-body">
+							<div class="calculator-input-group">
+								<label for="spinCount">Number of Free Spins</label>
+								<input
+									type="number"
+									id="spinCount"
+									placeholder="e.g., 50"
+									min="0"
+									value="50"
+								/>
+							</div>
+
+							<div class="calculator-input-group">
+								<label for="spinValue">Value per Spin (£)</label>
+								<input
+									type="number"
+									id="spinValue"
+									placeholder="e.g., 0.10"
+									min="0"
+									step="0.01"
+									value="0.10"
+								/>
+							</div>
+
+							<div class="calculator-input-group">
+								<label for="spinWagering">Wagering on Winnings (x)</label>
+								<input
+									type="number"
+									id="spinWagering"
+									placeholder="e.g., 35"
+									min="0"
+									value="0"
+								/>
+								<small class="input-hint"
+									>Enter 0 if winnings paid as cash</small
+								>
+							</div>
+						</div>
+
+						<div class="calculator-results" id="spinsResults">
+							<div class="result-item highlight">
+								<div class="result-label">Total Bonus Value</div>
+								<div class="result-value" id="totalSpinValue">£0</div>
+							</div>
+							<div class="result-item">
+								<div class="result-label">Wagering Type</div>
+								<div
+									class="result-value"
+									id="wageringType"
+									style="font-size: 1.2rem"
+								>
+									Wager Free
+								</div>
+							</div>
+							<div class="result-item" id="mustWagerItem" style="display: none">
+								<div class="result-label">Must Wager</div>
+								<div class="result-value" id="mustWager">£0</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Match Bonus Calculator -->
+					<div class="calculator-content" id="match-calc">
+						<div class="calculator-body">
+							<div class="calculator-input-group">
+								<label for="depositAmount">Your Deposit (£)</label>
+								<input
+									type="number"
+									id="depositAmount"
+									placeholder="Enter amount"
+									min="10"
+									value="50"
+								/>
+							</div>
+
+							<div class="calculator-input-group">
+								<label for="bonusPercentage">Bonus Percentage (%)</label>
+								<input
+									type="number"
+									id="bonusPercentage"
+									placeholder="e.g., 100"
+									min="0"
+									value="100"
+								/>
+							</div>
+
+							<div class="calculator-input-group">
+								<label for="wageringRequirement"
+									>Wagering Requirement (x)</label
+								>
+								<input
+									type="number"
+									id="wageringRequirement"
+									placeholder="e.g., 35"
+									min="0"
+									value="0"
+								/>
+							</div>
+						</div>
+
+						<div class="calculator-results" id="matchResults">
+							<div class="result-item">
+								<div class="result-label">Bonus Amount</div>
+								<div class="result-value" id="bonusAmount">£0</div>
+							</div>
+							<div class="result-item">
+								<div class="result-label">Total Balance</div>
+								<div class="result-value" id="totalBalance">£0</div>
+							</div>
+							<div class="result-item highlight">
+								<div class="result-label">Must Wager</div>
+								<div class="result-value" id="amountToWager">£0</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="calculator-tip">
+						<strong>💡 Pro Tip:</strong> Look for bonuses with low or no
+						wagering requirements for the best value!
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Info Section -->
+		<div class="info-grid">
+			<div class="info-card">
+				<h3>What are Wagering Requirements?</h3>
+				<p>
+					Wagering requirements (also called playthrough) are the number of
+					times you must bet your bonus before you can withdraw winnings. For
+					example, a £10 bonus with 35x wagering means you must place £350 in
+					bets. Look for low or zero wagering for the best value.
+				</p>
+			</div>
+
+			<div class="info-card">
+				<h3>Wager-Free Bonuses</h3>
+				<p>
+					Some casinos offer wager-free bonuses, meaning any winnings can be
+					withdrawn immediately as cash. These are typically more valuable than
+					higher bonuses with high wagering requirements. Look for the "Wager
+					Free ✓" indicator in our calculator above.
+				</p>
+			</div>
+
+			<div class="info-card">
+				<h3>Free Spins vs Match Bonuses</h3>
+				<p>
+					Free spins have a set value per spin (usually £0.10). Match bonuses
+					give you a percentage of your deposit as bonus cash. Both types can
+					have wagering requirements, so always use our calculator to compare
+					the real value of different offers before claiming.
+				</p>
+			</div>
+		</div>
+
+		<!-- CTA Section -->
+		<section class="calculator-cta">
+			<div class="container">
+				<h2 class="gradient-gold">Ready to Claim Your Bonus?</h2>
+				<p>
+					Browse our reviewed casinos with the best bonuses and lowest wagering
+					requirements
+				</p>
+				<a href="index.html" class="cta-btn-large">View Top Casinos →</a>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer class="footer">
+			<div class="container">
+				<div class="footer-top">
+					<div class="footer-brand">
+						<div class="footer-logo">
+							<img
+								src="images/casinofavicon.png"
+								alt="CSR Logo"
+								class="site-logo"
+							/>
+							<span class="logo-text">Casino Site Reviews</span>
+						</div>
+						<p class="footer-tagline">
+							Premium casino reviews for discerning players
+						</p>
+					</div>
+
+					<div class="footer-links">
+						<div class="footer-col">
+							<h4>Company</h4>
+							<a href="about.html">About Us</a>
+						</div>
+						<div class="footer-col">
+							<h4>Legal</h4>
+							<a href="terms.html">Terms & Conditions</a>
+							<a href="privacy.html">Privacy Policy</a>
+							<a href="affiliate-disclosure.html">Affiliate Disclosure</a>
+						</div>
+						<div class="footer-col">
+							<h4>Resources</h4>
+							<a href="responsible-gambling.html">Responsible Gaming</a>
+							<a href="faq.html">FAQ</a>
+							<a href="calculator.html">Bonus Calculator</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="footer-gambling">
+					<div class="gambling-logos">
+						<div class="gambling-logo">18+</div>
+						<a
+							href="https://www.begambleaware.org/"
+							target="_blank"
+							class="gambling-logo"
+							>BeGambleAware</a
+						>
+						<a
+							href="https://www.gamstop.co.uk/"
+							target="_blank"
+							class="gambling-logo"
+							>GamStop</a
+						>
+						<a
+							href="https://www.gamcare.org.uk/"
+							target="_blank"
+							class="gambling-logo"
+							>GamCare</a
+						>
+					</div>
+				</div>
+
+				<div class="footer-bottom">
+					<p>&copy; 2025 Casino Site Reviews. All rights reserved.</p>
+					<p class="footer-disclaimer">
+						All casinos are licensed by the UK Gambling Commission.
+					</p>
+				</div>
+			</div>
+		</footer>
+
+		<!-- Calculator Help Modal -->
+		<div class="calculator-help-modal" id="calculatorHelpModal">
+			<div class="calculator-help-overlay" id="calculatorHelpOverlay"></div>
+			<div class="calculator-help-content">
+				<button class="calculator-help-close" id="calculatorHelpClose">
+					×
+				</button>
+
+				<h2>❓ How to Use the Bonus Calculator</h2>
+				<p class="help-intro">
+					This calculator shows the real value of a casino bonus after wagering
+					requirements.
+				</p>
+
+				<div class="help-section">
+					<h3>🎰 Free Spins Calculator</h3>
+					<div class="help-item">
+						<strong>Number of Free Spins</strong>
+						<p>How many spins you receive (e.g. 50 or 100).</p>
+					</div>
+					<div class="help-item">
+						<strong>Value per Spin</strong>
+						<p>The stake per spin (usually £0.10 or £0.20).</p>
+					</div>
+					<div class="help-item">
+						<strong>Wagering on Winnings (x)</strong>
+						<p>
+							How many times you must wager your winnings before withdrawing.
+						</p>
+						<p class="help-note">* 0x = Wager-Free ✅ (best value)</p>
+					</div>
+					<div class="help-item">
+						<strong>Total Bonus Value</strong>
+						<p>Free spins × value per spin.</p>
+					</div>
+				</div>
+
+				<div class="help-section">
+					<h3>💰 Match Bonus Calculator</h3>
+					<div class="help-item">
+						<strong>Your Deposit</strong>
+						<p>How much you plan to deposit.</p>
+					</div>
+					<div class="help-item">
+						<strong>Bonus Percentage</strong>
+						<p>
+							The percentage the casino matches (100% = doubles your deposit).
+						</p>
+					</div>
+					<div class="help-item">
+						<strong>Wagering Requirement (x)</strong>
+						<p>
+							How many times you must wager the deposit + bonus before
+							withdrawing. Lower is always better.
+						</p>
+						<p class="help-note">* 0x = No wagering (rare and excellent)</p>
+					</div>
+				</div>
+
+				<div class="help-section help-terms">
+					<h3>📘 Key Terms</h3>
+					<div class="help-item">
+						<strong>Wagering Requirements (Playthrough)</strong>
+						<p>The total amount you must bet before withdrawing winnings.</p>
+					</div>
+					<div class="help-item">
+						<strong>Wager-Free / 0x Wagering</strong>
+						<p>
+							You can withdraw winnings immediately. This is the most valuable
+							type of bonus.
+						</p>
+					</div>
+					<div class="help-item">
+						<strong>Must Wager</strong>
+						<p>The total amount you need to bet before withdrawal.</p>
+					</div>
+				</div>
+
+				<div class="help-example">
+					<h4>🧮 Example</h4>
+					<p><strong>50 free spins at £0.10 = £5 bonus value</strong></p>
+					<ul>
+						<li>0x wagering: Withdraw winnings immediately ✅</li>
+						<li>35x wagering: Must wager £175 before withdrawal ❌</li>
+					</ul>
+					<p class="help-pro-tip">
+						💎 <strong>Pro Tip:</strong> Always compare bonuses using their real
+						value — not the headline number!
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="bookmark-modal" id="bookmarkModal">
+			<div class="bookmark-modal-overlay" id="bookmarkOverlay"></div>
+			<div class="bookmark-modal-content">
+				<button class="bookmark-close" id="bookmarkClose">×</button>
+				<div class="bookmark-icon">⭐</div>
+				<h3>Enjoying Our Reviews?</h3>
+				<p>Bookmark this page to easily find the best casino offers!</p>
+				<div class="bookmark-actions">
+					<button class="btn-bookmark-yes" id="bookmarkYes">
+						Remind Me Later
+					</button>
+					<button class="btn-bookmark-no" id="bookmarkNo">
+						Don't Show Again
+					</button>
+				</div>
+			</div>
+		</div>
+
+		<script src="script.js"></script>
+	</body>
+</html>

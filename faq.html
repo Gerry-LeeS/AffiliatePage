@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>FAQ - Frequently Asked Questions | Casino Site Reviews</title>
+		<meta
+			name="description"
+			content="Find answers to common questions about online casinos, exclusive bonuses, UKGC licensing, payment methods, and more."
+		/>
+		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="legal.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap"
+			rel="stylesheet"
+		/>
+		<style>
+			.faq-item {
+				margin-bottom: 2rem;
+				background: var(--bg-card);
+				border: 1px solid var(--border);
+				border-radius: 16px;
+				overflow: hidden;
+				transition: all 0.3s ease;
+			}
+			.faq-item:hover {
+				border-color: var(--gold);
+				box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+			}
+			.faq-question {
+				padding: 1.75rem 2rem;
+				cursor: pointer;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				user-select: none;
+				background: linear-gradient(
+					135deg,
+					var(--bg-card) 0%,
+					var(--bg-secondary) 100%
+				);
+			}
+			.faq-question h3 {
+				margin: 0;
+				font-size: 1.3rem;
+				color: var(--text-primary);
+				font-weight: 600;
+			}
+			.faq-toggle {
+				font-size: 1.5rem;
+				color: var(--gold);
+				transition: transform 0.3s ease;
+			}
+			.faq-item.active .faq-toggle {
+				transform: rotate(180deg);
+			}
+			.faq-answer {
+				max-height: 0;
+				overflow: hidden;
+				transition: max-height 0.3s ease;
+			}
+			.faq-item.active .faq-answer {
+				max-height: 1000px;
+			}
+			.faq-answer-content {
+				padding: 0 2rem 2rem 2rem;
+				color: var(--text-secondary);
+				line-height: 1.8;
+			}
+			.faq-answer-content p {
+				margin-bottom: 1rem;
+			}
+			.faq-answer-content ul {
+				margin: 1rem 0;
+				padding-left: 2rem;
+			}
+			.faq-answer-content li {
+				margin-bottom: 0.5rem;
+			}
+			.faq-category {
+				margin-bottom: 4rem;
+			}
+			.faq-category h2 {
+				font-family: var(--font-display);
+				font-size: 2.5rem;
+				color: var(--gold);
+				margin-bottom: 2rem;
+				padding-bottom: 1rem;
+				border-bottom: 2px solid var(--border);
+			}
+		</style>
+	</head>
+	<body>
+		<!-- Navigation -->
+		<nav class="nav" id="nav">
+			<div class="nav-container">
+				<div class="nav-logo">
+					<img
+						src="images/casinofavicon.png"
+						alt="CSR Logo"
+						class="site-logo"
+					/>
+					<span class="logo-text">Casino Site Reviews</span>
+				</div>
+
+				<!-- Desktop Nav Links -->
+				<ul class="nav-links">
+					<li><a href="index.html" class="nav-link">Home</a></li>
+					<li><a href="exclusive.html" class="nav-link">Exclusive</a></li>
+					<li><a href="search.html" class="nav-link">Search</a></li>
+					<li><a href="calculator.html" class="nav-link">Calculator</a></li>
+				</ul>
+
+				<!-- Desktop Theme Toggle -->
+				<button
+					class="theme-toggle desktop-theme-toggle"
+					id="themeToggle"
+					aria-label="Toggle theme"
+				>
+					<span class="theme-icon">☀</span>
+				</button>
+
+				<!-- Mobile Hamburger -->
+				<button class="hamburger" id="hamburger" aria-label="Toggle menu">
+					<span class="hamburger-line"></span>
+					<span class="hamburger-line"></span>
+					<span class="hamburger-line"></span>
+				</button>
+			</div>
+
+			<!-- Mobile Menu -->
+			<div class="mobile-menu" id="mobileMenu">
+				<ul class="mobile-menu-links">
+					<li><a href="index.html" class="mobile-nav-link">Home</a></li>
+					<li>
+						<a href="exclusive.html" class="mobile-nav-link">Exclusive</a>
+					</li>
+					<li><a href="search.html" class="mobile-nav-link">Search</a></li>
+					<li>
+						<a href="calculator.html" class="mobile-nav-link">Calculator</a>
+					</li>
+					<li class="mobile-theme-item">
+						<button
+							class="mobile-theme-toggle"
+							id="mobileThemeToggle"
+							aria-label="Toggle theme"
+						>
+							<span class="theme-icon">☀</span>
+							<span class="theme-label">Dark Mode</span>
+						</button>
+					</li>
+				</ul>
+			</div>
+		</nav>
+
+		<!-- Breadcrumbs -->
+		<div class="breadcrumbs">
+			<a href="index.html">Home</a>
+			<span>/</span>
+			<span class="current">FAQ</span>
+		</div>
+
+		<!-- Hero -->
+		<section class="legal-hero">
+			<div class="container">
+				<h1>Frequently Asked Questions</h1>
+				<p class="last-updated">Your questions answered</p>
+			</div>
+		</section>
+
+		<!-- Content -->
+		<main class="legal-content">
+			<div class="legal-intro">
+				Got questions about online casinos, exclusive bonuses, or how to get
+				started? We've compiled answers to the most common questions from our
+				users.
+			</div>
+
+			<!-- Getting Started -->
+			<div class="faq-category">
+				<h2>Getting Started</h2>
+
+				<div class="faq-item">
+					<div class="faq-question">
+						<h3>What is Casino Site Reviews?</h3>
+						<span class="faq-toggle">▼</span>
+					</div>
+					<div class="faq-answer">
+						<div class="faq-answer-content">
+							<p>
+								Casino Site Reviews is an independent review site that helps UK
+								players find the best online casinos and exclusive bonus offers.
+								We thoroughly review each casino for safety, game selection,
+								payment options, and customer service quality.
+							</p>
+							<p>
+								All casinos we recommend are fully licensed by the UK Gambling
+								Commission (UKGC), ensuring your safety and security.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="faq-item">
+					<div class="faq-question">
+						<h3>How do I choose the right online casino?</h3>
+						<span class="faq-toggle">▼</span>
+					</div>
+					<div class="faq-answer">
+						<div class="faq-answer-content">
+							<p>
+								When selecting an online casino, consider these key factors:
+							</p>
+							<ul>
+								<li>
+									<strong>UKGC License:</strong> Always verify the casino holds
+									a valid UK Gambling Commission license
+								</li>
+								<li>
+									<strong>Game Selection:</strong> Check if they offer your
+									preferred games (slots, live casino, table games)
+								</li>
+								<li>
+									<strong>Welcome Bonus:</strong> Compare bonus offers and
+									wagering requirements
+								</li>
+								<li>
+									<strong>Payment Methods:</strong> Ensure they support your
+									preferred deposit and withdrawal options
+								</li>
+								<li>
+									<strong>Customer Support:</strong> Look for 24/7 support via
+									live chat or phone
+								</li>
+							</ul>
+							<p>
+								Use our comparison tool to view casinos side-by-side and make an
+								informed decision.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="faq-item">
+					<div class="faq-question">
+						<h3>Are online casinos safe and legal in the UK?</h3>
+						<span class="faq-toggle">▼</span>
+					</div>
+					<div class="faq-answer">
+						<div class="faq-answer-content">
+							<p>
+								Yes! Online gambling is completely legal and regulated in the
+								UK. All casinos featured on our site hold a valid license from
+								the UK Gambling Commission (UKGC), which ensures:
+							</p>
+							<ul>
+								<li>
+									Fair gaming practices and RNG (Random Number Generator)
+									testing
+								</li>
+								<li>Secure payment processing and data protection</li>
+								<li>
+									Responsible gambling tools and player protection measures
+								</li>
+								<li>
+									Segregated player funds (your money is protected even if the
+									casino closes)
+								</li>
+							</ul>
+							<p>Always verify a casino's UKGC license before signing up.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Bonuses & Promotions -->
+			<div class="faq-category">
+				<h2>Bonuses & Promotions</h2>
+
+				<div class="faq-item">
+					<div class="faq-question">
+						<h3>What are exclusive casino bonuses?</h3>
+						<span class="faq-toggle">▼</span>
+					</div>
+					<div class="faq-answer">
+						<div class="faq-answer-content">
+							<p>
+								Exclusive bonuses are special offers negotiated by Casino Site
+								Reviews that you won't find anywhere else—not even on the
+								casino's own website!
+							</p>
+							<p>These exclusive deals typically include:</p>
+							<ul>
+								<li>Higher bonus amounts (more free spins or bonus cash)</li>
+								<li>Lower wagering requirements</li>
+								<li>Better terms and conditions</li>
+								<li>Priority customer support</li>
+							</ul>
+							<p>
+								Look for the ⭐ EXCLUSIVE badge on our casino cards to find
+								these enhanced offers.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="faq-item">
+					<div class="faq-question">
+						<h3>What are wagering requirements?</h3>
+						<span class="faq-toggle">▼</span>
+					</div>
+					<div class="faq-answer">
+						<div class="faq-answer-content">
+							<p>
+								Wagering requirements (also called playthrough requirements)
+								specify how many times you must bet your bonus before you can
+								withdraw winnings.
+							</p>
+							<p>
+								<strong>Example:</strong> If you receive a £100 bonus with 30x
+								wagering requirements, you must place £3,000 in bets (£100 × 30)
+								before you can withdraw any winnings from that bonus.
+							</p>
+							<p><strong>Tips:</strong></p>
+							<ul>
+								<li>
+									Lower wagering requirements are better (20x-30x is reasonable)
+								</li>
+								<li>
+									Check which games contribute toward requirements (slots
+									usually count 100%)
+								</li>
+								<li>Read the full terms before accepting any bonus</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="faq-item">
+					<div class="faq-question">
+						<h3>Do I have to claim a welcome bonus?</h3>
+						<span class="faq-toggle">▼</span>
+					</div>
+					<div class="faq-answer">
+						<div class="faq-answer-content">
+							<p>
+								No, claiming a welcome bonus is completely optional. Some
+								players prefer to play without bonuses to avoid wagering
+								requirements and withdrawal restrictions.
+							</p>
+							<p>
+								If you choose not to claim a bonus, you can still enjoy all
+								casino games and withdraw your winnings anytime (subject to the
+								casino's standard terms).
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Payments -->
+			<div class="faq-category">
+				<h2>Payments & Withdrawals</h2>
+
+				<div class="faq-item">
+					<div class="faq-question">
+						<h3>What payment methods are accepted at UK online casinos?</h3>
+						<span class="faq-toggle">▼</span>
+					</div>
+					<div class="faq-answer">
+						<div class="faq-answer-content">
+							<p>
+								Most UK casinos accept a wide range of payment methods,
+								including:
+							</p>
+							<ul>
+								<li>
+									<strong>Debit Cards:</strong> Visa, Mastercard (credit cards
+									banned for UK gambling since 2020)
+								</li>
+								<li>
+									<strong>E-wallets:</strong> PayPal, Skrill, Neteller, Apple
+									Pay, Google Pay
+								</li>
+								<li>
+									<strong>Bank Transfers:</strong> Direct bank transfer, Pay by
+									Mobile
+								</li>
+								<li><strong>Prepaid Cards:</strong> Paysafecard</li>
+							</ul>
+							<p>
+								E-wallets typically offer the fastest withdrawal times (often
+								within 24 hours).
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="faq-item">
+					<div class="faq-question">
+						<h3>How long do casino withdrawals take?</h3>
+						<span class="faq-toggle">▼</span>
+					</div>
+					<div class="faq-answer">
+						<div class="faq-answer-content">
+							<p>Withdrawal times vary by casino and payment method:</p>
+							<ul>
+								<li><strong>E-wallets (PayPal, Skrill):</strong> 0-24 hours</li>
+								<li><strong>Debit Cards:</strong> 1-3 business days</li>
+								<li><strong>Bank Transfers:</strong> 3-5 business days</li>
+							</ul>
+							<p>
+								Look for casinos with "fast withdrawal" or "instant payout"
+								features for quicker access to your winnings.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="faq-item">
+					<div class="faq-question">
+						<h3>Is there a minimum withdrawal amount?</h3>
+						<span class="faq-toggle">▼</span>
+					</div>
+					<div class="faq-answer">
+						<div class="faq-answer-content">
+							<p>
+								Yes, most casinos have minimum withdrawal limits, typically
+								ranging from £10 to £20. This information is available in each
+								casino's terms and conditions or payment policy.
+							</p>
+							<p>
+								Some casinos also have maximum daily or weekly withdrawal
+								limits, especially for larger wins. VIP players often enjoy
+								higher limits.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Safety & Security -->
+			<div class="faq-category">
+				<h2>Safety & Security</h2>
+
+				<div class="faq-item">
+					<div class="faq-question">
+						<h3>How do I verify a casino is legitimate?</h3>
+						<span class="faq-toggle">▼</span>
+					</div>
+					<div class="faq-answer">
+						<div class="faq-answer-content">
+							<p>To verify a UK casino's legitimacy:</p>
+							<ul>
+								<li>
+									Check for a valid UKGC license number (usually displayed in
+									the footer)
+								</li>
+								<li>
+									Verify the license on the
+									<a
+										href="https://www.gamblingcommission.gov.uk"
+										target="_blank"
+										>UK Gambling Commission website</a
+									>
+								</li>
+								<li>
+									Look for SSL encryption (padlock icon in browser address bar)
+								</li>
+								<li>
+									Read reviews from trusted sources like Casino Site Reviews
+								</li>
+								<li>
+									Check for responsible gambling tools (GAMSTOP, deposit limits,
+									self-exclusion)
+								</li>
+							</ul>
+							<p>
+								All casinos listed on our site have been verified and hold valid
+								UKGC licenses.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="faq-item">
+					<div class="faq-question">
+						<h3>What is KYC verification and why is it required?</h3>
+						<span class="faq-toggle">▼</span>
+					</div>
+					<div class="faq-answer">
+						<div class="faq-answer-content">
+							<p>
+								KYC (Know Your Customer) verification is a legal requirement for
+								all UK-licensed casinos. It involves confirming your identity,
+								age, and address by submitting documents such as:
+							</p>
+							<ul>
+								<li>Photo ID (passport, driver's license)</li>
+								<li>Proof of address (utility bill, bank statement)</li>
+								<li>Sometimes: proof of payment method</li>
+							</ul>
+							<p>
+								<strong>Why it's required:</strong> KYC protects against
+								underage gambling, money laundering, and fraud. It also ensures
+								you can withdraw winnings smoothly.
+							</p>
+							<p>
+								Complete verification as soon as possible after registering to
+								avoid delays when withdrawing.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- About Our Site -->
+			<div class="faq-category">
+				<h2>About Our Site</h2>
+
+				<div class="faq-item">
+					<div class="faq-question">
+						<h3>How does Casino Site Reviews make money?</h3>
+						<span class="faq-toggle">▼</span>
+					</div>
+					<div class="faq-answer">
+						<div class="faq-answer-content">
+							<p>
+								We earn commission when you click on a casino link and sign up.
+								This affiliate model allows us to offer free reviews and
+								comparisons without charging you anything.
+							</p>
+							<p>
+								<strong>Important:</strong> Our commission doesn't affect the
+								price you pay or the bonuses you receive. You get the same
+								offers whether you visit through our site or directly.
+							</p>
+							<p>
+								Read our full
+								<a href="affiliate-disclosure.html">Affiliate Disclosure</a> for
+								complete transparency.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="faq-item">
+					<div class="faq-question">
+						<h3>Are your casino reviews unbiased?</h3>
+						<span class="faq-toggle">▼</span>
+					</div>
+					<div class="faq-answer">
+						<div class="faq-answer-content">
+							<p>
+								Yes! While we earn affiliate commissions, our reviews are
+								completely independent. We evaluate every casino using
+								consistent criteria including:
+							</p>
+							<ul>
+								<li>Licensing and regulatory compliance</li>
+								<li>Game variety and software providers</li>
+								<li>Payment processing speeds</li>
+								<li>Customer service quality</li>
+								<li>User reviews and reputation</li>
+							</ul>
+							<p>
+								We never accept payment for reviews or ratings. If a casino
+								doesn't meet our standards, we won't recommend it—regardless of
+								commission rates.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="faq-item">
+					<div class="faq-question">
+						<h3>How often do you update casino reviews?</h3>
+						<span class="faq-toggle">▼</span>
+					</div>
+					<div class="faq-answer">
+						<div class="faq-answer-content">
+							<p>
+								We review and update our casino listings regularly—typically
+								monthly or whenever significant changes occur (new licenses,
+								game additions, bonus changes, policy updates).
+							</p>
+							<p>
+								Each review page displays a "Last updated" date so you know when
+								the information was last verified.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="legal-contact">
+				<h3>Still Have Questions?</h3>
+				<p>
+					Can't find what you're looking for? Check out our full reviews or get
+					in touch.
+				</p>
+				<a href="search.html" class="legal-contact-btn"
+					>Browse All Casino Reviews →</a
+				>
+			</div>
+		</main>
+
+		<!-- Footer -->
+		<footer class="footer">
+			<div class="container">
+				<div class="footer-top">
+					<div class="footer-brand">
+						<div class="footer-logo">
+							<img
+								src="images/casinofavicon.png"
+								alt="CSR Logo"
+								class="site-logo"
+							/>
+							<span class="logo-text">Casino Site Reviews</span>
+						</div>
+						<p class="footer-tagline">
+							Premium casino reviews for discerning players
+						</p>
+					</div>
+
+					<div class="footer-links">
+						<div class="footer-col">
+							<h4>Legal</h4>
+							<a href="about.html">About Us</a>
+							<a href="terms.html">Terms & Conditions</a>
+							<a href="privacy.html">Privacy Policy</a>
+							<a href="affiliate-disclosure.html">Affiliate Disclosure</a>
+						</div>
+						<div class="footer-col">
+							<h4>Resources</h4>
+							<a href="responsible-gambling.html">Responsible Gaming</a>
+							<a href="faq.html">FAQ</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="footer-gambling">
+					<div class="gambling-logos">
+						<div class="gambling-logo">18+</div>
+						<a
+							href="https://www.begambleaware.org/"
+							target="_blank"
+							class="gambling-logo"
+							>BeGambleAware</a
+						>
+						<a
+							href="https://www.gamstop.co.uk/"
+							target="_blank"
+							class="gambling-logo"
+							>GamStop</a
+						>
+						<a
+							href="https://www.gamcare.org.uk/"
+							target="_blank"
+							class="gambling-logo"
+							>GamCare</a
+						>
+					</div>
+				</div>
+
+				<div class="footer-bottom">
+					<p>&copy; 2025 Casino Elite Reviews. All rights reserved.</p>
+					<p class="footer-disclaimer">
+						All casinos are licensed by the UK Gambling Commission.
+					</p>
+				</div>
+			</div>
+		</footer>
+
+		<div class="bookmark-modal" id="bookmarkModal">
+			<div class="bookmark-modal-overlay" id="bookmarkOverlay"></div>
+			<div class="bookmark-modal-content">
+				<button class="bookmark-close" id="bookmarkClose">×</button>
+				<div class="bookmark-icon">⭐</div>
+				<h3>Enjoying Our Reviews?</h3>
+				<p>Bookmark this page to easily find the best casino offers!</p>
+				<div class="bookmark-actions">
+					<button class="btn-bookmark-yes" id="bookmarkYes">
+						Remind Me Later
+					</button>
+					<button class="btn-bookmark-no" id="bookmarkNo">
+						Don't Show Again
+					</button>
+				</div>
+			</div>
+		</div>
+
+		<script src="script.js"></script>
+		<script>
+			// FAQ Accordion functionality
+			document.querySelectorAll('.faq-question').forEach((question) => {
+				question.addEventListener('click', () => {
+					const faqItem = question.parentElement;
+					const isActive = faqItem.classList.contains('active');
+
+					// Close all other FAQ items
+					document.querySelectorAll('.faq-item').forEach((item) => {
+						item.classList.remove('active');
+					});
+
+					// Toggle current item
+					if (!isActive) {
+						faqItem.classList.add('active');
+					}
+				});
+			});
+		</script>
+	</body>
+</html>

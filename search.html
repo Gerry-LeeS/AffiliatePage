@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Search Casino Reviews - Casino Site Reviews</title>
+		<link rel="stylesheet" href="style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="icon" href="/images/casinofavicon.png" type="image/x-icon" />
+	</head>
+	<body>
+		<!-- Navigation -->
+		<nav class="nav" id="nav">
+			<div class="nav-container">
+				<div class="nav-logo">
+					<img
+						src="images/casinofavicon.png"
+						alt="CSR Logo"
+						class="site-logo"
+					/>
+					<span class="logo-text">Casino Site Reviews</span>
+				</div>
+
+				<!-- Desktop Nav Links -->
+				<ul class="nav-links">
+					<li><a href="index.html" class="nav-link">Home</a></li>
+					<li><a href="exclusive.html" class="nav-link">Exclusive</a></li>
+					<li><a href="search.html" class="nav-link active">Search</a></li>
+					<li><a href="calculator.html" class="nav-link">Calculator</a></li>
+				</ul>
+
+				<!-- Desktop Theme Toggle -->
+				<button
+					class="theme-toggle desktop-theme-toggle"
+					id="themeToggle"
+					aria-label="Toggle theme"
+				>
+					<span class="theme-icon">☀</span>
+				</button>
+
+				<!-- Mobile Hamburger -->
+				<button class="hamburger" id="hamburger" aria-label="Toggle menu">
+					<span class="hamburger-line"></span>
+					<span class="hamburger-line"></span>
+					<span class="hamburger-line"></span>
+				</button>
+			</div>
+
+			<!-- Mobile Menu -->
+			<div class="mobile-menu" id="mobileMenu">
+				<ul class="mobile-menu-links">
+					<li><a href="index.html" class="mobile-nav-link">Home</a></li>
+					<li>
+						<a href="exclusive.html" class="mobile-nav-link">Exclusive</a>
+					</li>
+					<li><a href="search.html" class="mobile-nav-link">Search</a></li>
+					<li>
+						<a href="calculator.html" class="mobile-nav-link">Calculator</a>
+					</li>
+					<li class="mobile-theme-item">
+						<button
+							class="mobile-theme-toggle"
+							id="mobileThemeToggle"
+							aria-label="Toggle theme"
+						>
+							<span class="theme-icon">☀</span>
+							<span class="theme-label">Dark Mode</span>
+						</button>
+					</li>
+				</ul>
+			</div>
+		</nav>
+
+		<!-- Search Hero -->
+		<section class="search-hero">
+			<div class="container">
+				<h1 class="search-h1">Find Your Perfect Casino</h1>
+				<p>Search through our comprehensive reviews</p>
+
+				<!-- Search Bar -->
+				<div class="search-container">
+					<input
+						type="text"
+						id="searchInput"
+						class="search-input"
+						placeholder="Search for a casino..."
+						autocomplete="off"
+					/>
+					<div id="searchResults" class="search-results"></div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Top 3 Section -->
+		<section class="top3-section">
+			<div class="container">
+				<h2 class="section-title">Top 3 Rated Casinos</h2>
+				<div class="top3-grid">
+					<!-- NetBet -->
+					<a href="/reviews/netbet.html" class="top3-card">
+						<div class="top3-rank">1</div>
+						<h3>NetBet</h3>
+						<div class="top3-rating">
+							<svg viewBox="0 0 24 24" class="star filled">
+								<path
+									d="M12 .587l3.668 7.431L24 9.748l-6 5.848 1.416 8.268L12 19.771l-7.416 4.093L6 15.596 0 9.748l8.332-1.73L12 .587z"
+								/>
+							</svg>
+							<svg viewBox="0 0 24 24" class="star filled">
+								<path
+									d="M12 .587l3.668 7.431L24 9.748l-6 5.848 1.416 8.268L12 19.771l-7.416 4.093L6 15.596 0 9.748l8.332-1.73L12 .587z"
+								/>
+							</svg>
+							<svg viewBox="0 0 24 24" class="star filled">
+								<path
+									d="M12 .587l3.668 7.431L24 9.748l-6 5.848 1.416 8.268L12 19.771l-7.416 4.093L6 15.596 0 9.748l8.332-1.73L12 .587z"
+								/>
+							</svg>
+							<svg viewBox="0 0 24 24" class="star filled">
+								<path
+									d="M12 .587l3.668 7.431L24 9.748l-6 5.848 1.416 8.268L12 19.771l-7.416 4.093L6 15.596 0 9.748l8.332-1.73L12 .587z"
+								/>
+							</svg>
+							<svg viewBox="0 0 24 24" class="star filled">
+								<path
+									d="M12 .587l3.668 7.431L24 9.748l-6 5.848 1.416 8.268L12 19.771l-7.416 4.093L6 15.596 0 9.748l8.332-1.73L12 .587z"
+								/>
+							</svg>
+						</div>
+					</a>
+
+					<!-- BoyleSports -->
+					<a href="/reviews/boylecasino.html" class="top3-card">
+						<div class="top3-rank">2</div>
+						<h3>BOYLE Casino</h3>
+						<div class="top3-rating">
+							<svg viewBox="0 0 24 24" class="star filled">
+								<path
+									d="M12 .587l3.668 7.431L24 9.748l-6 5.848 1.416 8.268L12 19.771l-7.416 4.093L6 15.596 0 9.748l8.332-1.73L12 .587z"
+								/>
+							</svg>
+							<svg viewBox="0 0 24 24" class="star filled">
+								<path
+									d="M12 .587l3.668 7.431L24 9.748l-6 5.848 1.416 8.268L12 19.771l-7.416 4.093L6 15.596 0 9.748l8.332-1.73L12 .587z"
+								/>
+							</svg>
+							<svg viewBox="0 0 24 24" class="star filled">
+								<path
+									d="M12 .587l3.668 7.431L24 9.748l-6 5.848 1.416 8.268L12 19.771l-7.416 4.093L6 15.596 0 9.748l8.332-1.73L12 .587z"
+								/>
+							</svg>
+							<svg viewBox="0 0 24 24" class="star filled">
+								<path
+									d="M12 .587l3.668 7.431L24 9.748l-6 5.848 1.416 8.268L12 19.771l-7.416 4.093L6 15.596 0 9.748l8.332-1.73L12 .587z"
+								/>
+							</svg>
+							<svg viewBox="0 0 24 24" class="star filled">
+								<path
+									d="M12 .587l3.668 7.431L24 9.748l-6 5.848 1.416 8.268L12 19.771l-7.416 4.093L6 15.596 0 9.748l8.332-1.73L12 .587z"
+								/>
+							</svg>
+						</div>
+					</a>
+
+					<!-- Gala Bingo -->
+					<a href="/reviews/playojo.html" class="top3-card">
+						<div class="top3-rank">3</div>
+						<h3>PlayOJO</h3>
+						<div class="top3-rating">
+							<svg viewBox="0 0 24 24" class="star filled">
+								<path
+									d="M12 .587l3.668 7.431L24 9.748l-6 5.848 1.416 8.268L12 19.771l-7.416 4.093L6 15.596 0 9.748l8.332-1.73L12 .587z"
+								/>
+							</svg>
+							<svg viewBox="0 0 24 24" class="star filled">
+								<path
+									d="M12 .587l3.668 7.431L24 9.748l-6 5.848 1.416 8.268L12 19.771l-7.416 4.093L6 15.596 0 9.748l8.332-1.73L12 .587z"
+								/>
+							</svg>
+							<svg viewBox="0 0 24 24" class="star filled">
+								<path
+									d="M12 .587l3.668 7.431L24 9.748l-6 5.848 1.416 8.268L12 19.771l-7.416 4.093L6 15.596 0 9.748l8.332-1.73L12 .587z"
+								/>
+							</svg>
+							<svg viewBox="0 0 24 24" class="star filled">
+								<path
+									d="M12 .587l3.668 7.431L24 9.748l-6 5.848 1.416 8.268L12 19.771l-7.416 4.093L6 15.596 0 9.748l8.332-1.73L12 .587z"
+								/>
+							</svg>
+							<svg viewBox="0 0 24 24" class="star filled">
+								<path
+									d="M12 .587l3.668 7.431L24 9.748l-6 5.848 1.416 8.268L12 19.771l-7.416 4.093L6 15.596 0 9.748l8.332-1.73L12 .587z"
+								/>
+							</svg>
+							<!-- <svg viewBox="0 0 24 24" class="star half">
+								<defs>
+									<clipPath id="half-4.5">
+										<rect x="0" y="0" width="12" height="24" />
+									</clipPath>
+								</defs>
+								<path
+									d="M12 .587l3.668 7.431L24 9.748l-6 5.848 1.416 8.268L12 19.771l-7.416 4.093L6 15.596 0 9.748l8.332-1.73L12 .587z"
+									clip-path="url(#half-4.5)"
+									fill="var(--gold)"
+								/>
+								<path
+									d="M12 .587l3.668 7.431L24 9.748l-6 5.848 1.416 8.268L12 19.771l-7.416 4.093L6 15.596 0 9.748l8.332-1.73L12 .587z"
+									fill="rgba(212, 175, 55, 0.3)"
+								/>
+							</svg> -->
+						</div>
+						<span class="top3-badge">⭐ EXCLUSIVE</span>
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- All Reviews Section -->
+		<section class="all-reviews-section">
+			<div class="container">
+				<h2 class="section-title">
+					All Casino Reviews (<span id="totalCount">0</span>)
+				</h2>
+				<div class="reviews-grid" id="reviewsGrid">
+					<!-- Cards will be generated by JavaScript -->
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer class="footer">
+			<div class="container">
+				<div class="search-footer-content">
+					<div class="search-footer-brand">
+						<h3>Casino Site Reviews</h3>
+						<p>
+							Your trusted source for honest casino reviews and exclusive
+							offers.
+						</p>
+					</div>
+
+					<div class="search-footer-links">
+						<div class="search-footer-col">
+							<h4>Quick Links</h4>
+							<a href="index.html">Home</a>
+							<a href="exclusive.html">Exclusive Offers</a>
+							<a href="search.html">Search Reviews</a>
+						</div>
+
+						<div class="search-footer-col">
+							<h4>Legal</h4>
+							<a href="terms.html">Terms & Conditions</a>
+							<a href="privacy.html">Privacy Policy</a>
+							<a href="responsible-gambling.html">Responsible Gambling</a>
+						</div>
+					</div>
+
+					<div class="search-footer-gambling">
+						<div class="gambling-logo gambling-logo-width">18+</div>
+						<a
+							href="https://www.begambleaware.org/"
+							target="_blank"
+							class="gambling-logo gambling-logo-width"
+							>BeGambleAware</a
+						>
+						<a
+							href="https://www.gamstop.co.uk/"
+							target="_blank"
+							class="gambling-logo gambling-logo-width"
+							>GamStop</a
+						>
+						<a
+							href="https://www.gamcare.org.uk/"
+							target="_blank"
+							class="gambling-logo gambling-logo-width"
+							>GamCare</a
+						>
+					</div>
+				</div>
+
+				<div class="footer-bottom">
+					<p>&copy; 2025 Casino Site Reviews. All rights reserved.</p>
+					<p class="footer-disclaimer">
+						All casinos are licensed by the UK Gambling Commission.
+					</p>
+				</div>
+			</div>
+		</footer>
+
+		<div class="bookmark-modal" id="bookmarkModal">
+			<div class="bookmark-modal-overlay" id="bookmarkOverlay"></div>
+			<div class="bookmark-modal-content">
+				<button class="bookmark-close" id="bookmarkClose">×</button>
+				<div class="bookmark-icon">⭐</div>
+				<h3>Enjoying Our Reviews?</h3>
+				<p>Bookmark this page to easily find the best casino offers!</p>
+				<div class="bookmark-actions">
+					<button class="btn-bookmark-yes" id="bookmarkYes">
+						Remind Me Later
+					</button>
+					<button class="btn-bookmark-no" id="bookmarkNo">
+						Don't Show Again
+					</button>
+				</div>
+			</div>
+		</div>
+
+		<script src="script.js"></script>
+		<script src="casinoData.js"></script>
+		<script src="searchPage.js"></script>
+	</body>
+</html>

@@ -1,0 +1,369 @@
+/* ==========================================
+   LEGAL PAGES STYLES
+   ========================================== */
+
+/* Hero Section for Legal Pages */
+.legal-hero {
+	padding: 8rem 0 4rem;
+	background: linear-gradient(
+		135deg,
+		var(--bg-primary) 0%,
+		var(--bg-secondary) 100%
+	);
+	text-align: center;
+	border-bottom: 1px solid var(--border);
+}
+
+.legal-hero h1 {
+	font-family: var(--font-display);
+	font-size: 3.5rem;
+	margin-bottom: 1rem;
+	background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+}
+
+.legal-hero .last-updated {
+	font-size: 0.95rem;
+	color: var(--text-muted);
+	font-style: italic;
+}
+
+/* Content Section */
+.legal-content {
+	max-width: 900px;
+	margin: 0 auto;
+	padding: 4rem 2rem;
+}
+
+.legal-intro {
+	font-size: 1.15rem;
+	line-height: 1.8;
+	color: var(--text-secondary);
+	margin-bottom: 3rem;
+	padding: 2rem;
+	background: rgba(212, 175, 55, 0.05);
+	border-left: 4px solid var(--gold);
+	border-radius: 8px;
+}
+
+.legal-section {
+	margin-bottom: 3rem;
+}
+
+.legal-section h2 {
+	font-family: var(--font-display);
+	font-size: 2rem;
+	color: var(--gold);
+	margin-bottom: 1rem;
+	padding-bottom: 0.5rem;
+	border-bottom: 2px solid var(--border);
+}
+
+.legal-section h3 {
+	font-size: 1.3rem;
+	color: var(--text-primary);
+	margin: 1.5rem 0 0.75rem;
+	font-weight: 600;
+}
+
+.legal-section p {
+	font-size: 1.05rem;
+	line-height: 1.8;
+	color: var(--text-secondary);
+	margin-bottom: 1.25rem;
+}
+
+.legal-section ul,
+.legal-section ol {
+	margin: 1.5rem 0;
+	padding-left: 2rem;
+}
+
+.legal-section li {
+	font-size: 1.05rem;
+	line-height: 1.8;
+	color: var(--text-secondary);
+	margin-bottom: 0.75rem;
+}
+
+.legal-section a {
+	color: var(--gold);
+	text-decoration: none;
+	font-weight: 600;
+	transition: color 0.3s ease;
+}
+
+/* Add after the existing .legal-section a rules */
+.legal-section a,
+.legal-highlight a,
+.legal-warning a {
+	color: var(--gold);
+	text-decoration: none;
+	font-weight: 600;
+	transition: color 0.3s ease;
+}
+
+.legal-section a:hover,
+.legal-highlight a:hover,
+.legal-warning a:hover {
+	color: var(--gold-light);
+	text-decoration: underline;
+}
+
+.legal-section a:hover {
+	color: var(--gold-light);
+	text-decoration: underline;
+}
+
+/* Highlight Boxes */
+.legal-highlight {
+	background: var(--bg-card);
+	border: 2px solid var(--gold);
+	border-radius: 16px;
+	padding: 2rem;
+	margin: 2rem 0;
+}
+
+.legal-highlight h3 {
+	color: var(--gold);
+	margin-top: 0;
+}
+
+.legal-warning {
+	background: rgba(244, 67, 54, 0.1);
+	border-left: 4px solid #f44336;
+	padding: 1.5rem;
+	margin: 2rem 0;
+	border-radius: 8px;
+}
+
+.legal-warning p {
+	margin-bottom: 0;
+	color: var(--text-primary);
+}
+
+/* Contact Box */
+.legal-contact {
+	background: linear-gradient(
+		135deg,
+		var(--bg-card) 0%,
+		var(--bg-secondary) 100%
+	);
+	border: 2px solid var(--gold);
+	border-radius: 20px;
+	padding: 3rem;
+	text-align: center;
+	margin: 4rem 0;
+}
+
+.legal-contact h3 {
+	font-family: var(--font-display);
+	font-size: 2rem;
+	color: var(--gold);
+	margin-bottom: 1rem;
+}
+
+.legal-contact p {
+	font-size: 1.1rem;
+	margin-bottom: 1.5rem;
+}
+
+.legal-contact-btn {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.75rem;
+	padding: 1rem 2.5rem;
+	background: var(--exclusive);
+	color: var(--bg-primary);
+	text-decoration: none;
+	border-radius: 50px;
+	font-weight: 700;
+	font-size: 1.05rem;
+	transition: all 0.3s ease;
+}
+
+.legal-contact-btn:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+}
+
+/* Breadcrumbs */
+.breadcrumbs {
+	max-width: 1400px;
+	margin: 0 auto;
+	padding: 1.5rem 2rem 0;
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	font-size: 0.9rem;
+}
+
+.breadcrumbs a {
+	color: var(--text-secondary);
+	text-decoration: none;
+	transition: color 0.3s ease;
+}
+
+.breadcrumbs a:hover {
+	color: var(--gold);
+}
+
+.breadcrumbs span {
+	color: var(--text-muted);
+}
+
+.breadcrumbs .current {
+	color: var(--text-primary);
+	font-weight: 600;
+}
+
+/* ==========================================
+   LEGAL PAGES - MOBILE RESPONSIVE
+   ========================================== */
+
+@media (max-width: 1024px) {
+	.legal-hero {
+		padding: 6rem 0 3rem;
+	}
+
+	.legal-hero h1 {
+		font-size: 3rem;
+	}
+
+	.legal-content {
+		padding: 3rem 1.5rem;
+	}
+}
+
+@media (max-width: 768px) {
+	.legal-hero {
+		padding: 5rem 0 2.5rem;
+	}
+
+	.legal-hero h1 {
+		font-size: 2.5rem;
+	}
+
+	.legal-hero .last-updated {
+		font-size: 0.85rem;
+	}
+
+	.legal-content {
+		padding: 3rem 1.5rem;
+	}
+
+	.legal-intro {
+		font-size: 1.05rem;
+		padding: 1.5rem;
+		margin-bottom: 2.5rem;
+	}
+
+	.legal-section {
+		margin-bottom: 2.5rem;
+	}
+
+	.legal-section h2 {
+		font-size: 1.75rem;
+	}
+
+	.legal-section h3 {
+		font-size: 1.2rem;
+	}
+
+	.legal-section p,
+	.legal-section li {
+		font-size: 1rem;
+	}
+
+	.legal-section ul,
+	.legal-section ol {
+		padding-left: 1.5rem;
+	}
+
+	.legal-highlight,
+	.legal-warning {
+		padding: 1.5rem;
+		margin: 1.5rem 0;
+	}
+
+	.legal-contact {
+		padding: 2rem 1.5rem;
+		margin: 3rem 0;
+	}
+
+	.legal-contact h3 {
+		font-size: 1.75rem;
+	}
+
+	.legal-contact p {
+		font-size: 1rem;
+	}
+
+	.legal-contact-btn {
+		padding: 0.9rem 2rem;
+		font-size: 1rem;
+	}
+
+	.breadcrumbs {
+		padding: 1.5rem 1.5rem 0;
+		font-size: 0.85rem;
+		flex-wrap: wrap;
+	}
+}
+
+@media (max-width: 480px) {
+	.legal-hero {
+		padding: 4rem 0 2rem;
+	}
+
+	.legal-hero h1 {
+		font-size: 2rem;
+	}
+
+	.legal-content {
+		padding: 2.5rem 1rem;
+	}
+
+	.legal-intro {
+		font-size: 1rem;
+		padding: 1.25rem;
+	}
+
+	.legal-section h2 {
+		font-size: 1.5rem;
+	}
+
+	.legal-section h3 {
+		font-size: 1.1rem;
+	}
+
+	.legal-section p,
+	.legal-section li {
+		font-size: 0.95rem;
+	}
+
+	.legal-highlight,
+	.legal-warning {
+		padding: 1.25rem;
+	}
+
+	.legal-contact {
+		padding: 1.75rem 1.25rem;
+	}
+
+	.legal-contact h3 {
+		font-size: 1.5rem;
+	}
+
+	.legal-contact-btn {
+		padding: 0.85rem 1.75rem;
+		font-size: 0.95rem;
+	}
+
+	.breadcrumbs {
+		padding: 1rem 1rem 0;
+		font-size: 0.8rem;
+	}
+}

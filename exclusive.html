@@ -3,18 +3,25 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Casino Site Reviews - Premium UK Casino Reviews</title>
+		<title>Exclusive Offers - Casino Site Reviews</title>
 		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="exclusive.css" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap"
 			rel="stylesheet"
 		/>
 		<link
-			href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Sixtyfour&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Sixtyfour&display=swap"
 			rel="stylesheet"
 		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+			rel="stylesheet"
+		/>
+
+		<link rel="icon" href="/images/casinofavicon.png" type="image/x-icon" />
 	</head>
 	<body>
 		<!-- Navigation -->
@@ -31,8 +38,10 @@
 
 				<!-- Desktop Nav Links -->
 				<ul class="nav-links">
-					<li><a href="index.html" class="nav-link active">Home</a></li>
-					<li><a href="exclusive.html" class="nav-link">Exclusive</a></li>
+					<li><a href="index.html" class="nav-link">Home</a></li>
+					<li>
+						<a href="exclusive.html" class="nav-link active">Exclusive</a>
+					</li>
 					<li><a href="search.html" class="nav-link">Search</a></li>
 					<li><a href="calculator.html" class="nav-link">Calculator</a></li>
 				</ul>
@@ -79,85 +88,99 @@
 			</div>
 		</nav>
 
-		<!-- Hero Section -->
-		<section class="hero" id="home">
-			<div class="hero-background"></div>
-			<div class="hero-content">
-				<h1 class="hero-title">
-					<span class="title-line">Discover</span>
-					<span class="title-line">Premium UK</span>
-					<span class="title-line gold">Casinos</span>
-				</h1>
-				<p class="hero-subtitle">UKGC Licensed. Trusted. Reviewed.</p>
-
-				<!-- Stats Bar -->
-				<div class="stats-bar">
-					<div class="stat-item">
-						<span class="stat-number" data-target="0">0</span>
-						<span class="stat-label">Casinos</span>
-					</div>
-					<div class="stat-divider"></div>
-					<div class="stat-item">
-						<span class="stat-number">£1000s</span>
-						<span class="stat-label">In Bonuses</span>
-					</div>
-					<div class="stat-divider"></div>
-					<div class="stat-item">
-						<span class="stat-number">100%</span>
-						<span class="stat-label">UKGC Licensed</span>
-					</div>
-				</div>
-
-				<a href="#casinos" class="hero-cta">Explore Casinos</a>
-			</div>
-			<div class="hero-overlay"></div>
-		</section>
-
-		<!-- Filter Bar -->
-		<section class="filter-section" id="casinos">
+		<!-- Exclusive Hero -->
+		<section class="exclusive-hero" id="exclusive-top">
+			<div class="exclusive-hero-bg"></div>
 			<div class="container">
-				<div class="filter-bar">
-					<button class="filter-btn active" data-filter="all">
-						<span>Top Casinos</span>
-						<span class="filter-count">5</span>
-					</button>
-					<button class="filter-btn" data-filter="exclusive">
-						<span>⭐ Exclusive</span>
-						<span class="filter-count">1</span>
-					</button>
+				<div class="exclusive-hero-content">
+					<span class="exclusive-label">⭐ Exclusive Deals</span>
+					<p class="exclusive-subtitle">
+						Hand-picked deals you won't find anywhere else. Reserved for our
+						valued community.
+					</p>
+
+					<div class="exclusive-stats">
+						<div class="exclusive-stat">
+							<span class="stat-icon">🎁</span>
+							<span class="stat-text">Exclusive Partners</span>
+						</div>
+						<div class="stat-divider"></div>
+						<div class="exclusive-stat">
+							<span class="stat-icon">💎</span>
+							<span class="stat-text">Premium Bonuses</span>
+						</div>
+						<div class="stat-divider"></div>
+						<div class="exclusive-stat">
+							<span class="stat-icon">⚡</span>
+							<span class="stat-text">Limited Time</span>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>
 
-		<!-- Compare Banner (Hidden by default) -->
-		<div class="compare-banner" id="compareBanner">
+		<!-- Exclusive Cards -->
+		<section class="exclusive-section">
 			<div class="container">
-				<div class="compare-content">
-					<div class="compare-left">
-						<h3>Compare Casinos</h3>
-						<div class="compare-chips" id="compareChips"></div>
-					</div>
-					<div class="compare-right">
-						<button
-							class="compare-close-btn"
-							onclick="closeCompareBanner()"
-							aria-label="Close compare banner"
-						>
-							×
-						</button>
-						<button class="btn-compare" id="compareBtn" disabled>
-							Compare Now
-						</button>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!-- Casino Cards -->
-		<section class="casinos-section">
-			<div class="container">
-				<div class="cards-grid" id="cardsGrid">
+				<div class="exclusive-cards-grid" id="exclusiveCardsGrid">
 					<!-- Cards will be dynamically generated -->
+				</div>
+			</div>
+		</section>
+
+		<!-- Why Exclusive Section -->
+		<section class="why-exclusive">
+			<div class="container">
+				<h2 class="section-heading">Why Our Exclusive Offers?</h2>
+				<div class="benefits-grid">
+					<div class="benefit-card">
+						<div class="benefit-icon">🔒</div>
+						<h3>Not Available Elsewhere</h3>
+						<p>
+							These offers are negotiated exclusively for CSR members and cannot
+							be found on the casino's main site.
+						</p>
+					</div>
+					<div class="benefit-card">
+						<div class="benefit-icon">💰</div>
+						<h3>Enhanced Value</h3>
+						<p>
+							Better bonuses, lower wagering requirements, and more free spins
+							than standard welcome offers.
+						</p>
+					</div>
+					<div class="benefit-card">
+						<div class="benefit-icon">✓</div>
+						<h3>Verified & Trusted</h3>
+						<p>
+							Every partner is fully licensed by the UK Gambling Commission and
+							personally vetted by our team.
+						</p>
+					</div>
+					<div class="benefit-card">
+						<div class="benefit-icon">⚡</div>
+						<h3>Tailored for you</h3>
+						<p>
+							Curated offers for our players needs. Get maximum value on things
+							you actually want.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- CTA Section -->
+		<section class="exclusive-cta">
+			<div class="container">
+				<div class="cta-content">
+					<h2 class="gradient-gold">Ready to Claim Your Exclusive Offer?</h2>
+					<p>
+						Join thousands of smart players who trust CSR for the best deals
+					</p>
+					<a href="#exclusive-top" class="cta-btn-large">
+						View All Exclusive Offers
+						<span class="cta-arrow">↑</span>
+					</a>
 				</div>
 			</div>
 		</section>
@@ -168,6 +191,7 @@
 				<div class="footer-top">
 					<div class="footer-brand">
 						<div class="footer-logo">
+							<!-- <span class="logo-icon">♠</span> -->
 							<img
 								src="images/casinofavicon.png"
 								alt="CSR Logo"
@@ -232,34 +256,6 @@
 			</div>
 		</footer>
 
-		<!-- Compare Modal -->
-		<div class="compare-modal" id="compareModal">
-			<div class="compare-modal-overlay" onclick="closeCompareModal()"></div>
-			<div class="compare-modal-content">
-				<button class="compare-modal-close" onclick="closeCompareModal()">
-					×
-				</button>
-				<h2 class="compare-modal-title">Casino Comparison</h2>
-
-				<div class="compare-table-container">
-					<table class="compare-table" id="compareTable">
-						<!-- Table will be populated by JavaScript -->
-					</table>
-				</div>
-			</div>
-		</div>
-
-		<!-- Quick View Modal -->
-		<div class="quick-view-modal" id="quickViewModal">
-			<div class="quick-view-overlay" onclick="closeQuickView()"></div>
-			<div class="quick-view-content">
-				<button class="quick-view-close" onclick="closeQuickView()">×</button>
-				<div id="quickViewBody">
-					<!-- Content populated by JavaScript -->
-				</div>
-			</div>
-		</div>
-
 		<div class="bookmark-modal" id="bookmarkModal">
 			<div class="bookmark-modal-overlay" id="bookmarkOverlay"></div>
 			<div class="bookmark-modal-content">
@@ -278,7 +274,7 @@
 			</div>
 		</div>
 
-		<script src="casinoData.js"></script>
 		<script src="script.js"></script>
+		<script src="exclusivePage.js"></script>
 	</body>
 </html>

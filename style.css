@@ -1406,6 +1406,20 @@ body {
 	font-size: 0.85rem;
 }
 
+.top3-card .card-arrow {
+	position: absolute;
+	bottom: 2rem;
+	right: 1rem;
+	font-size: 1.5rem;
+	color: var(--gold);
+	transform: translateX(-20px);
+	transition: all 0.3s ease;
+}
+
+.top3-card:hover .card-arrow {
+	transform: translateX(-10px);
+}
+
 .all-reviews-section {
 	padding: 4rem 0 8rem;
 }

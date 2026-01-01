@@ -13,6 +13,9 @@
 // 		Supercharges: '⚡',
 // 		Poker: '♠️',
 
+// Auto-update copyright year
+document.getElementById('currentYear').textContent = new Date().getFullYear();
+
 // Casino data
 const casinos = [
 	{
@@ -80,6 +83,7 @@ const casinos = [
 		reviewLink: '/reviews/playojo.html',
 		exclusive: true,
 	},
+
 	{
 		id: 'kwiff',
 		name: 'Kwiff',
@@ -94,6 +98,38 @@ const casinos = [
 			'Wager £20 cash on slots within 5 days of first deposit and Get 200 Free Spins on Book of Dead. £0.10 per spin. £250 total max withdrawal. E-wallets and virtual cards excluded. 18+. New customers only. Full T&Cs apply. Gamble Responsibly.',
 		link: 'https://promos.kwiff.com/casino/?btag=a_4001b_79c_&affid=1012&source=IncomeAccess&creative=79&campaign_id=&affiliate_id=1012&incomeaccess_click_id=a_4001b_79c_&campaign=a_4001b_79c_&siteid=4001',
 		reviewLink: '/reviews/kwiff.html',
+		exclusive: false,
+	},
+	{
+		id: 'livescorebet',
+		name: 'LiveScoreBet',
+		logo: 'lsbet.png',
+		logoBg: 'rgb(251, 84, 21)',
+		rating: 4.5,
+		bonus: 'Bet £10 get £30 in Free Bets.',
+		description:
+			'Your favourite sports results website has it’s own online Sports betting and Casino to welcome you to. With plenty of promotions and a sleek website design LiveScore Bet is a great place to play at.',
+		features: ['Slots', 'Live Tables', 'Sports', 'Roulette', 'Blackjack'],
+		terms:
+			'*New members only. £10+ bet on sports (ex. Virtuals) 1.5 min odds, settled within 14 days. Free Bets: accept in 7 days, valid 7 days; £20 use on sportsbook, £10 on Bet Builder. Stake not returned. T&Cs + deposit exclusions apply. Bet Responsibly. GambleAware.org. 18+.',
+		link: 'https://wl-nl.livescorebet.com/C.ashx?btag=a_2233b_46c_&affid=717&siteid=2233&adid=46&c=',
+		reviewLink: '/reviews/livescorebet.html',
+		exclusive: false,
+	},
+	{
+		id: 'bettom',
+		name: 'BetTom',
+		logo: 'bettom.png',
+		logoBg: 'rgb(15, 38, 172)',
+		rating: 4.5,
+		bonus: 'UP TO £50 BONUS FUNDS + 10 FREE SPINS ON BIG BASS SPLASH!',
+		description:
+			'A relatively new UK brand that has a big focus on their players. Boasting their live chat has real people to speak to and same day withdrawals they already prove themselves as a brand to trust.',
+		features: ['Slots', 'Live Tables', 'Sports', 'Roulette', 'Blackjack'],
+		terms:
+			'Get 50% back on first day casino losses as a free bonus funds up to £50. To be credited within 24 hours. Max free bet per customer £/€50. Qualifying customers will additionally receive 10x 10p free spins on Big Bass Splash. 5x wagering requirement applies to free spins. Customers who qualify for the welcome offer free bet will also receive 10x free spins on Big Bass Splash. Each free spin is worth £0.10. Full T&Cs apply.',
+		link: 'https://tracker.bettomaffiliates.com/link?btag=102129792_477209',
+		reviewLink: '/reviews/bettom.html',
 		exclusive: false,
 	},
 	{

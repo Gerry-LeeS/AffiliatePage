@@ -4,6 +4,8 @@ const casinoPages = [
 	{ title: 'BOYLE Casino', url: '/reviews/boylecasino.html', rating: 5 },
 	{ title: 'PlayOJO', url: '/reviews/playojo.html', rating: 5 },
 	{ title: 'Kwiff', url: '/reviews/kwiff.html', rating: 4.5 },
+	{ title: 'LiveScoreBet', url: '/reviews/livescorebet.html', rating: 4.5 },
+	{ title: 'BetTom', url: '/reviews/bettom.html', rating: 4.5 },
 	{ title: 'BresBet', url: '/reviews/bresbet.html', rating: 4.5 },
 	// { title: 'Ladbrokes', url: '/reviews/ladbrokes.html', rating: 5 },
 	// { title: 'Gala Bingo', url: '/reviews/galabingo.html', rating: 4.5 },

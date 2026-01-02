@@ -128,7 +128,7 @@ const casinos = [
 		features: ['Slots', 'Live Tables', 'Sports', 'Roulette', 'Blackjack'],
 		terms:
 			'Get 50% back on first day casino losses as a free bonus funds up to £50. To be credited within 24 hours. Max free bet per customer £/€50. Qualifying customers will additionally receive 10x 10p free spins on Big Bass Splash. 5x wagering requirement applies to free spins. Customers who qualify for the welcome offer free bet will also receive 10x free spins on Big Bass Splash. Each free spin is worth £0.10. Full T&Cs apply.',
-		link: '/go/bettom',
+		link: 'https://tracker.bettomaffiliates.com/link?btag=102129792_477209',
 		reviewLink: '/reviews/bettom.html',
 		exclusive: false,
 	},

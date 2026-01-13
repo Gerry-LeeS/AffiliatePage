@@ -24,6 +24,7 @@ const casinos = [
 		logo: 'netbet.png',
 		logoBg: '#101010',
 		rating: 5,
+		bonusType: 'Casino Bonus',
 		bonus:
 			'Wager £20 on any slots and get 100 Free Spins. Winnings paid in cash!',
 		description:
@@ -48,6 +49,7 @@ const casinos = [
 		logo: 'boyle_square.png',
 		logoBg: '#001d5e',
 		rating: 5,
+		bonusType: 'Casino Bonus',
 		bonus: 'Get up to 100 Free spins. The more you wager the more you get!',
 		description:
 			'From high street to online, BOYLE Casino is one of the household names you can trust, with everything under one roof you’ll find your next favourite game.',
@@ -72,6 +74,7 @@ const casinos = [
 		logo: 'playojo.png',
 		logoBg: '#fff',
 		rating: 5,
+		bonusType: 'Casino Bonus',
 		bonus:
 			'80 Wager Free Spins + Money back on Every Bet! No Wagering requirements on anything, EVER!',
 		description:
@@ -90,6 +93,7 @@ const casinos = [
 		logo: 'kwiff.png',
 		logoBg: '#7a2af4',
 		rating: 4.5,
+		bonusType: 'Casino Bonus',
 		bonus: 'Wager £20 on any slot and get 200 Free Spins.',
 		description:
 			'Ontop of their great casino selection with new games and kwiff casino exclusives, kwiff have their unique supercharged bets where any sports bet you place can have increased odds.',
@@ -106,6 +110,7 @@ const casinos = [
 		logo: 'lsbet.png',
 		logoBg: 'rgb(251, 84, 21)',
 		rating: 4.5,
+		bonusType: 'Sports Bonus',
 		bonus: 'Bet £10 get £30 in Free Bets.',
 		description:
 			'Your favourite sports results website has it’s own online Sports betting and Casino to welcome you to. With plenty of promotions and a sleek website design LiveScore Bet is a great place to play at.',
@@ -122,6 +127,7 @@ const casinos = [
 		logo: 'bettom.png',
 		logoBg: 'rgb(15, 38, 172)',
 		rating: 4.5,
+		bonusType: 'Casino Bonus',
 		bonus: 'UP TO £50 BONUS FUNDS + 10 FREE SPINS ON BIG BASS SPLASH!',
 		description:
 			'A relatively new UK brand that has a big focus on their players. Boasting their live chat has real people to speak to and same day withdrawals they already prove themselves as a brand to trust.',
@@ -138,6 +144,7 @@ const casinos = [
 		logo: 'bresbet.png',
 		logoBg: 'rgb(0, 28, 70)',
 		rating: 4.5,
+		bonusType: 'Casino Bonus',
 		bonus: 'Get 100 Free Spins on Big Bass Bonanza 100, winnings paid in cash!',
 		description:
 			'BresBet have a good focus on loyalty and it is rewarded when you play here. With weekly casino and sports clubs you can get Free Spins and Bets often.',
@@ -296,7 +303,7 @@ function renderCards() {
             
             <div class="card-body">
                 <div class="bonus-highlight">
-                    <div class="bonus-type">Casino Bonus</div>
+                    <div class="bonus-type">${casino.bonusType}</div>
                     <h4 class="bonus-title">${casino.bonus}</h4>
                     <p class="bonus-terms">${casino.terms}</p>
                 </div>

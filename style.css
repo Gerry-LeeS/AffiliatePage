@@ -5646,3 +5646,1077 @@ body:not(.light-theme) .theme-icon {
 .light-theme .benefit-card h3 {
 	color: var(--gold) !important;
 }
+/* Hero - Reduced height */
+.hero {
+	position: relative;
+	height: 55vh; /* Changed from 100vh */
+	min-height: 500px; /* Prevent too small */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	padding-top: 100px;
+}
+
+/* Gradient fade at bottom - blends into background */
+.hero::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 120px;
+	background: linear-gradient(
+		to bottom,
+		transparent 0%,
+		var(--bg-primary) 100%
+	);
+	pointer-events: none;
+	z-index: 3;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+	.hero {
+		height: 65vh;
+		min-height: 450px;
+	}
+
+	.hero::after {
+		height: 100px;
+	}
+}
+
+@media (max-width: 480px) {
+	.hero {
+		height: 70vh;
+		min-height: 400px;
+	}
+
+	.hero::after {
+		height: 80px;
+	}
+}
+
+/* Hero - Reduced height with better spacing */
+.hero {
+	position: relative;
+	height: 60vh; /* Slightly taller than 55vh */
+	min-height: 550px; /* Increased min-height */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	padding-top: 100px;
+	padding-bottom: 3rem; /* Add bottom padding */
+}
+
+/* Hero content - tighter spacing */
+.hero-content {
+	text-align: center;
+	z-index: 1;
+	animation: fadeInUp 1s var(--transition-smooth);
+	max-width: 100%;
+}
+
+/* Title - smaller on index to fit better */
+.hero-title {
+	font-family: var(--font-display);
+	font-size: clamp(2.5rem, 6vw, 5.5rem); /* Reduced from 7rem */
+	font-weight: 900;
+	line-height: 1.1;
+	margin-bottom: 1rem; /* Reduced from 1.5rem */
+	display: flex;
+	flex-direction: column;
+	gap: 0.25rem; /* Reduced gap */
+}
+
+/* Stats bar - smaller */
+.stats-bar {
+	display: flex;
+	gap: 2.5rem; /* Reduced from 3rem */
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 2rem; /* Reduced from 3rem */
+	padding: 1.5rem 2.5rem; /* Reduced padding */
+	background: rgba(255, 255, 255, 0.03);
+	backdrop-filter: blur(10px);
+	border: 1px solid var(--border);
+	border-radius: 20px;
+	max-width: 650px; /* Reduced from 700px */
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Subtitle - smaller */
+.hero-subtitle {
+	font-size: 1rem; /* Reduced from 1.2rem */
+	letter-spacing: 3px; /* Reduced from 4px */
+	text-transform: uppercase;
+	color: var(--text-secondary);
+	margin-bottom: 2rem; /* Reduced from 3rem */
+	font-weight: 300;
+}
+
+/* Gradient fade - starts lower */
+.hero::after {
+	content: '';
+	position: absolute;
+	bottom: -1px; /* Ensure no gap */
+	left: 0;
+	right: 0;
+	height: 80px; /* Smaller fade */
+	background: linear-gradient(
+		to bottom,
+		transparent 0%,
+		var(--bg-primary) 100%
+	);
+	pointer-events: none;
+	z-index: 3;
+}
+
+/* Filter section - ensure it's not covered */
+.filter-section {
+	padding: 2rem 0;
+	background: var(--bg-secondary);
+	border-bottom: 1px solid var(--border);
+	position: sticky;
+	top: 89px;
+	z-index: 100;
+	backdrop-filter: blur(10px);
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+	.hero {
+		height: 70vh;
+		min-height: 500px;
+	}
+
+	.hero-title {
+		font-size: clamp(2rem, 5vw, 3.5rem);
+	}
+
+	.stats-bar {
+		flex-direction: column;
+		gap: 1rem;
+		padding: 1.25rem 2rem;
+	}
+
+	.hero::after {
+		height: 60px;
+	}
+}
+
+@media (max-width: 480px) {
+	.hero {
+		height: 75vh;
+		min-height: 450px;
+	}
+
+	.hero::after {
+		height: 50px;
+	}
+}
+
+/* Hero - Better proportions */
+.hero {
+	position: relative;
+	height: 75vh; /* Taller to fit everything properly */
+	min-height: 600px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	padding-top: 100px;
+	padding-bottom: 2rem;
+}
+
+/* Hero content - better spacing */
+.hero-content {
+	text-align: center;
+	z-index: 1;
+	animation: fadeInUp 1s var(--transition-smooth);
+}
+
+/* Title - cleaner sizing */
+.hero-title {
+	font-family: var(--font-display);
+	font-size: clamp(3rem, 7vw, 6rem); /* Better balance */
+	font-weight: 900;
+	line-height: 1.1;
+	margin-bottom: 1.25rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+/* Subtitle - more visible */
+.hero-subtitle {
+	font-size: 1.1rem;
+	letter-spacing: 3.5px;
+	text-transform: uppercase;
+	color: var(--text-secondary);
+	margin-bottom: 2.5rem;
+	font-weight: 300;
+}
+
+/* Stats bar - well-proportioned */
+.stats-bar {
+	display: flex;
+	gap: 3rem;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 2.5rem;
+	padding: 1.75rem 2.75rem;
+	background: rgba(255, 255, 255, 0.03);
+	backdrop-filter: blur(10px);
+	border: 1px solid var(--border);
+	border-radius: 20px;
+	max-width: 680px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* CTA button - make sure it's visible */
+.hero-cta {
+	display: inline-block;
+	padding: 1.2rem 3rem;
+	background: var(--exclusive);
+	color: var(--bg-primary);
+	text-decoration: none;
+	font-weight: 700;
+	font-size: 1rem;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	border-radius: 50px;
+	position: relative;
+	overflow: hidden;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	margin-bottom: 1rem; /* Add space below button */
+}
+
+/* Gradient fade - positioned to not cut off content */
+.hero::after {
+	content: '';
+	position: absolute;
+	bottom: -1px;
+	left: 0;
+	right: 0;
+	height: 100px;
+	background: linear-gradient(
+		to bottom,
+		transparent 0%,
+		rgba(10, 10, 10, 0.5) 50%,
+		var(--bg-primary) 100%
+	);
+	pointer-events: none;
+	z-index: 3;
+}
+
+/* Casinos section - add top padding for smooth transition */
+.casinos-section {
+	padding-top: 4rem; /* Creates nice space between hero and first card */
+	padding-bottom: 8rem;
+	position: relative;
+}
+
+/* First card - subtle entrance with slight lift */
+.casino-card:first-child {
+	animation: fadeInUp 0.8s ease-out backwards;
+	animation-delay: 0.3s;
+}
+
+/* Add a decorative separator line */
+.casinos-section::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 120px;
+	height: 3px;
+	background: linear-gradient(
+		90deg,
+		transparent 0%,
+		var(--gold) 50%,
+		transparent 100%
+	);
+	opacity: 0.5;
+}
+
+/* Light theme gradient */
+.light-theme .hero::after {
+	background: linear-gradient(
+		to bottom,
+		transparent 0%,
+		rgba(248, 250, 252, 0.5) 50%,
+		var(--bg-primary) 100%
+	);
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+	.hero {
+		height: 80vh;
+		min-height: 550px;
+	}
+
+	.hero-title {
+		font-size: clamp(2.25rem, 6vw, 4rem);
+		margin-bottom: 1rem;
+	}
+
+	.hero-subtitle {
+		font-size: 1rem;
+		letter-spacing: 2.5px;
+		margin-bottom: 2rem;
+	}
+
+	.stats-bar {
+		flex-direction: column;
+		gap: 1.25rem;
+		padding: 1.5rem 2rem;
+		margin-bottom: 2rem;
+	}
+
+	.hero-cta {
+		padding: 1rem 2.5rem;
+		font-size: 0.95rem;
+	}
+
+	.hero::after {
+		height: 80px;
+	}
+
+	.casinos-section {
+		padding-top: 3rem;
+	}
+
+	.casinos-section::before {
+		width: 80px;
+		height: 2px;
+	}
+}
+
+@media (max-width: 480px) {
+	.hero {
+		height: 85vh;
+		min-height: 500px;
+	}
+
+	.hero-title {
+		font-size: clamp(2rem, 5.5vw, 3rem);
+	}
+
+	.stats-bar {
+		padding: 1.25rem 1.5rem;
+	}
+
+	.hero::after {
+		height: 60px;
+	}
+
+	.casinos-section {
+		padding-top: 2.5rem;
+	}
+}
+
+/* Hero - Properly sized to fit everything */
+.hero {
+	position: relative;
+	height: 85vh; /* Much taller */
+	min-height: 650px; /* Higher minimum */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	padding-top: 150px; /* Extra clearance for navbar */
+	padding-bottom: 3rem; /* Extra bottom padding */
+}
+
+/* Hero content - push down slightly */
+.hero-content {
+	text-align: center;
+	z-index: 1;
+	animation: fadeInUp 1s var(--transition-smooth);
+	margin-top: 20px; /* Additional push down */
+}
+
+/* Title - slightly smaller to fit */
+.hero-title {
+	font-family: var(--font-display);
+	font-size: clamp(2.75rem, 6.5vw, 5.5rem); /* Reduced max size */
+	font-weight: 900;
+	line-height: 1.1;
+	margin-bottom: 1rem; /* Tighter spacing */
+	display: flex;
+	flex-direction: column;
+	gap: 0.4rem;
+}
+
+/* Subtitle */
+.hero-subtitle {
+	font-size: 1.05rem;
+	letter-spacing: 3.5px;
+	text-transform: uppercase;
+	color: var(--text-secondary);
+	margin-bottom: 2.25rem; /* Tighter spacing */
+	font-weight: 300;
+}
+
+/* Stats bar */
+.stats-bar {
+	display: flex;
+	gap: 2.5rem;
+	justify-content: center;
+	align-items: center;
+	padding: 1.75rem 2.75rem;
+	background: rgba(255, 255, 255, 0.03);
+	backdrop-filter: blur(10px);
+	border: 1px solid var(--border);
+	border-radius: 20px;
+	max-width: 680px;
+	margin: 0 auto;
+	margin-bottom: 0; /* No extra margin */
+}
+
+/* Hide CTA button */
+.hero-cta {
+	display: none;
+}
+
+/* Gradient fade - positioned lower */
+.hero::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 120px;
+	background: linear-gradient(
+		180deg,
+		transparent 0%,
+		rgba(10, 10, 10, 0.3) 40%,
+		var(--bg-primary) 100%
+	);
+	pointer-events: none;
+	z-index: 3;
+}
+
+.light-theme .hero::after {
+	background: linear-gradient(
+		180deg,
+		transparent 0%,
+		rgba(248, 250, 252, 0.3) 40%,
+		var(--bg-primary) 100%
+	);
+}
+
+/* Filter section - ensure proper spacing */
+.filter-section {
+	padding: 2rem 0;
+	background: var(--bg-secondary);
+	border-bottom: 1px solid var(--border);
+	position: sticky;
+	top: 89px;
+	z-index: 100;
+	backdrop-filter: blur(10px);
+	margin-top: 0; /* Remove any margin */
+}
+
+/* Casinos section */
+.casinos-section {
+	padding-top: 4rem;
+	padding-bottom: 8rem;
+	position: relative;
+}
+
+/* Decorative line */
+.casinos-section::before {
+	content: '';
+	position: absolute;
+	top: 2rem;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 100px;
+	height: 2px;
+	background: linear-gradient(
+		90deg,
+		transparent 0%,
+		var(--gold) 50%,
+		transparent 100%
+	);
+}
+
+/* First card animation */
+.casino-card:first-child {
+	animation: fadeInPeek 1s ease-out backwards;
+	animation-delay: 0.4s;
+}
+
+@keyframes fadeInPeek {
+	from {
+		opacity: 0;
+		transform: translateY(30px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+	.hero {
+		height: 82vh;
+		min-height: 580px;
+		padding-top: 130px;
+		padding-bottom: 2rem;
+	}
+
+	.hero-content {
+		margin-top: 10px;
+	}
+
+	.hero-title {
+		font-size: clamp(2.25rem, 6vw, 3.75rem);
+		margin-bottom: 0.85rem;
+	}
+
+	.hero-subtitle {
+		font-size: 0.95rem;
+		letter-spacing: 3px;
+		margin-bottom: 1.85rem;
+	}
+
+	.stats-bar {
+		flex-direction: column;
+		gap: 1.25rem;
+		padding: 1.5rem 2rem;
+		max-width: 90%;
+	}
+
+	.stat-divider {
+		width: 60px;
+		height: 1px;
+	}
+
+	.hero::after {
+		height: 100px;
+	}
+
+	.casinos-section {
+		padding-top: 3.5rem;
+	}
+}
+
+@media (max-width: 480px) {
+	.hero {
+		height: 85vh;
+		min-height: 540px;
+		padding-top: 120px;
+	}
+
+	.hero-title {
+		font-size: clamp(2rem, 5.5vw, 3rem);
+	}
+
+	.hero-subtitle {
+		font-size: 0.9rem;
+		letter-spacing: 2.5px;
+	}
+
+	.stats-bar {
+		padding: 1.35rem 1.75rem;
+		gap: 1.15rem;
+	}
+
+	.hero::after {
+		height: 80px;
+	}
+
+	.casinos-section {
+		padding-top: 3rem;
+	}
+}
+
+/* Hero - Redesigned for compact layout */
+.hero {
+	position: relative;
+	height: 55vh;
+	min-height: 480px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	padding-top: 110px; /* Clear navbar */
+	padding-bottom: 2.5rem; /* Clear filter buttons */
+}
+
+/* Hero content - compact vertical layout */
+.hero-content {
+	text-align: center;
+	z-index: 1;
+	animation: fadeInUp 1s var(--transition-smooth);
+	width: 100%;
+	max-width: 1200px;
+}
+
+/* Title - Single line, compact */
+.hero-title {
+	font-family: var(--font-display);
+	font-size: clamp(2.5rem, 5vw, 4.5rem); /* Smaller */
+	font-weight: 900;
+	line-height: 1;
+	margin-bottom: 0.5rem; /* Tight */
+	display: block; /* Single line instead of flex column */
+}
+
+/* Remove the multi-line title structure */
+.title-line {
+	display: inline; /* All on one line */
+}
+
+/* Subtitle - Much smaller */
+.hero-subtitle {
+	font-size: 0.85rem;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	color: var(--text-secondary);
+	margin-bottom: 1.75rem;
+	font-weight: 300;
+}
+
+/* Stats bar - Horizontal, compact */
+.stats-bar {
+	display: flex;
+	gap: 2rem;
+	justify-content: center;
+	align-items: center;
+	padding: 1.25rem 2rem;
+	background: rgba(255, 255, 255, 0.03);
+	backdrop-filter: blur(10px);
+	border: 1px solid var(--border);
+	border-radius: 16px;
+	max-width: 550px;
+	margin: 0 auto;
+}
+
+/* Stat numbers - Smaller */
+.stat-number {
+	font-family: var(--font-display);
+	font-size: 2rem; /* Was 2.5rem */
+	font-weight: 700;
+	color: var(--gold);
+	text-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+}
+
+/* Stat labels - Smaller */
+.stat-label {
+	font-size: 0.7rem; /* Was 0.85rem */
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+	color: var(--text-secondary);
+}
+
+/* Stat divider - Shorter */
+.stat-divider {
+	width: 1px;
+	height: 45px; /* Was 60px */
+	background: var(--border);
+}
+
+/* Hide CTA */
+.hero-cta {
+	display: none;
+}
+
+/* Gradient fade - subtle */
+.hero::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100px;
+	background: linear-gradient(
+		180deg,
+		transparent 0%,
+		rgba(10, 10, 10, 0.3) 40%,
+		var(--bg-primary) 100%
+	);
+	pointer-events: none;
+	z-index: 3;
+}
+
+.light-theme .hero::after {
+	background: linear-gradient(
+		180deg,
+		transparent 0%,
+		rgba(248, 250, 252, 0.3) 40%,
+		var(--bg-primary) 100%
+	);
+}
+
+/* Casinos section - first card peeks */
+.casinos-section {
+	padding-top: 4rem;
+	padding-bottom: 8rem;
+	position: relative;
+}
+
+/* Decorative separator */
+.casinos-section::before {
+	content: '';
+	position: absolute;
+	top: 2rem;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 100px;
+	height: 2px;
+	background: linear-gradient(
+		90deg,
+		transparent 0%,
+		var(--gold) 50%,
+		transparent 100%
+	);
+}
+
+/* First card peek animation */
+.casino-card:first-child {
+	animation: fadeInPeek 1s ease-out backwards;
+	animation-delay: 0.4s;
+}
+
+@keyframes fadeInPeek {
+	from {
+		opacity: 0;
+		transform: translateY(30px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+	.hero {
+		height: 60vh;
+		min-height: 450px;
+		padding-top: 100px;
+		padding-bottom: 2rem;
+	}
+
+	.hero-title {
+		font-size: clamp(2rem, 6vw, 3.5rem);
+		margin-bottom: 0.75rem;
+	}
+
+	.hero-subtitle {
+		font-size: 0.8rem;
+		letter-spacing: 2.5px;
+		margin-bottom: 1.5rem;
+	}
+
+	.stats-bar {
+		flex-direction: column;
+		gap: 1rem;
+		padding: 1.25rem 1.75rem;
+		max-width: 80%;
+	}
+
+	.stat-number {
+		font-size: 1.75rem;
+	}
+
+	.stat-label {
+		font-size: 0.65rem;
+	}
+
+	.stat-divider {
+		width: 50px;
+		height: 1px;
+	}
+
+	.hero::after {
+		height: 80px;
+	}
+
+	.casinos-section {
+		padding-top: 3.5rem;
+	}
+}
+
+@media (max-width: 480px) {
+	.hero {
+		height: 65vh;
+		min-height: 420px;
+		padding-top: 95px;
+	}
+
+	.hero-title {
+		font-size: clamp(1.75rem, 5.5vw, 3rem);
+	}
+
+	.hero-subtitle {
+		font-size: 0.75rem;
+		letter-spacing: 2px;
+	}
+
+	.stats-bar {
+		padding: 1.15rem 1.5rem;
+	}
+
+	.stat-number {
+		font-size: 1.6rem;
+	}
+
+	.stat-label {
+		font-size: 0.6rem;
+	}
+
+	.hero::after {
+		height: 70px;
+	}
+
+	.casinos-section {
+		padding-top: 3rem;
+	}
+}
+
+/* Hero - Compact layout */
+.hero {
+	position: relative;
+	height: 55vh;
+	min-height: 480px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	padding-top: 110px;
+	padding-bottom: 2.5rem;
+}
+
+/* Hero content */
+.hero-content {
+	text-align: center;
+	z-index: 1;
+	animation: fadeInUp 1s var(--transition-smooth);
+	width: 100%;
+	max-width: 1200px;
+}
+
+/* Title - Single line */
+.hero-title {
+	font-family: var(--font-display);
+	font-size: clamp(2.5rem, 5vw, 4.5rem);
+	font-weight: 900;
+	line-height: 1;
+	margin-bottom: 0.5rem;
+	display: block;
+}
+
+.title-line {
+	display: inline;
+}
+
+/* Subtitle */
+.hero-subtitle {
+	font-size: 0.85rem;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	color: var(--text-secondary);
+	margin-bottom: 1.75rem;
+	font-weight: 300;
+}
+
+/* Stats bar */
+.stats-bar {
+	display: flex;
+	gap: 2rem;
+	justify-content: center;
+	align-items: center;
+	padding: 1.25rem 2rem;
+	background: rgba(255, 255, 255, 0.03);
+	backdrop-filter: blur(10px);
+	border: 1px solid var(--border);
+	border-radius: 16px;
+	max-width: 550px;
+	margin: 0 auto;
+	position: relative;
+	z-index: 5; /* Above gradient */
+}
+
+.stat-number {
+	font-family: var(--font-display);
+	font-size: 2rem;
+	font-weight: 700;
+	color: var(--gold);
+	text-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+}
+
+.stat-label {
+	font-size: 0.7rem;
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+	color: var(--text-secondary);
+}
+
+.stat-divider {
+	width: 1px;
+	height: 45px;
+	background: var(--border);
+}
+
+/* Hide CTA */
+.hero-cta {
+	display: none;
+}
+
+/* Gradient fade - positioned UNDER stats bar */
+.hero::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 150px; /* Taller to start under stats */
+	background: linear-gradient(
+		180deg,
+		transparent 0%,
+		transparent 30%,
+		/* Keep transparent longer */ rgba(10, 10, 10, 0.3) 60%,
+		var(--bg-primary) 100%
+	);
+	pointer-events: none;
+	z-index: 2; /* Below stats bar (z-index: 5) */
+}
+
+.light-theme .hero::after {
+	background: linear-gradient(
+		180deg,
+		transparent 0%,
+		transparent 30%,
+		rgba(248, 250, 252, 0.3) 60%,
+		var(--bg-primary) 100%
+	);
+}
+
+/* Casinos section */
+.casinos-section {
+	padding-top: 4rem;
+	padding-bottom: 8rem;
+	position: relative;
+}
+
+.casinos-section::before {
+	content: '';
+	position: absolute;
+	top: 2rem;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 100px;
+	height: 2px;
+	background: linear-gradient(
+		90deg,
+		transparent 0%,
+		var(--gold) 50%,
+		transparent 100%
+	);
+}
+
+.casino-card:first-child {
+	animation: fadeInPeek 1s ease-out backwards;
+	animation-delay: 0.4s;
+}
+
+@keyframes fadeInPeek {
+	from {
+		opacity: 0;
+		transform: translateY(30px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* Mobile - Hide stats, make hero shorter */
+@media (max-width: 768px) {
+	.hero {
+		height: 45vh; /* Much shorter without stats */
+		min-height: 350px;
+		padding-top: 100px;
+		padding-bottom: 2rem;
+	}
+
+	.hero-title {
+		font-size: clamp(2rem, 6vw, 3.5rem);
+		margin-bottom: 0.75rem;
+	}
+
+	.hero-subtitle {
+		font-size: 0.8rem;
+		letter-spacing: 2.5px;
+		margin-bottom: 0; /* No margin since no stats below */
+	}
+
+	/* Hide stats bar on mobile */
+	.stats-bar {
+		display: none;
+	}
+
+	.hero::after {
+		height: 100px;
+		background: linear-gradient(
+			180deg,
+			transparent 0%,
+			rgba(10, 10, 10, 0.4) 50%,
+			var(--bg-primary) 100%
+		);
+	}
+
+	.light-theme .hero::after {
+		background: linear-gradient(
+			180deg,
+			transparent 0%,
+			rgba(248, 250, 252, 0.4) 50%,
+			var(--bg-primary) 100%
+		);
+	}
+
+	.casinos-section {
+		padding-top: 3.5rem;
+	}
+
+	.casinos-section::before {
+		width: 80px;
+	}
+}
+
+@media (max-width: 480px) {
+	.hero {
+		height: 42vh;
+		min-height: 320px;
+		padding-top: 95px;
+	}
+
+	.hero-title {
+		font-size: clamp(1.75rem, 5.5vw, 3rem);
+	}
+
+	.hero-subtitle {
+		font-size: 0.75rem;
+		letter-spacing: 2px;
+	}
+
+	.hero::after {
+		height: 80px;
+	}
+
+	.casinos-section {
+		padding-top: 3rem;
+	}
+}

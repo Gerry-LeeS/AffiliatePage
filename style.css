@@ -6720,3 +6720,22 @@ body:not(.light-theme) .theme-icon {
 		padding-top: 3rem;
 	}
 }
+
+/* Filter section - sticky on desktop */
+.filter-section {
+	padding: 2rem 0;
+	background: var(--bg-secondary);
+	border-bottom: 1px solid var(--border);
+	position: sticky;
+	top: 89px;
+	z-index: 100;
+	backdrop-filter: blur(10px);
+}
+
+/* Mobile - remove sticky behavior */
+@media (max-width: 768px) {
+	.filter-section {
+		position: relative; /* Changed from sticky */
+		top: auto; /* Reset top value */
+	}
+}

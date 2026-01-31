@@ -1,6 +1,23 @@
 // Exclusive casinos data (filtered from main casinos array)
 const exclusiveCasinos = [
 	{
+		id: 'swiftcasino',
+		name: 'Swift Casino',
+		logo: 'swift.png',
+		logoBg: '#7a2af4',
+		rating: 5,
+		bonus: '100% Bonus up to £75 + 50 Free Spins on Book of Dead!',
+		description:
+			'We’ve got an exclusive here for you with up to a matched £75 in bonus funds that’s more play for your pound! No code needed!',
+		features: ['Slots', 'Live Tables', 'Roulette', 'Blackjack'],
+		terms:
+			'Automatically credited upon deposit. Cancellation can be requested. First Deposit Only. Min. deposit: £10, max. Bonus £75. Maximum amount of Free Spins is 50. Game: Book of Dead, Spin Value: £0.1. WR of 10x Bonus amount and Free Spin winnings amount (only Slots count) within 30 days. Max bet is 10% (min £0.10) of the free spin winnings and bonus amount or £5 (lowest amount applies). Spins must be used and/or Bonus must be claimed before using deposited funds. Bonuses do not prevent withdrawing deposit balance. Bonus Policy applies.',
+		link: 'https://games.swiftcasino.com/redirect.aspx?mid=5298&sid=15149&cid=&pid=&affid=8275',
+		reviewLink: 'reviews/swiftcasino.html',
+		exclusive: true,
+		exclusiveTag: 'Up to £75!',
+	},
+	{
 		id: 'playojo',
 		name: 'PlayOJO',
 		logo: 'playojo.png',

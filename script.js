@@ -19,28 +19,20 @@ document.getElementById('currentYear').textContent = new Date().getFullYear();
 // Casino data
 const casinos = [
 	{
-		id: 'netbet',
-		name: 'NetBet',
-		logo: 'netbet.png',
-		logoBg: '#101010',
+		id: 'lunacasino',
+		name: 'Luna Casino',
+		logo: 'luna.png',
+		logoBg: 'black',
 		rating: 5,
 		bonusType: 'Casino Bonus',
-		bonus:
-			'Wager £20 on any slots and get 100 Free Spins. Winnings paid in cash!',
+		bonus: '100% Up to £50 + 50 Free Spins on Book of Dead. Bonus code: LUNA',
 		description:
-			'A longstanding casino since 2001. Plenty of slot options and betting with sports AI to help you create your next bet.',
-		features: [
-			'Slots',
-			'Live Tables',
-			'Sports',
-			'Roulette',
-			'Blackjack',
-			'Poker',
-		],
+			'Luna Casino will be your next favourite place to play at. We loved it here and with plenty of fun bonuses to play with you won’t get bored here. They are up to date with the latest games from all your favourite providers.',
+		features: ['Slots', 'Live Tables', 'Roulette', 'Blackjack'],
 		terms:
-			'18+. New customers only. £20 min deposit. Opt-in and Bet £20+ on any slot, 100 Free Spins on Big Bass Splash, £0.10 per spin. Winnings paid as cash, £100 Max win. Additional T&Cs apply.',
-		link: 'https://netbet.livepartners.com/click.php?z=186827',
-		reviewLink: 'reviews/netbet.html',
+			'Automatically credited upon deposit. Cancellation can be requested. First Deposit Only. Min. deposit: £10, max. Bonus £50. Maximum amount of Free Spins is 50. Game: Book of Dead, Spin Value: £0.1. WR of 10x Bonus amount and Free Spin winnings amount (only Slots count) within 30 days. Max bet is 10% (min £0.10) of the free spin winnings and bonus amount or £5 (lowest amount applies). Spins must be used and/or Bonus must be claimed before using deposited funds. Bonuses do not prevent withdrawing deposit balance. Bonus Policy applies.',
+		link: 'https://ads.galaxyaffiliates.com/redirect.aspx?mid=5366&sid=15149&cid=&pid=&affid=8275',
+		reviewLink: 'reviews/lunacasino.html',
 		exclusive: false,
 	},
 	{
@@ -88,39 +80,75 @@ const casinos = [
 	},
 
 	{
-		id: 'kwiff',
-		name: 'Kwiff',
-		logo: 'kwiff.png',
-		logoBg: '#7a2af4',
+		id: 'swiftcasino',
+		name: 'Swift Casino',
+		logo: 'swift.png',
+		logoBg: 'black',
+		rating: 5,
+		bonusType: 'Casino',
+		bonus: '100% Bonus up to £75 + 50 Free Spins on Book of Dead.',
+		description:
+			'We’ve got an exclusive here for you with up to a matched £75 in bonus funds that’s more play for your pound! No code needed!',
+		features: ['Slots', 'Live Tables', 'Roulette', 'Blackjack'],
+		terms:
+			'Automatically credited upon deposit. Cancellation can be requested. First Deposit Only. Min. deposit: £10, max. Bonus £75. Maximum amount of Free Spins is 50. Game: Book of Dead, Spin Value: £0.1. WR of 10x Bonus amount and Free Spin winnings amount (only Slots count) within 30 days. Max bet is 10% (min £0.10) of the free spin winnings and bonus amount or £5 (lowest amount applies). Spins must be used and/or Bonus must be claimed before using deposited funds. Bonuses do not prevent withdrawing deposit balance. Bonus Policy applies.',
+		link: 'https://games.swiftcasino.com/redirect.aspx?mid=5298&sid=15149&cid=&pid=&affid=8275',
+		reviewLink: '/reviews/swiftcasino.html',
+		exclusive: true,
+	},
+
+	{
+		id: 'netbet',
+		name: 'NetBet',
+		logo: 'netbet.png',
+		logoBg: '#101010',
+		rating: 5,
+		bonusType: 'Casino Bonus',
+		bonus:
+			'Wager £20 on any slots and get 100 Free Spins. Winnings paid in cash!',
+		description:
+			'A longstanding casino since 2001. Plenty of slot options and betting with sports AI to help you create your next bet.',
+		features: [
+			'Slots',
+			'Live Tables',
+			'Sports',
+			'Roulette',
+			'Blackjack',
+			'Poker',
+		],
+		terms:
+			'18+. New customers only. £20 min deposit. Opt-in and Bet £20+ on any slot, 100 Free Spins on Big Bass Splash, £0.10 per spin. Winnings paid as cash, £100 Max win. Additional T&Cs apply.',
+		link: 'https://netbet.livepartners.com/click.php?z=186827',
+		reviewLink: 'reviews/netbet.html',
+		exclusive: false,
+	},
+
+	{
+		id: 'bresbet',
+		name: 'BresBet',
+		logo: 'bresbet.png',
+		logoBg: 'rgb(0, 28, 70)',
 		rating: 4.5,
 		bonusType: 'Casino Bonus',
-		bonus: 'Wager £20 on any slot and get 200 Free Spins.',
+		bonus:
+			'Offer: Get 100 Free Spins when you wager £10 on Huff N Lots Of Puff.',
 		description:
-			'Ontop of their great casino selection with new games and kwiff casino exclusives, kwiff have their unique supercharged bets where any sports bet you place can have increased odds.',
-		features: ['Slots', 'Live Tables', 'Blackjack', 'Roulette', 'Supercharges'],
+			'BresBet have a good focus on loyalty and it is rewarded when you play here. With weekly casino and sports clubs you can get Free Spins and Bets often.',
+		features: [
+			'Slots',
+			'Live Tables',
+			'Sports',
+			'Blackjack',
+			'Roulette',
+			'Racing',
+		],
 		terms:
-			'Wager £20 cash on slots within 5 days of first deposit and Get 200 Free Spins on Book of Dead. £0.10 per spin. £250 total max withdrawal. E-wallets and virtual cards excluded. 18+. New customers only. Full T&Cs apply. Gamble Responsibly.',
-		link: 'https://promos.kwiff.com/casino/?btag=a_4001b_79c_&affid=1012&source=IncomeAccess&creative=79&campaign_id=&affiliate_id=1012&incomeaccess_click_id=a_4001b_79c_&campaign=a_4001b_79c_&siteid=4001',
-		reviewLink: '/reviews/kwiff.html',
+			'Min £10 wager on Huff N Lots Of Puff to receive 100 x £0.10 free spins. Free spins credited by 12pn noon the day after you qualify. New Customers Only. T&Cs apply. 18+ Use code: CasinoWelcome26',
+		link: 'https://refer.bresbet.com/redirect?cid=6908a413b70b75a6c986e44b&oid=6499640c6e61a4ede687608b&mid=69778ff644285b0a54fe2176&customParameter=',
+		reviewLink: '/reviews/bresbet.html',
 		exclusive: false,
 	},
-	{
-		id: 'livescorebet',
-		name: 'LiveScoreBet',
-		logo: 'lsbet.png',
-		logoBg: 'rgb(251, 84, 21)',
-		rating: 4.5,
-		bonusType: 'Sports Bonus',
-		bonus: 'Bet £10 get £30 in Free Bets.',
-		description:
-			'Your favourite sports results website has it’s own online Sports betting and Casino to welcome you to. With plenty of promotions and a sleek website design LiveScore Bet is a great place to play at.',
-		features: ['Slots', 'Live Tables', 'Sports', 'Roulette', 'Blackjack'],
-		terms:
-			'*New members only. £10+ bet on sports (ex. Virtuals) 1.5 min odds, settled within 14 days. Free Bets: accept in 7 days, valid 7 days; £20 use on sportsbook, £10 on Bet Builder. Stake not returned. T&Cs + deposit exclusions apply. Bet Responsibly. GambleAware.org. 18+.',
-		link: 'https://wl-nl.livescorebet.com/C.ashx?btag=a_2233b_46c_&affid=717&siteid=2233&adid=46&c=',
-		reviewLink: '/reviews/livescorebet.html',
-		exclusive: false,
-	},
+
 	{
 		id: 'bettom',
 		name: 'BetTom',
@@ -138,28 +166,40 @@ const casinos = [
 		reviewLink: '/reviews/bettom.html',
 		exclusive: false,
 	},
+
 	{
-		id: 'bresbet',
-		name: 'BresBet',
-		logo: 'bresbet.png',
-		logoBg: 'rgb(0, 28, 70)',
+		id: 'livescorebet',
+		name: 'LiveScoreBet',
+		logo: 'lsbet.png',
+		logoBg: 'rgb(251, 84, 21)',
+		rating: 4.5,
+		bonusType: 'Sports Bonus',
+		bonus: 'Bet £10 get £30 in Free Bets.',
+		description:
+			'Your favourite sports results website has it’s own online Sports betting and Casino to welcome you to. With plenty of promotions and a sleek website design LiveScore Bet is a great place to play at.',
+		features: ['Slots', 'Live Tables', 'Sports', 'Roulette', 'Blackjack'],
+		terms:
+			'*New members only. £10+ bet on sports (ex. Virtuals) 1.5 min odds, settled within 14 days. Free Bets: accept in 7 days, valid 7 days; £20 use on sportsbook, £10 on Bet Builder. Stake not returned. T&Cs + deposit exclusions apply. Bet Responsibly. GambleAware.org. 18+.',
+		link: 'https://wl-nl.livescorebet.com/C.ashx?btag=a_2233b_46c_&affid=717&siteid=2233&adid=46&c=',
+		reviewLink: '/reviews/livescorebet.html',
+		exclusive: false,
+	},
+
+	{
+		id: 'kwiff',
+		name: 'Kwiff',
+		logo: 'kwiff.png',
+		logoBg: '#7a2af4',
 		rating: 4.5,
 		bonusType: 'Casino Bonus',
-		bonus: 'Get 100 Free Spins on Big Bass Bonanza 100, winnings paid in cash!',
+		bonus: 'Wager £20 on any slot and get 200 Free Spins.',
 		description:
-			'BresBet have a good focus on loyalty and it is rewarded when you play here. With weekly casino and sports clubs you can get Free Spins and Bets often.',
-		features: [
-			'Slots',
-			'Live Tables',
-			'Sports',
-			'Blackjack',
-			'Roulette',
-			'Racing',
-		],
+			'Ontop of their great casino selection with new games and kwiff casino exclusives, kwiff have their unique supercharged bets where any sports bet you place can have increased odds.',
+		features: ['Slots', 'Live Tables', 'Blackjack', 'Roulette', 'Supercharges'],
 		terms:
-			' T&Cs apply. 18+ New customers only. Wager £10 or more on Big Bass Bonanza 1000 slot & get 100 free spins on the same game. Must use code W10G100BBB1000 when creating an account.',
-		link: 'https://refer.bresbet.com/redirect?cid=6908a413b70b75a6c986e44b&oid=6499640c6e61a4ede687608b&mid=6880b2fa6c4e751190341ecd&customParameter=',
-		reviewLink: '/reviews/bresbet.html',
+			'Wager £20 cash on slots within 5 days of first deposit and Get 200 Free Spins on Book of Dead. £0.10 per spin. £250 total max withdrawal. E-wallets and virtual cards excluded. 18+. New customers only. Full T&Cs apply. Gamble Responsibly.',
+		link: 'https://promos.kwiff.com/casino/?btag=a_4001b_79c_&affid=1012&source=IncomeAccess&creative=79&campaign_id=&affiliate_id=1012&incomeaccess_click_id=a_4001b_79c_&campaign=a_4001b_79c_&siteid=4001',
+		reviewLink: '/reviews/kwiff.html',
 		exclusive: false,
 	},
 ];

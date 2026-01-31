@@ -4,7 +4,7 @@ const exclusiveCasinos = [
 		id: 'swiftcasino',
 		name: 'Swift Casino',
 		logo: 'swift.png',
-		logoBg: '#7a2af4',
+		logoBg: 'black',
 		rating: 5,
 		bonus: '100% Bonus up to £75 + 50 Free Spins on Book of Dead!',
 		description:
@@ -21,7 +21,7 @@ const exclusiveCasinos = [
 		id: 'playojo',
 		name: 'PlayOJO',
 		logo: 'playojo.png',
-		logoBg: '#7a2af4',
+		logoBg: 'white',
 		rating: 5,
 		bonus: '80 free spins!',
 		description:

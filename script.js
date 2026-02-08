@@ -174,13 +174,13 @@ const casinos = [
 		logoBg: 'rgb(251, 84, 21)',
 		rating: 4.5,
 		bonusType: 'Sports Bonus',
-		bonus: 'Bet £10 get £30 in Free Bets.',
+		bonus: 'Play £10 on slots & get 100 Free Spins!',
 		description:
 			'Your favourite sports results website has it’s own online Sports betting and Casino to welcome you to. With plenty of promotions and a sleek website design LiveScore Bet is a great place to play at.',
 		features: ['Slots', 'Live Tables', 'Sports', 'Roulette', 'Blackjack'],
 		terms:
-			'*New members only. £10+ bet on sports (ex. Virtuals) 1.5 min odds, settled within 14 days. Free Bets: accept in 7 days, valid 7 days; £20 use on sportsbook, £10 on Bet Builder. Stake not returned. T&Cs + deposit exclusions apply. Bet Responsibly. GambleAware.org. 18+.',
-		link: 'https://wl-nl.livescorebet.com/C.ashx?btag=a_2233b_46c_&affid=717&siteid=2233&adid=46&c=',
+			'**New members only. *Must sign up via offer link. Wager in 7 days of reg. Accept Free Spins to use on King Kong Cash Even Bigger Bananas Jackpot King via pop-up within 24 hrs of qualifying (10p spin value, 3 days expiry). Terms & deposit exclusions apply. 18+',
+		link: 'https://wl-nl.livescorebet.com/C.ashx?btag=a_2339b_60c_&affid=717&siteid=2339&adid=60&c= ',
 		reviewLink: '/reviews/livescorebet.html',
 		exclusive: false,
 	},
@@ -273,7 +273,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function updateFilterCounts() {
 	const allCount = document.querySelector('[data-filter="all"] .filter-count');
 	const exclusiveCount = document.querySelector(
-		'[data-filter="exclusive"] .filter-count'
+		'[data-filter="exclusive"] .filter-count',
 	);
 
 	if (allCount) allCount.textContent = casinos.length;
@@ -304,8 +304,8 @@ function renderCards() {
             <div class="card-header">
                 <div class="card-logo" style="background: ${casino.logoBg}">
                     <img src="images/casinologos/${casino.logo}" alt="${
-				casino.name
-			}">
+											casino.name
+										}">
                 </div>
                 
                 <div class="card-title-group">
@@ -354,11 +354,11 @@ function renderCards() {
 												(feature) => `
                         <div class="feature-item">
                             <div class="feature-icon">${getFeatureIcon(
-															feature
+															feature,
 														)}</div>
                             <div class="feature-label">${feature}</div>
                         </div>
-                    `
+                    `,
 											)
 											.join('')}
                 </div>
@@ -375,7 +375,7 @@ function renderCards() {
                 </div>
             </div>
         </div>
-    `
+    `,
 		)
 		.join('');
 
@@ -578,7 +578,7 @@ function openCompareModal() {
 
 	// Get selected casinos
 	const selectedCasinos = compareList.map((id) =>
-		casinos.find((c) => c.id === id)
+		casinos.find((c) => c.id === id),
 	);
 	console.log('Selected casinos:', selectedCasinos);
 
@@ -678,7 +678,7 @@ function openCompareModal() {
 	console.log('Modal classes after adding active:', modal.className);
 	console.log(
 		'Modal computed display:',
-		window.getComputedStyle(modal).display
+		window.getComputedStyle(modal).display,
 	);
 	console.log('Modal computed z-index:', window.getComputedStyle(modal).zIndex);
 
@@ -841,7 +841,7 @@ function openQuickView(casinoId) {
 			${casino.features
 				.map(
 					(f) =>
-						`<span class="quick-view-feature">${getFeatureIcon(f)} ${f}</span>`
+						`<span class="quick-view-feature">${getFeatureIcon(f)} ${f}</span>`,
 				)
 				.join('')}
 		</div>

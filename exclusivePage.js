@@ -4,7 +4,7 @@ const exclusiveCasinos = [
 		id: 'swiftcasino',
 		name: 'Swift Casino',
 		logo: 'swift.png',
-		logoBg: 'black',
+		logoBg: 'rgb(18, 18, 18)',
 		rating: 5,
 		bonus: '100% Bonus up to £75 + 50 Free Spins on Book of Dead!',
 		description:
@@ -68,8 +68,8 @@ function renderExclusiveCards() {
 									casino.logoBg
 								}">
                     <img src="images/casinologos/${casino.logo}" alt="${
-				casino.name
-			}">
+											casino.name
+										}">
                 </div>
                 <h3>${casino.name}</h3>
                 <div class="exclusive-card-rating">
@@ -92,9 +92,9 @@ function renderExclusiveCards() {
 											.map(
 												(feature) => `
                         <span class="feature-tag">${getFeatureIcon(
-													feature
+													feature,
 												)} ${feature}</span>
-                    `
+                    `,
 											)
 											.join('')}
                 </div>
@@ -114,7 +114,7 @@ function renderExclusiveCards() {
                 </a>
             </div>
         </div>
-    `
+    `,
 		)
 		.join('');
 }

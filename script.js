@@ -83,7 +83,7 @@ const casinos = [
 		id: 'swiftcasino',
 		name: 'Swift Casino',
 		logo: 'swift.png',
-		logoBg: 'black',
+		logoBg: 'rgb(18, 18, 18)',
 		rating: 5,
 		bonusType: 'Casino',
 		bonus: '100% Bonus up to £75 + 50 Free Spins on Book of Dead.',
@@ -95,6 +95,23 @@ const casinos = [
 		link: 'https://games.swiftcasino.com/redirect.aspx?mid=5298&sid=15149&cid=&pid=&affid=8275',
 		reviewLink: '/reviews/swiftcasino.html',
 		exclusive: true,
+	},
+	{
+		id: 'bestodds',
+		name: 'BestOdds',
+		logo: 'bestodds.png',
+		logoBg: 'rgb(22, 32, 57)',
+		rating: 5,
+		bonusType: 'Casino',
+		bonus: 'Get 5 x 50 Free Spins when you wager £20!',
+		description:
+			'BestOdds are one of the newer operators on the scene, with a great site and plenty of Sports and Casino offerings we’re finding it a great place to play.',
+		features: ['Slots', 'Live Tables', 'Sports', 'Roulette', 'Blackjack'],
+		terms:
+			'New UK customers only. Wager £20+ on selected Pragmatic Play slots to get 50 Free Spins daily for 5 days. Spins expire 24 hrs after issue. Max Payouts & Full T&Cs apply. Use code 5x50fs',
+		link: 'https://bolinkhub.com/wdzr67kan',
+		reviewLink: '/reviews/swiftcasino.html',
+		exclusive: false,
 	},
 
 	{

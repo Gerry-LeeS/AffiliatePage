@@ -110,7 +110,7 @@ const casinos = [
 		terms:
 			'New UK customers only. Wager £20+ on selected Pragmatic Play slots to get 50 Free Spins daily for 5 days. Spins expire 24 hrs after issue. Max Payouts & Full T&Cs apply. Use code 5x50fs',
 		link: 'https://bolinkhub.com/wdzr67kan',
-		reviewLink: '/reviews/swiftcasino.html',
+		reviewLink: '/reviews/bestodds.html',
 		exclusive: false,
 	},
 

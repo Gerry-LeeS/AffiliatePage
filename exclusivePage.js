@@ -1,4 +1,5 @@
 // Exclusive casinos data (filtered from main casinos array)
+// To add, copy frmo the curly brackets to another curly bracket, and then just fill in the new casino details.
 const exclusiveCasinos = [
 	{
 		id: 'swiftcasino',

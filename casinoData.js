@@ -17,7 +17,7 @@ const casinoPages = [
 	// { title: "New Casino Name", url: "/reviews/new-casino.html", rating: 4.5 }
 ];
 
-// Get total count for stats
+// Get total
 function getTotalCasinoCount() {
 	return casinoPages.length;
 }

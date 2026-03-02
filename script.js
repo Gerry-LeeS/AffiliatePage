@@ -17,6 +17,7 @@
 document.getElementById('currentYear').textContent = new Date().getFullYear();
 
 // Casino data
+// To add a new casino, copy and paste an array from the { id to the } after exclusive - and fill in details.
 const casinos = [
 	{
 		id: 'lunacasino',

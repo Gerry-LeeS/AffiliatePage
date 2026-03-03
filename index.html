@@ -206,11 +206,8 @@
 <!-- Newsletter Section -->
 <section style="padding: 2rem 0; background: var(--bg-primary);">
   <div class="container">
-    
-    <!-- Card wrapper matching your casino cards exactly -->
     <div class="casino-card" style="max-width: 600px; margin: 0 auto;">
       
-      <!-- Card Header - matches your .card-header style -->
       <div class="card-header" style="flex-direction: column; text-align: center; gap: 0.5rem;">
         <div class="card-title-group">
           <h3 style="font-family: var(--font-display);">Stay Up To Date</h3>
@@ -220,95 +217,94 @@
         </div>
       </div>
 
-      <!-- Card Body - matches your .card-body style -->
       <div class="card-body">
-        <!-- Email input styled to match your site -->
-        <div id="sib-form-container">
 
-          <!-- Error message -->
-          <div id="error-message" style="display:none; font-size:0.9rem; color:#661d1d; background-color:#ffeded; border-radius:8px; border: 1px solid #ff4949; padding: 0.75rem 1rem; margin-bottom: 1rem;">
-            Your subscription could not be saved. Please try again.
-          </div>
-
-          <!-- Success message -->
-          <div id="success-message" style="display:none; font-size:0.9rem; color:#085229; background-color:#e7faf0; border-radius:8px; border: 1px solid #13ce66; padding: 0.75rem 1rem; margin-bottom: 1rem;">
-            ✓ Your subscription has been successful!
-          </div>
-
-          <form id="sib-form" method="POST"
-            action="https://93ec5e2b.sibforms.com/serve/MUIFANNnlnaPvo4Updi0NbQ-cQY_FJ5hOpzGmSCkLbb7PImKx97ZSS-VewMY-qTv3aaSDHJ_GX1v-ycCovePjioEmHWz9iPb1nF0XDjylBfUCjEfv-0O_pb1cGkZ5zJU00cunY53_DZDdnxVsu-sUffvQKokYU4_r4GmdjoKnCjBMA6tba6lT0NNdLGsuFWr3gO1c7lGFZgh2gBP_A=="
-            data-type="subscription">
-
-            <!-- Email input field - styled like your search input -->
-            <div style="margin-bottom: 1rem;">
-              <label style="display:block; font-weight:600; font-size:0.9rem; color:var(--text-secondary); margin-bottom:0.5rem; text-transform:uppercase; letter-spacing:0.5px;">
-                Email Address
-              </label>
-              <input
-                type="text"
-                id="EMAIL"
-                name="EMAIL"
-                autocomplete="off"
-                placeholder="your@email.com"
-                data-required="true"
-                required
-                style="
-                  width: 100%;
-                  padding: 0.85rem 1.25rem;
-                  background: var(--bg-primary);
-                  border: 2px solid var(--border);
-                  border-radius: 12px;
-                  color: var(--text-primary);
-                  font-size: 1rem;
-                  font-family: var(--font-body);
-                  transition: all 0.3s ease;
-                  outline: none;
-                "
-                onfocus="this.style.borderColor='var(--gold)'; this.style.boxShadow='0 0 0 3px rgba(212,175,55,0.1)'"
-                onblur="this.style.borderColor='var(--border)'; this.style.boxShadow='none'"
-              />
-              <span style="font-size:0.8rem; color:var(--text-muted); margin-top:0.35rem; display:block;">
-                e.g. your@email.com
-              </span>
-            </div>
-
-            <!-- Submit button - matches your .btn .btn-primary -->
-            <button
-              type="submit"
-              form="sib-form"
-              class="btn btn-primary"
-              style="width: 100%; padding: 1rem; font-size: 1rem; letter-spacing: 1px; text-transform: uppercase; border: none; cursor: pointer;"
-            >
-              Subscribe
-            </button>
-
-            <input type="text" name="email_address_check" value="" style="display:none;">
-            <input type="hidden" name="locale" value="en">
-          </form>
-
+        <div id="error-message" style="display:none; font-size:0.9rem; color:#661d1d; background-color:#ffeded; border-radius:8px; border: 1px solid #ff4949; padding: 0.75rem 1rem; margin-bottom: 1rem;">
+          Your subscription could not be saved. Please try again.
         </div>
-      </div>
 
+        <div id="success-message" style="display:none; font-size:0.9rem; color:#085229; background-color:#e7faf0; border-radius:8px; border: 1px solid #13ce66; padding: 0.75rem 1rem; margin-bottom: 1rem;">
+          ✓ Your subscription has been successful! Please check your email to confirm.
+        </div>
+
+        <div style="margin-bottom: 1rem;">
+          <label style="display:block; font-weight:600; font-size:0.9rem; color:var(--text-secondary); margin-bottom:0.5rem; text-transform:uppercase; letter-spacing:0.5px;">
+            Email Address
+          </label>
+          <input
+            type="email"
+            id="newsletter-email"
+            autocomplete="off"
+            placeholder="your@email.com"
+            required
+            style="
+              width: 100%;
+              padding: 0.85rem 1.25rem;
+              background: var(--bg-primary);
+              border: 2px solid var(--border);
+              border-radius: 12px;
+              color: var(--text-primary);
+              font-size: 1rem;
+              font-family: var(--font-body);
+              transition: all 0.3s ease;
+              outline: none;
+              box-sizing: border-box;
+            "
+            onfocus="this.style.borderColor='var(--gold)'; this.style.boxShadow='0 0 0 3px rgba(212,175,55,0.1)'"
+            onblur="this.style.borderColor='var(--border)'; this.style.boxShadow='none'"
+          />
+          <span style="font-size:0.8rem; color:var(--text-muted); margin-top:0.35rem; display:block;">
+            e.g. your@email.com
+          </span>
+        </div>
+
+        <button
+          onclick="submitNewsletter()"
+          class="btn btn-primary"
+          style="width: 100%; padding: 1rem; font-size: 1rem; letter-spacing: 1px; text-transform: uppercase; border: none; cursor: pointer;"
+        >
+          Subscribe
+        </button>
+
+      </div>
     </div>
   </div>
 </section>
 
-<!-- Brevo Scripts -->
 <script>
-  window.REQUIRED_CODE_ERROR_MESSAGE = 'Please choose a country code';
-  window.LOCALE = 'en';
-  window.EMAIL_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
-  window.REQUIRED_ERROR_MESSAGE = "This field cannot be left blank.";
-  window.GENERIC_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
-  window.translation = {
-    common: {
-      selectedList: '{quantity} list selected',
-      selectedLists: '{quantity} lists selected',
+async function submitNewsletter() {
+  const email = document.getElementById('newsletter-email').value;
+  const errorMsg = document.getElementById('error-message');
+  const successMsg = document.getElementById('success-message');
+
+  errorMsg.style.display = 'none';
+  successMsg.style.display = 'none';
+
+  if (!email || !email.includes('@')) {
+    errorMsg.style.display = 'block';
+    return;
+  }
+
+  try {
+    const response = await fetch('/.netlify/functions/subscribe', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email })
+    });
+
+    const data = await response.json();
+
+    if (response.ok) {
+      successMsg.style.display = 'block';
+      document.getElementById('newsletter-email').value = '';
+    } else {
+      errorMsg.style.display = 'block';
     }
-  };
-  var AUTOHIDE = Boolean(0);
+  } catch (error) {
+    errorMsg.style.display = 'block';
+  }
+}
 </script>
-<script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
 
 <!-- SEO Static Content - Google reads this even when JS is disabled -->
 <section class="seo-content" style="padding: 4rem 0; background: var(--bg-secondary);">

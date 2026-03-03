@@ -6739,3 +6739,7 @@ body:not(.light-theme) .theme-icon {
 		top: auto; /* Reset top value */
 	}
 }
+
+.casinos-section {
+    padding-bottom: 0rem;
+}

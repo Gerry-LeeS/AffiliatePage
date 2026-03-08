@@ -2,4 +2,3 @@
   functions = "netlify/functions"
 
 [context.production.environment]
-  BREVO_API_KEY = "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"

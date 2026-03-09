@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
@@ -28,6 +28,63 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 		<link rel="icon" href="/images/casinofavicon.png" type="image/x-icon" />
+
+		<script type="application/ld+json">
+		{
+		  "@context": "https://schema.org",
+		  "@type": "FAQPage",
+		  "mainEntity": [
+		    {
+		      "@type": "Question",
+		      "name": "What are wagering requirements at online casinos?",
+		      "acceptedAnswer": {
+		        "@type": "Answer",
+		        "text": "Wagering requirements (also called playthrough requirements) are conditions attached to casino bonuses that require you to bet a certain amount before you can withdraw any winnings. For example, a £10 bonus with 35x wagering means you must place £350 in bets before withdrawing. The lower the wagering requirement, the more valuable the bonus."
+		      }
+		    },
+		    {
+		      "@type": "Question",
+		      "name": "What is a wager-free casino bonus?",
+		      "acceptedAnswer": {
+		        "@type": "Answer",
+		        "text": "A wager-free bonus (also called 0x wagering) means any winnings from the bonus can be withdrawn immediately as real cash, with no playthrough conditions attached. These are the most valuable type of casino bonus. PlayOJO is a well-known UK casino that offers wager-free bonuses."
+		      }
+		    },
+		    {
+		      "@type": "Question",
+		      "name": "How do I calculate the real value of a casino bonus?",
+		      "acceptedAnswer": {
+		        "@type": "Answer",
+		        "text": "To calculate the real value of a casino bonus, you need to know three things: the bonus amount, the wagering requirement multiplier, and the value per free spin if applicable. Multiply the bonus amount by the wagering requirement to find out how much you need to bet before withdrawing. Our free calculator above does this instantly for both free spins and match bonuses."
+		      }
+		    },
+		    {
+		      "@type": "Question",
+		      "name": "What is the difference between free spins and a match bonus?",
+		      "acceptedAnswer": {
+		        "@type": "Answer",
+		        "text": "Free spins give you a set number of spins on a slot game, each with a fixed value (usually £0.10 per spin). A match bonus gives you a percentage of your deposit as bonus cash — for example, a 100% match on a £50 deposit gives you £50 in bonus funds. Both types can have wagering requirements attached. Use our calculator to compare the real value of each."
+		      }
+		    },
+		    {
+		      "@type": "Question",
+		      "name": "Are casino bonuses worth claiming?",
+		      "acceptedAnswer": {
+		        "@type": "Answer",
+		        "text": "It depends on the wagering requirements. A large bonus with high wagering (e.g. 50x) can be very difficult to clear and may not be worth claiming. A smaller bonus with low or no wagering is often far more valuable in practice. Always use a bonus calculator to work out the real value before you claim."
+		      }
+		    },
+		    {
+		      "@type": "Question",
+		      "name": "What is a good wagering requirement for a UK casino bonus?",
+		      "acceptedAnswer": {
+		        "@type": "Answer",
+		        "text": "In the UK, a wagering requirement of 20x or less is generally considered good value. Anything above 35x starts to make the bonus difficult to clear. Wager-free (0x) bonuses are the best you can get. Always check the full terms and conditions before claiming any bonus."
+		      }
+		    }
+		  ]
+		}
+		</script>
 	</head>
 	<body>
 		<script>
@@ -37,6 +94,7 @@
 				document.body.classList.add('light-theme');
 			}
 		</script>
+
 		<!-- Navigation -->
 		<nav class="nav" id="nav">
 			<div class="nav-container">
@@ -51,11 +109,11 @@
 
 				<!-- Desktop Nav Links -->
 				<ul class="nav-links">
-    			<li><a href="/" class="nav-link">Home</a></li>
-    			<li><a href="/exclusive" class="nav-link">Exclusive</a></li>
-    			<li><a href="/search" class="nav-link">Search</a></li>
-    			<li><a href="/calculator" class="nav-link active">Calculator</a></li>
-</ul>
+					<li><a href="/" class="nav-link">Home</a></li>
+					<li><a href="/exclusive" class="nav-link">Exclusive</a></li>
+					<li><a href="/search" class="nav-link">Search</a></li>
+					<li><a href="/calculator" class="nav-link active">Calculator</a></li>
+				</ul>
 
 				<!-- Desktop Theme Toggle -->
 				<button
@@ -77,17 +135,17 @@
 			<!-- Mobile Menu -->
 			<div class="mobile-menu" id="mobileMenu">
 				<ul class="mobile-menu-links">
-    		<li><a href="/" class="mobile-nav-link">Home</a></li>
-    		<li><a href="/exclusive" class="mobile-nav-link">Exclusive</a></li>
-    		<li><a href="/search" class="mobile-nav-link">Search</a></li>
-    		<li><a href="/calculator" class="mobile-nav-link active">Calculator</a></li>
-    		<li class="mobile-theme-item">
-        <button class="mobile-theme-toggle" id="mobileThemeToggle" aria-label="Toggle theme">
-            <span class="theme-icon">☀</span>
-            <span class="theme-label">Dark Mode</span>
-        </button>
-    </li>
-</ul>
+					<li><a href="/" class="mobile-nav-link">Home</a></li>
+					<li><a href="/exclusive" class="mobile-nav-link">Exclusive</a></li>
+					<li><a href="/search" class="mobile-nav-link">Search</a></li>
+					<li><a href="/calculator" class="mobile-nav-link active">Calculator</a></li>
+					<li class="mobile-theme-item">
+						<button class="mobile-theme-toggle" id="mobileThemeToggle" aria-label="Toggle theme">
+							<span class="theme-icon">☀</span>
+							<span class="theme-label">Dark Mode</span>
+						</button>
+					</li>
+				</ul>
 			</div>
 		</nav>
 
@@ -172,9 +230,7 @@
 									min="0"
 									value="0"
 								/>
-								<small class="input-hint"
-									>Enter 0 if winnings paid as cash</small
-								>
+								<small class="input-hint">Enter 0 if winnings paid as cash</small>
 							</div>
 						</div>
 
@@ -185,13 +241,7 @@
 							</div>
 							<div class="result-item">
 								<div class="result-label">Wagering Type</div>
-								<div
-									class="result-value"
-									id="wageringType"
-									style="font-size: 1.2rem"
-								>
-									Wager Free
-								</div>
+								<div class="result-value" id="wageringType" style="font-size: 1.2rem">Wager Free</div>
 							</div>
 							<div class="result-item" id="mustWagerItem" style="display: none">
 								<div class="result-label">Must Wager</div>
@@ -226,9 +276,7 @@
 							</div>
 
 							<div class="calculator-input-group">
-								<label for="wageringRequirement"
-									>Wagering Requirement (x)</label
-								>
+								<label for="wageringRequirement">Wagering Requirement (x)</label>
 								<input
 									type="number"
 									id="wageringRequirement"
@@ -271,27 +319,67 @@
 					Wagering requirements (also called playthrough) are the number of
 					times you must bet your bonus before you can withdraw winnings. For
 					example, a £10 bonus with 35x wagering means you must place £350 in
-					bets. Look for low or zero wagering for the best value.
+					bets before you can cash out.
+				</p>
+				<p>
+					In the UK, a wagering requirement of 20x or below is considered
+					good value. Anything above 35x is high and makes a bonus difficult
+					to clear. Always use our calculator above to work out the true cost
+					of a bonus before you claim it — the headline offer can be
+					misleading without knowing the wagering attached.
 				</p>
 			</div>
 
 			<div class="info-card">
 				<h3>Wager-Free Bonuses</h3>
 				<p>
-					Some casinos offer wager-free bonuses, meaning any winnings can be
-					withdrawn immediately as cash. These are typically more valuable than
-					higher bonuses with high wagering requirements. Look for the "Wager
-					Free ✓" indicator in our calculator above.
+					Some casinos offer wager-free bonuses (also called 0x wagering),
+					meaning any winnings from your bonus can be withdrawn immediately as
+					real cash with no conditions attached. These are the most valuable
+					type of bonus you can find.
+				</p>
+				<p>
+					A smaller wager-free bonus is nearly always worth more in practice
+					than a larger bonus with high wagering requirements. For example,
+					£5 in wager-free free spins is often more valuable than a £50
+					bonus with 40x wagering — which would require £2,000 in bets before
+					you could withdraw a penny. Look for the "Wager Free ✓" indicator
+					in our calculator above.
 				</p>
 			</div>
 
 			<div class="info-card">
 				<h3>Free Spins vs Match Bonuses</h3>
 				<p>
-					Free spins have a set value per spin (usually £0.10). Match bonuses
-					give you a percentage of your deposit as bonus cash. Both types can
-					have wagering requirements, so always use our calculator to compare
-					the real value of different offers before claiming.
+					Free spins give you a set number of spins on a specific slot game,
+					each with a fixed value — usually £0.10 per spin. So 50 free spins
+					at £0.10 gives you a total bonus value of £5. Match bonuses give
+					you a percentage of your deposit as bonus cash — a 100% match on
+					a £50 deposit gives you £50 extra to play with.
+				</p>
+				<p>
+					Both types can have wagering requirements attached, so the
+					headline number doesn't tell the whole story. Use our calculator
+					to compare the real value of different offers side by side before
+					you decide which bonus to claim.
+				</p>
+			</div>
+
+			<div class="info-card">
+				<h3>Are Casino Bonuses Worth Claiming?</h3>
+				<p>
+					It depends entirely on the wagering requirements. A large bonus
+					with high wagering (e.g. 50x) can be extremely difficult to clear
+					and statistically unlikely to result in a withdrawal. A smaller
+					bonus with low or no wagering is often far more valuable in
+					practice.
+				</p>
+				<p>
+					As a rule of thumb: wager-free bonuses are always worth claiming,
+					bonuses under 20x wagering are generally good value, and anything
+					above 35x should be approached with caution. All UK casinos are
+					required by the UKGC to display bonus terms clearly — always read
+					the full T&Cs before depositing.
 				</p>
 			</div>
 		</div>
@@ -304,7 +392,7 @@
 					Browse our reviewed casinos with the best bonuses and lowest wagering
 					requirements
 				</p>
-				<a href="index.html" class="cta-btn-large">View Top Casinos →</a>
+				<a href="/" class="cta-btn-large">View Top Casinos →</a>
 			</div>
 		</section>
 
@@ -329,19 +417,19 @@
 					<div class="footer-links">
 						<div class="footer-col">
 							<h4>Company</h4>
-							<a href="about">About Us</a>
+							<a href="/about">About Us</a>
 						</div>
 						<div class="footer-col">
 							<h4>Legal</h4>
-							<a href="terms">Terms & Conditions</a>
-							<a href="privacy">Privacy Policy</a>
-							<a href="affiliate-disclosure">Affiliate Disclosure</a>
+							<a href="/terms">Terms & Conditions</a>
+							<a href="/privacy">Privacy Policy</a>
+							<a href="/affiliate-disclosure">Affiliate Disclosure</a>
 						</div>
 						<div class="footer-col">
 							<h4>Resources</h4>
-							<a href="responsible-gambling">Responsible Gaming</a>
-							<a href="faq">FAQ</a>
-							<a href="calculator">Bonus Calculator</a>
+							<a href="/responsible-gambling">Responsible Gaming</a>
+							<a href="/faq">FAQ</a>
+							<a href="/calculator">Bonus Calculator</a>
 						</div>
 					</div>
 				</div>
@@ -349,32 +437,14 @@
 				<div class="footer-gambling">
 					<div class="gambling-logos">
 						<div class="gambling-logo">18+</div>
-						<a
-							href="https://www.begambleaware.org/"
-							target="_blank"
-							class="gambling-logo"
-							>BeGambleAware</a
-						>
-						<a
-							href="https://www.gamstop.co.uk/"
-							target="_blank"
-							class="gambling-logo"
-							>GamStop</a
-						>
-						<a
-							href="https://www.gamcare.org.uk/"
-							target="_blank"
-							class="gambling-logo"
-							>GamCare</a
-						>
+						<a href="https://www.begambleaware.org/" target="_blank" class="gambling-logo">BeGambleAware</a>
+						<a href="https://www.gamstop.co.uk/" target="_blank" class="gambling-logo">GamStop</a>
+						<a href="https://www.gamcare.org.uk/" target="_blank" class="gambling-logo">GamCare</a>
 					</div>
 				</div>
 
 				<div class="footer-bottom">
-					<p>
-						&copy; <span id="currentYear"></span> Casino Site Reviews. All
-						rights reserved.
-					</p>
+					<p>&copy; <span id="currentYear"></span> Casino Site Reviews. All rights reserved.</p>
 					<p class="footer-disclaimer">
 						All casinos are licensed by the UK Gambling Commission.
 					</p>
@@ -386,9 +456,7 @@
 		<div class="calculator-help-modal" id="calculatorHelpModal">
 			<div class="calculator-help-overlay" id="calculatorHelpOverlay"></div>
 			<div class="calculator-help-content">
-				<button class="calculator-help-close" id="calculatorHelpClose">
-					×
-				</button>
+				<button class="calculator-help-close" id="calculatorHelpClose">×</button>
 
 				<h2>❓ How to Use the Bonus Calculator</h2>
 				<p class="help-intro">
@@ -408,9 +476,7 @@
 					</div>
 					<div class="help-item">
 						<strong>Wagering on Winnings (x)</strong>
-						<p>
-							How many times you must wager your winnings before withdrawing.
-						</p>
+						<p>How many times you must wager your winnings before withdrawing.</p>
 						<p class="help-note">* 0x = Wager-Free ✅ (best value)</p>
 					</div>
 					<div class="help-item">
@@ -427,16 +493,11 @@
 					</div>
 					<div class="help-item">
 						<strong>Bonus Percentage</strong>
-						<p>
-							The percentage the casino matches (100% = doubles your deposit).
-						</p>
+						<p>The percentage the casino matches (100% = doubles your deposit).</p>
 					</div>
 					<div class="help-item">
 						<strong>Wagering Requirement (x)</strong>
-						<p>
-							How many times you must wager the deposit + bonus before
-							withdrawing. Lower is always better.
-						</p>
+						<p>How many times you must wager the deposit + bonus before withdrawing. Lower is always better.</p>
 						<p class="help-note">* 0x = No wagering (rare and excellent)</p>
 					</div>
 				</div>
@@ -449,10 +510,7 @@
 					</div>
 					<div class="help-item">
 						<strong>Wager-Free / 0x Wagering</strong>
-						<p>
-							You can withdraw winnings immediately. This is the most valuable
-							type of bonus.
-						</p>
+						<p>You can withdraw winnings immediately. This is the most valuable type of bonus.</p>
 					</div>
 					<div class="help-item">
 						<strong>Must Wager</strong>
@@ -483,12 +541,8 @@
 				<h3>Enjoying Our Reviews?</h3>
 				<p>Bookmark this page to easily find the best casino offers!</p>
 				<div class="bookmark-actions">
-					<button class="btn-bookmark-yes" id="bookmarkYes">
-						Remind Me Later
-					</button>
-					<button class="btn-bookmark-no" id="bookmarkNo">
-						Don't Show Again
-					</button>
+					<button class="btn-bookmark-yes" id="bookmarkYes">Remind Me Later</button>
+					<button class="btn-bookmark-no" id="bookmarkNo">Don't Show Again</button>
 				</div>
 			</div>
 		</div>

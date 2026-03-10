@@ -1,10 +1,21 @@
-# Casino Affiliate Redirects
+# Strip .html to clean URLs
+/reviews/*.html    /reviews/:splat    301
+/*.html            /:splat            301
 
-/go/netbet https://netbet.livepartners.com/click.php?z=186827 302
-/go/boylecasino https://promo.boylesports.com/gaming/promo/game8?btag=54248|0f036f7746684ebb9a8e6752ee0e068a 302
-/go/playojo https://site.gotoplayojo.com/index.php?aname=csreviews&zone_id=80spins_uk 302
-/go/kwiff https://promos.kwiff.com/casino/?btag=a_4001b_79c_&affid=1012&source=IncomeAccess&creative=79&campaign_id=&affiliate_id=1012&incomeaccess_click_id=a_4001b_79c_&campaign=a_4001b_79c_&siteid=4001 302
-/go/livescorebet https://wl-nl.livescorebet.com/C.ashx?btag=a_2233b_46c_&affid=717&siteid=2233&adid=46&c= 302
-/go/bettom https://tracker.bettomaffiliates.com/link?btag=102129792_477209 302
-/go/bettom-sports https://tracker.bettomaffiliates.com/link?btag=102129792_477210 302
-/go/bresbet https://refer.bresbet.com/redirect?cid=6908a413b70b75a6c986e44b&oid=6499640c6e61a4ede687608b&mid=6880b2fa6c4e751190341ecd&customParameter= 302
+# Casino Affiliate Redirects
+/go/boylecasino         https://promo.boylesports.com/gaming/promo/game8?btag=54248|0f036f7746684ebb9a8e6752ee0e068a 302
+/go/boyle-freespins     https://ads.boylesports.com/redirect.aspx?pid=54248&bid=7747 302
+/go/boyle-bet           https://ads.boylesports.com/redirect.aspx?pid=54249&bid=7766 302
+/go/playojo             https://site.gotoplayojo.com/index.php?aname=csreviews&zone_id=80spins_uk 302
+/go/bestodds            https://bolinkhub.com/wdzr67kan 302
+/go/netbet              https://netbet.livepartners.com/click.php?z=186827 302
+/go/netbet-sports       https://netbet.livepartners.com/click.php?z=186826 302
+/go/bresbet             https://refer.bresbet.com/redirect?cid=6908a413b70b75a6c986e44b&oid=6499640c6e61a4ede687608b&mid=6880b2fa6c4e751190341ecd&customParameter= 302
+/go/bresbet-slots       https://refer.bresbet.com/redirect?cid=6908a413b70b75a6c986e44b&oid=6499640c6e61a4ede687608b&mid=69778ff644285b0a54fe2176&customParameter= 302
+/go/bresbet-sports      https://refer.bresbet.com/redirect?cid=6908a413b70b75a6c986e44b&oid=6499640c6e61a4ede687608b&mid=689cba6c32682cf35be69345&customParameter= 302
+/go/bettom              https://tracker.bettomaffiliates.com/link?btag=102129792_477209 302
+/go/bettom-sports       https://tracker.bettomaffiliates.com/link?btag=102129792_477210 302
+/go/kwiff               https://promos.kwiff.com/casino/?btag=a_4001b_79c_&affid=1012&source=IncomeAccess&creative=79&campaign_id=&affiliate_id=1012&incomeaccess_click_id=a_4001b_79c_&campaign=a_4001b_79c_&siteid=4001 302
+/go/livescorebet        https://wl-nl.livescorebet.com/C.ashx?btag=a_2339b_60c_&affid=717&siteid=2339&adid=60&c= 302
+/go/luna                https://ads.galaxyaffiliates.com/redirect.aspx?mid=5366&sid=15149&cid=&pid=&affid=8275 302
+/go/swift               https://games.swiftcasino.com/redirect.aspx?mid=5298&sid=15149&cid=&pid=&affid=8275 302

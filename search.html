@@ -14,6 +14,9 @@
 		<meta property="og:description" content="Search our full database of UKGC licensed UK casinos. Filter by bonus, games, payout speed and more." />
 		<meta property="og:url" content="https://casinositereviews.co.uk/search" />
 		<meta property="og:type" content="website" />
+	<meta property="og:image" content="https://casinositereviews.co.uk/images/casinofavicon.png" />
+	<meta property="og:image:width" content="512" />
+	<meta property="og:image:height" content="512" />
 		<meta property="og:site_name" content="Casino Site Reviews" />
 
 		<!-- Twitter Card -->
@@ -21,7 +24,8 @@
 		<meta name="twitter:title" content="Search UK Casino Reviews | Casino Site Reviews" />
 		<meta name="twitter:description" content="Search our full database of UKGC licensed UK casinos. Filter by bonus, games, payout speed and more." />
 
-		<!-- Styles & Fonts -->
+			<meta name="twitter:image" content="https://casinositereviews.co.uk/images/casinofavicon.png" />
+<!-- Styles & Fonts -->
 		<link rel="stylesheet" href="style.css" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -110,7 +114,59 @@
 		  ]
 		}
 		</script>
-	</head>
+	<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://casinositereviews.co.uk/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Search Casinos",
+      "item": "https://casinositereviews.co.uk/search"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I find the best UK casino for me?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use our search and filter tools to browse all UKGC licensed casinos by bonus type, rating, or features. Every casino is independently reviewed across our 7-point framework covering bonuses, games, payouts, mobile, security, support and responsible gambling tools."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are all casinos on Casino Site Reviews UKGC licensed?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We only list and review casinos that hold an active licence from the UK Gambling Commission. We do not feature offshore or unlicensed operators."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the highest rated casino on Casino Site Reviews?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our top rated casinos currently include Boyle Casino, PlayOJO and NetBet, all rated 5 out of 5 across our 7-point review framework. See our full rankings on the homepage."
+      }
+    }
+  ]
+}
+</script>
+</head>
 	<body>
 		<!-- Navigation -->
 		<nav class="nav" id="nav">
@@ -174,6 +230,7 @@
 		<section class="search-hero">
 			<div class="container">
 				<h1 class="search-h1">Find Your Perfect Casino</h1>
+			<p class="last-updated" style="font-size:0.8rem; color:var(--text-muted); margin:0.25rem 0 0; letter-spacing:0.3px;">Last updated: March 2026</p>
 				<p>Search through our comprehensive reviews</p>
 
 				<!-- Search Bar -->

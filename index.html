@@ -132,6 +132,28 @@
 	}
 	</script>
 
+
+	<!-- Schema: ItemList — Casino Reviews -->
+	<script type="application/ld+json">
+	{
+	  "@context": "https://schema.org",
+	  "@type": "ItemList",
+	  "name": "Best UK Online Casinos 2026",
+	  "description": "Independent reviews of the best UKGC licensed online casinos in the UK, rated across a 7-point framework.",
+	  "url": "https://casinositereviews.co.uk/",
+	  "itemListElement": [
+	    {"@type":"ListItem","position":1,"name":"Boyle Casino","url":"https://casinositereviews.co.uk/reviews/boylecasino"},
+	    {"@type":"ListItem","position":2,"name":"PlayOJO","url":"https://casinositereviews.co.uk/reviews/playojo"},
+	    {"@type":"ListItem","position":3,"name":"BestOdds","url":"https://casinositereviews.co.uk/reviews/bestodds"},
+	    {"@type":"ListItem","position":4,"name":"NetBet","url":"https://casinositereviews.co.uk/reviews/netbet"},
+	    {"@type":"ListItem","position":5,"name":"BresBet","url":"https://casinositereviews.co.uk/reviews/bresbet"},
+	    {"@type":"ListItem","position":6,"name":"BetTOM","url":"https://casinositereviews.co.uk/reviews/bettom"},
+	    {"@type":"ListItem","position":7,"name":"LiveScore Bet","url":"https://casinositereviews.co.uk/reviews/livescorebet"},
+	    {"@type":"ListItem","position":8,"name":"Kwiff","url":"https://casinositereviews.co.uk/reviews/kwiff"}
+	  ]
+	}
+	</script>
+
 	<style>
 		/* ════════════════════════════════════════
 		   STATIC CASINO CARDS
@@ -140,7 +162,7 @@
 		════════════════════════════════════════ */
 
 		.static-cards-section {
-			padding: 1rem 0 3rem;
+			padding: 0.5rem 0 3rem;
 		}
 
 		.static-cards-list {
@@ -499,8 +521,18 @@
      HERO — compact
 ══════════════════════════════════════ -->
 <style>
-.hero { padding: 1.8rem 0 1.4rem !important; min-height: unset !important; }
-.hero-content { display: flex; flex-direction: column; align-items: center; gap: 0.55rem; padding: 0 1rem; }
+/* ── Hero overrides ── */
+.hero {
+  height: auto !important;
+  min-height: unset !important;
+  padding: 6rem 0 2.5rem !important;
+  overflow: visible !important;
+}
+.hero::after { display: none !important; }
+.hero-content {
+  display: flex; flex-direction: column; align-items: center;
+  gap: 0.6rem; padding: 0 1.5rem; width: 100%; max-width: 860px; margin: 0 auto;
+}
 .hero-pill-badge {
   display: inline-flex; align-items: center; gap: 6px;
   background: rgba(212,175,55,0.1); border: 1px solid rgba(212,175,55,0.25);
@@ -511,28 +543,52 @@
 .hero-pill-badge::before { content: "\2736"; font-size: 8px; }
 .hero-title {
   font-family: var(--font-display) !important;
-  font-size: clamp(1.65rem, 4vw, 2.5rem) !important;
-  font-weight: 800 !important; line-height: 1.2 !important;
+  font-size: clamp(1.8rem, 4vw, 2.8rem) !important;
+  font-weight: 800 !important; line-height: 1.15 !important;
   text-align: center !important; margin: 0 !important;
 }
 .hero-title .title-line { display: inline; }
 .hero-title .title-line:not(.gold)::after { content: " "; }
-.hero-subtitle { font-size: 0.88rem !important; letter-spacing: 0.3px; margin: 0 !important; opacity: 0.6; text-align: center; }
+.hero-subtitle {
+  font-size: 0.82rem !important; letter-spacing: 0.3px;
+  margin: 0 !important; opacity: 0.6; text-align: center;
+}
+/* Stats bar — shrink-to-fit, no clipping */
 .stats-bar {
-  display: inline-flex; align-items: center;
+  display: inline-flex; align-items: stretch;
   background: rgba(255,255,255,0.03);
   border: 1px solid var(--border); border-radius: 12px;
-  overflow: visible; margin: 0.3rem auto;
-  max-width: 100%; box-sizing: border-box;
+  overflow: visible !important;
+  width: auto; max-width: 100%;
+  margin: 0.4rem auto 0;
 }
-.stat-item { display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 0.6rem 1.4rem; }
-.stat-number { font-size: 1.05rem !important; font-weight: 800 !important; color: var(--gold) !important; line-height: 1 !important; }
-.stat-label { font-size: 0.7rem !important; opacity: 0.6; white-space: nowrap; text-transform: uppercase; letter-spacing: 0.4px; }
-.stat-divider { width: 1px; height: 26px; background: var(--border); flex-shrink: 0; }
-.hero-cta { padding: 0.58rem 1.6rem !important; font-size: 0.8rem !important; letter-spacing: 1.2px; }
+.stat-item {
+  display: flex; flex-direction: column; align-items: center;
+  justify-content: center; gap: 3px; padding: 0.55rem 1.2rem;
+}
+.stat-number {
+  font-size: 1.1rem !important; font-weight: 800 !important;
+  color: var(--gold) !important; line-height: 1 !important;
+  white-space: nowrap;
+}
+.stat-label {
+  font-size: 0.65rem !important; opacity: 0.6;
+  white-space: nowrap; text-transform: uppercase; letter-spacing: 0.4px;
+}
+.stat-divider { width: 1px; background: var(--border); align-self: stretch; flex-shrink: 0; }
+.hero-cta { display: none !important; }
+
+/* Fix page overflow */
+body { overflow-x: hidden; }
+.container { max-width: min(900px, 100% - 2rem) !important; padding: 0 1rem !important; }
+
+/* Cards fill the container properly */
+.static-cards-list { max-width: 100% !important; }
+
 @media (max-width: 480px) {
-  .stat-item { padding: 0.5rem 0.8rem; gap: 4px; }
+  .stat-item { padding: 0.45rem 0.8rem; }
   .stat-label { display: none; }
+  .hero { padding: 5rem 0 2rem !important; }
 }
 </style>
 <section class="hero" id="home">
@@ -568,7 +624,7 @@
 <!-- ══════════════════════════════════════
      FILTER BAR
 ══════════════════════════════════════ -->
-<section class="filter-section" id="casinos">
+<section class="filter-section" id="casinos" style="padding: 0.75rem 0;">
 	<div class="container">
 		<div class="filter-bar">
 			<button class="filter-btn active" data-filter="all" onclick="filterStaticCards('all',this)">
@@ -582,6 +638,9 @@
 		</div>
 	</div>
 </section>
+
+<!-- Last updated -->
+<p style="text-align:center; font-size:0.8rem; color:var(--text-muted); padding: 0.25rem 0 0.5rem; margin:0;">Last updated: March 2026</p>
 
 <!-- ══════════════════════════════════════
      CASINO CARDS
@@ -619,7 +678,7 @@
 				</div>
 				<div class="sc-tc">
 					<span class="sc-tc-icon">ℹ</span>
-					<p><strong>18+ New customers only.</strong> Opt in. Exp. 01.12.26. New UK/ROI gaming players. Same day min. stake req. (€/£ 20/50/100 to get 20/50/100 Free Spins (FS)) by 23:59. FS Values £/€0.10. FS valid 72h. Acc. &amp; Game restrictions. T&amp;Cs Apply. <a href="https://www.begambleaware.org" target="_blank" rel="noopener">BeGambleAware.org</a></p>
+					<p>18+. Opt in. Exp. 01.12.26. New UK/ROI gaming players. Same day min. stake req. (€/£ 20/50/100 to get 20/50/100 Free Spins (FS)) by 23:59. FS Values £/€0.10. FS valid 72h. Acc. &amp; Game restrictions. T&amp;Cs Apply. <a href="https://www.begambleaware.org" target="_blank" rel="noopener">BeGambleAware.org</a> — Please gamble responsibly.</p>
 				</div>
 			</article>
 
@@ -653,7 +712,7 @@
 				</div>
 				<div class="sc-tc">
 					<span class="sc-tc-icon">ℹ</span>
-					<p><strong>18+ New customers only.</strong> First deposit only. This offer is only available for first time depositors. Min deposit is £10. 80 Free Spins on Big Bass Bonanza. Spin Value: £0.10. <a href="https://www.begambleaware.org" target="_blank" rel="noopener">BeGambleAware.org</a></p>
+					<p>First deposit only. This offer is only available for first time depositors. Min deposit is £10. 80 Free Spins on Big Bass Bonanza. Spin Value: £0.10. <a href="https://www.begambleaware.org" target="_blank" rel="noopener">BeGambleAware.org</a> — Please gamble responsibly.</p>
 				</div>
 			</article>
 
@@ -750,7 +809,7 @@
 				</div>
 				<div class="sc-tc">
 					<span class="sc-tc-icon">ℹ</span>
-					<p><strong>18+ New customers only.</strong> Min deposit required. Wager £10 to receive 100 Free Spins on qualifying slots. Winnings from free spins subject to wagering requirements before withdrawal. T&amp;Cs apply. <a href="https://www.begambleaware.org" target="_blank" rel="noopener">BeGambleAware.org</a></p>
+					<p><strong>18+ New customers only.</strong> Min deposit required. Wager £10 to receive 100 Free Spins on qualifying slots. Winnings from free spins subject to wagering requirements before withdrawal. T&amp;Cs apply. <a href="https://www.begambleaware.org" target="_blank" rel="noopener">BeGambleAware.org</a> — Please gamble responsibly.</p>
 				</div>
 			</article>
 
@@ -886,7 +945,7 @@
 						style="width:100%; padding:0.85rem 1.25rem; background:var(--bg-primary); border:2px solid var(--border); border-radius:12px; color:var(--text-primary); font-size:1rem; font-family:var(--font-body); transition:all 0.3s ease; outline:none; box-sizing:border-box;"
 						onfocus="this.style.borderColor='var(--gold)'; this.style.boxShadow='0 0 0 3px rgba(212,175,55,0.1)'"
 						onblur="this.style.borderColor='var(--border)'; this.style.boxShadow='none'" />
-					<span style="font-size:0.8rem; color:var(--text-muted); margin-top:0.35rem; display:block;">e.g. <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c0b9afb5b280a5ada1a9aceea3afad">[email&#160;protected]</a></span>
+					<span style="font-size:0.8rem; color:var(--text-muted); margin-top:0.35rem; display:block;">e.g. your@email.com</span>
 				</div>
 				<button onclick="submitNewsletter()" class="btn btn-primary" style="width:100%; padding:1rem; font-size:1rem; letter-spacing:1px; text-transform:uppercase; border:none; cursor:pointer;">Subscribe</button>
 			</div>
@@ -894,7 +953,7 @@
 	</div>
 </section>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 async function submitNewsletter() {
 	const email = document.getElementById('newsletter-email').value;
 	const errorMsg = document.getElementById('error-message');
@@ -1187,7 +1246,7 @@ function toggleFaq(btn) {
 document.getElementById('currentYear').textContent = new Date().getFullYear();
 </script>
 
-<!-- Hidden cardsGrid: keeps script.js happy (our cards are now static HTML above) -->
+<!-- Hidden cardsGrid: keeps script.js happy -->
 <div id="cardsGrid" style="display:none;" aria-hidden="true"></div>
 
 <script src="casinoData.js"></script>

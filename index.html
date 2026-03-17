@@ -586,8 +586,9 @@ body { overflow-x: hidden; }
 .static-cards-list { max-width: 100% !important; }
 
 @media (max-width: 480px) {
-  .stat-item { padding: 0.45rem 0.8rem; }
-  .stat-label { display: none; }
+  .stat-item { padding: 0.45rem 0.7rem; }
+  .stat-label { font-size: 0.58rem !important; }
+  .stat-number { font-size: 0.95rem !important; }
   .hero { padding: 5rem 0 2rem !important; }
 }
 </style>
@@ -953,7 +954,7 @@ body { overflow-x: hidden; }
 	</div>
 </section>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 async function submitNewsletter() {
 	const email = document.getElementById('newsletter-email').value;
 	const errorMsg = document.getElementById('error-message');

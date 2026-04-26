@@ -533,29 +533,6 @@ function attachCompareListeners() {
 	});
 }
 
-function updateCompareBanner() {
-	if (compareList.length > 0) {
-		compareBanner.classList.add('active');
-
-		compareChips.innerHTML = compareList
-			.map((id) => {
-				const casino = casinos.find((c) => c.id === id);
-				return `
-                <div class="compare-chip">
-                    <span>${casino.name}</span>
-                    <button class="chip-remove" onclick="removeCasino('${id}')">×</button>
-                </div>
-            `;
-			})
-			.join('');
-
-		compareBtn.disabled = compareList.length < 2;
-	} else {
-		compareBanner.classList.remove('active');
-	}
-}
-
-// Add this new function after updateCompareBanner:
 function closeCompareBanner() {
 	compareBanner.classList.remove('active');
 	// Optional: Keep selections or clear them
@@ -576,29 +553,19 @@ function removeCasino(casinoId) {
 
 // Compare button
 compareBtn?.addEventListener('click', () => {
-	console.log('Compare button clicked, compareList:', compareList);
 	if (compareList.length >= 2) {
-		console.log('Opening modal...');
 		openCompareModal();
-	} else {
-		console.log('Need at least 2 casinos');
 	}
 });
 
 // Open compare modal
 function openCompareModal() {
-	console.log('openCompareModal called');
 	const modal = document.getElementById('compareModal');
 	const table = document.getElementById('compareTable');
 
-	console.log('Modal element:', modal);
-	console.log('Table element:', table);
-
-	// Get selected casinos
 	const selectedCasinos = compareList.map((id) =>
 		casinos.find((c) => c.id === id),
 	);
-	console.log('Selected casinos:', selectedCasinos);
 
 	// Build table HTML
 	let tableHTML = '<thead><tr><th class="compare-row-label">Feature</th>';
@@ -691,17 +658,8 @@ function openCompareModal() {
 
 	table.innerHTML = tableHTML;
 
-	console.log('About to add active class to modal');
 	modal.classList.add('active');
-	console.log('Modal classes after adding active:', modal.className);
-	console.log(
-		'Modal computed display:',
-		window.getComputedStyle(modal).display,
-	);
-	console.log('Modal computed z-index:', window.getComputedStyle(modal).zIndex);
-
 	document.body.style.overflow = 'hidden';
-	console.log('Modal should now be visible');
 }
 
 function initializeTheme() {
@@ -1047,22 +1005,17 @@ function animateResults(containerId) {
 	});
 }
 
-// Hamburger Menu - DEBUG VERSION
+// Hamburger Menu
 document.addEventListener('DOMContentLoaded', () => {
 	const hamburger = document.getElementById('hamburger');
 	const mobileMenu = document.getElementById('mobileMenu');
 	const body = document.body;
 
-	console.log('Hamburger:', hamburger);
-	console.log('Mobile Menu:', mobileMenu);
-
 	if (hamburger && mobileMenu) {
 		hamburger.addEventListener('click', () => {
-			console.log('Hamburger clicked!');
 			hamburger.classList.toggle('active');
 			mobileMenu.classList.toggle('active');
 			body.classList.toggle('menu-open');
-			console.log('Mobile menu classes:', mobileMenu.className);
 		});
 
 		// Close menu when clicking a link
@@ -1074,8 +1027,6 @@ document.addEventListener('DOMContentLoaded', () => {
 				body.classList.remove('menu-open');
 			});
 		});
-	} else {
-		console.error('Hamburger or mobile menu not found!');
 	}
 });
 

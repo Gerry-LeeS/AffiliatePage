@@ -344,7 +344,7 @@ function renderCards() {
 										}')" class="btn btn-secondary btn-quick-view">Quick View</button>
                     <a href="${
 											casino.link
-										}" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Claim Offer</a>
+										}" rel="noopener noreferrer" class="btn btn-primary">Claim Offer</a>
                 </div>
                 
                 ${
@@ -647,7 +647,7 @@ function openCompareModal() {
 		tableHTML += `
 			<td>
 				<div class="compare-cell-content">
-					<a href="${casino.link}" target="_blank" rel="noopener noreferrer" class="compare-cta">Claim Offer →</a>
+					<a href="${casino.link}" rel="noopener noreferrer" class="compare-cta">Claim Offer →</a>
 				</div>
 			</td>
 		`;
@@ -830,7 +830,7 @@ function openQuickView(casinoId) {
 			</a>
 			<a href="${
 				casino.link
-			}" target="_blank" rel="noopener noreferrer" class="quick-view-btn quick-view-btn-primary">
+			}" rel="noopener noreferrer" class="quick-view-btn quick-view-btn-primary">
 				Claim Offer →
 			</a>
 		</div>

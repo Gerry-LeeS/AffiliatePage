@@ -33,12 +33,12 @@ const casinos = [
 		terms:
 			'Automatically credited upon deposit. Cancellation can be requested. First Deposit Only. Min. deposit: £10, max. Bonus £50. Maximum amount of Free Spins is 50. Game: Book of Dead, Spin Value: £0.1. WR of 10x Bonus amount and Free Spin winnings amount (only Slots count) within 30 days. Max bet is 10% (min £0.10) of the free spin winnings and bonus amount or £5 (lowest amount applies). Spins must be used and/or Bonus must be claimed before using deposited funds. Bonuses do not prevent withdrawing deposit balance. Bonus Policy applies.',
 		link: 'https://ads.galaxyaffiliates.com/redirect.aspx?mid=5366&sid=15149&cid=&pid=&affid=8275',
-		reviewLink: 'reviews/lunacasino.html',
+		reviewLink: '/reviews/lunacasino',
 		exclusive: false,
 	},
 	{
 		id: 'boylecasino',
-		name: 'BOYLE Casino',
+		name: 'Boyle Casino',
 		logo: 'boyle_square.png',
 		logoBg: '#001d5e',
 		rating: 5,
@@ -58,7 +58,7 @@ const casinos = [
 		terms:
 			'18+. Opt in. Acc. games, game weighting & payment restrictions apply. 100 Free Spins: Exp. 01.12.26. New UK/ROI gaming players. Same day min. stake req. (€/£ 20/50/100 to get 20/50/100 Free Spins (FS)) by 23:59. FS Values £/€0.10 – 0.20. FS valid 72h.  Pragmatic Tournament: Tue 12:00 to Mon 23:59 BST. Play 10+ real money rounds on eligible games to qualify. Score based on multiplier wins, streaks (wins/losses). Max 200 rounds/day. FS value €/£0.10. Use within 48 hrs. T&Cs Apply.',
 		link: 'https://promo.boylesports.com/gaming/promo/game8?btag=54248|0f036f7746684ebb9a8e6752ee0e068a',
-		reviewLink: '/reviews/boylecasino.html',
+		reviewLink: '/reviews/boylecasino',
 		exclusive: false,
 	},
 	{
@@ -76,7 +76,7 @@ const casinos = [
 		terms:
 			'18+ First deposit only. This offer is only available for first time depositors. Min deposit is £10. 80 Free Spins on Big Bass Bonanza. Spin Value: £0.10. This offer cannot be used in conjunction with any other offer. T&Cs Apply.',
 		link: 'https://site.gotoplayojo.com/index.php?aname=csreviews&zone_id=80spins_uk',
-		reviewLink: '/reviews/playojo.html',
+		reviewLink: '/reviews/playojo',
 		exclusive: true,
 	},
 
@@ -94,7 +94,7 @@ const casinos = [
 		terms:
 			'Automatically credited upon deposit. Cancellation can be requested. First Deposit Only. Min. deposit: £10, max. Bonus £75. Maximum amount of Free Spins is 50. Game: Book of Dead, Spin Value: £0.1. WR of 10x Bonus amount and Free Spin winnings amount (only Slots count) within 30 days. Max bet is 10% (min £0.10) of the free spin winnings and bonus amount or £5 (lowest amount applies). Spins must be used and/or Bonus must be claimed before using deposited funds. Bonuses do not prevent withdrawing deposit balance. Bonus Policy applies.',
 		link: 'https://games.swiftcasino.com/redirect.aspx?mid=5298&sid=15149&cid=&pid=&affid=8275',
-		reviewLink: '/reviews/swiftcasino.html',
+		reviewLink: '/reviews/swiftcasino',
 		exclusive: true,
 	},
 	{
@@ -111,7 +111,7 @@ const casinos = [
 		terms:
 			'New UK customers only. Wager £20+ on selected Pragmatic Play slots to get 50 Free Spins daily for 5 days. Spins expire 24 hrs after issue. Max Payouts & Full T&Cs apply. Use code 5x50fs',
 		link: 'https://bolinkhub.com/wdzr67kan',
-		reviewLink: '/reviews/bestodds.html',
+		reviewLink: '/reviews/bestodds',
 		exclusive: false,
 	},
 
@@ -137,7 +137,7 @@ const casinos = [
 		terms:
 			'18+. New customers only. £20 min deposit. Opt-in and Bet £20+ on any slot, 100 Free Spins on Big Bass Splash, £0.10 per spin. Winnings paid as cash, £100 Max win. Additional T&Cs apply.',
 		link: 'https://netbet.livepartners.com/click.php?z=186827',
-		reviewLink: 'reviews/netbet.html',
+		reviewLink: '/reviews/netbet',
 		exclusive: false,
 	},
 
@@ -163,13 +163,13 @@ const casinos = [
 		terms:
 			'Min £10 wager on Huff N Lots Of Puff to receive 100 x £0.10 free spins. Free spins credited by 12pn noon the day after you qualify. New Customers Only. T&Cs apply. 18+ Use code: CasinoWelcome26',
 		link: 'https://refer.bresbet.com/redirect?cid=6908a413b70b75a6c986e44b&oid=6499640c6e61a4ede687608b&mid=69778ff644285b0a54fe2176&customParameter=',
-		reviewLink: '/reviews/bresbet.html',
+		reviewLink: '/reviews/bresbet',
 		exclusive: false,
 	},
 
 	{
 		id: 'bettom',
-		name: 'BetTom',
+		name: 'BetTOM',
 		logo: 'bettom.png',
 		logoBg: 'rgb(15, 38, 172)',
 		rating: 4.5,
@@ -181,13 +181,13 @@ const casinos = [
 		terms:
 			'Get 50% back on first day casino losses as a free bonus funds up to £50. To be credited within 24 hours. Max free bet per customer £/€50. Qualifying customers will additionally receive 10x 10p free spins on Big Bass Splash. 5x wagering requirement applies to free spins. Customers who qualify for the welcome offer free bet will also receive 10x free spins on Big Bass Splash. Each free spin is worth £0.10. Full T&Cs apply.',
 		link: 'https://tracker.bettomaffiliates.com/link?btag=102129792_477209',
-		reviewLink: '/reviews/bettom.html',
+		reviewLink: '/reviews/bettom',
 		exclusive: false,
 	},
 
 	{
 		id: 'livescorebet',
-		name: 'LiveScoreBet',
+		name: 'LiveScore Bet',
 		logo: 'lsbet.png',
 		logoBg: 'rgb(251, 84, 21)',
 		rating: 4.5,
@@ -198,8 +198,8 @@ const casinos = [
 		features: ['Slots', 'Live Tables', 'Sports', 'Roulette', 'Blackjack'],
 		terms:
 			'**New members only. *Must sign up via offer link. Wager in 7 days of reg. Accept Free Spins to use on King Kong Cash Even Bigger Bananas Jackpot King via pop-up within 24 hrs of qualifying (10p spin value, 3 days expiry). Terms & deposit exclusions apply. 18+',
-		link: 'https://wl-nl.livescorebet.com/C.ashx?btag=a_2339b_60c_&affid=717&siteid=2339&adid=60&c= ',
-		reviewLink: '/reviews/livescorebet.html',
+		link: 'https://wl-nl.livescorebet.com/C.ashx?btag=a_2339b_60c_&affid=717&siteid=2339&adid=60&c=',
+		reviewLink: '/reviews/livescorebet',
 		exclusive: false,
 	},
 
@@ -217,7 +217,7 @@ const casinos = [
 		terms:
 			'Wager £20 cash on slots within 5 days of first deposit and Get 200 Free Spins on Book of Dead. £0.10 per spin. £250 total max withdrawal. E-wallets and virtual cards excluded. 18+. New customers only. Full T&Cs apply. Gamble Responsibly.',
 		link: 'https://promos.kwiff.com/casino/?btag=a_4001b_79c_&affid=1012&source=IncomeAccess&creative=79&campaign_id=&affiliate_id=1012&incomeaccess_click_id=a_4001b_79c_&campaign=a_4001b_79c_&siteid=4001',
-		reviewLink: '/reviews/kwiff.html',
+		reviewLink: '/reviews/kwiff',
 		exclusive: false,
 	},
 ];

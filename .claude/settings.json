@@ -3,7 +3,12 @@
     "allow": [
       "Bash(python3 -c ' *)",
       "Bash(grep -E \"\\\\.html$\")",
-      "Bash(python3 -)"
+      "Bash(python3 -)",
+      "Bash(Get-ChildItem -Path \"c:\\\\Users\\\\shxnk\\\\AffiliatePage\" -Recurse)",
+      "Bash(Select-Object FullName)",
+      "Bash(python expand_all.py)",
+      "Bash(python -c ' *)",
+      "Bash(del expand_all.py)"
     ]
   }
 }

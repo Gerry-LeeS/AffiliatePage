@@ -8,7 +8,9 @@
       "Bash(Select-Object FullName)",
       "Bash(python expand_all.py)",
       "Bash(python -c ' *)",
-      "Bash(del expand_all.py)"
+      "Bash(del expand_all.py)",
+      "Bash(python optimise_reviews.py)",
+      "Bash(python fix2.py)"
     ]
   }
 }

@@ -14,7 +14,7 @@ const exclusiveCasinos = [
 		terms:
 			'Automatically credited upon deposit. Cancellation can be requested. First Deposit Only. Min. deposit: £10, max. Bonus £75. Maximum amount of Free Spins is 50. Game: Book of Dead, Spin Value: £0.1. WR of 10x Bonus amount and Free Spin winnings amount (only Slots count) within 30 days. Max bet is 10% (min £0.10) of the free spin winnings and bonus amount or £5 (lowest amount applies). Spins must be used and/or Bonus must be claimed before using deposited funds. Bonuses do not prevent withdrawing deposit balance. Bonus Policy applies.',
 		link: 'https://games.swiftcasino.com/redirect.aspx?mid=5298&sid=15149&cid=&pid=&affid=8275',
-		reviewLink: 'reviews/swiftcasino.html',
+		reviewLink: '/reviews/swiftcasino',
 		exclusive: true,
 		exclusiveTag: 'Up to £75!',
 	},
@@ -31,7 +31,7 @@ const exclusiveCasinos = [
 		terms:
 			'18+ First deposit only. This offer is only available for first time depositors. Min deposit is £10. 80 Free Spins on Big Bass Bonanza. Spin Value: £0.10.  This offer cannot be used in conjunction with any other offer. T&Cs Apply.',
 		link: 'https://site.gotoplayojo.com/index.php?aname=csreviews&zone_id=80spins_uk',
-		reviewLink: 'reviews/playojo.html',
+		reviewLink: '/reviews/playojo',
 		exclusive: true,
 		exclusiveTag: 'BEST VALUE',
 	},
@@ -109,7 +109,7 @@ function renderExclusiveCards() {
 								}" class="btn-exclusive-secondary">Read Review</a>
                 <a href="${
 									casino.link
-								}" target="_blank" class="btn-exclusive-primary">
+								}" target="_blank" rel="noopener sponsored" class="btn-exclusive-primary">
                     Claim Exclusive Offer
                     <span class="btn-arrow">→</span>
                 </a>

@@ -10,7 +10,19 @@
       "Bash(python -c ' *)",
       "Bash(del expand_all.py)",
       "Bash(python optimise_reviews.py)",
-      "Bash(python fix2.py)"
+      "Bash(python fix2.py)",
+      "WebSearch",
+      "WebFetch(domain:www.gamblingcommission.gov.uk)",
+      "WebFetch(domain:find-and-update.company-information.service.gov.uk)",
+      "WebFetch(domain:casinositereviews.co.uk)",
+      "WebFetch(domain:bettinglounge.co.uk)",
+      "WebFetch(domain:web.archive.org)",
+      "Bash(New-Item -Path \"c:\\\\Users\\\\shxnk\\\\AffiliatePage\\\\best-casino-bonuses.html\" -ItemType File -Force)",
+      "Bash(Out-Null)",
+      "Bash(Write-Output \"created\")"
+    ],
+    "additionalDirectories": [
+      "c:\\Users\\shxnk\\AffiliatePage"
     ]
   }
 }

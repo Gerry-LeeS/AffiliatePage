@@ -1198,3 +1198,71 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 	}
 });
+
+// Inject Guides dropdown (desktop + mobile) into every page
+document.addEventListener('DOMContentLoaded', () => {
+	const guideItems = [
+		{ href: '/paypal-casinos', label: '💳 PayPal Casinos' },
+		{ href: '/no-wagering-casinos', label: '🎯 No Wagering Casinos' },
+		{ href: '/fastest-withdrawal-casinos', label: '⚡ Fastest Withdrawals' },
+		{ href: '/new-casinos', label: '🆕 New Casinos 2026' },
+		{ href: '/best-casino-bonuses', label: '🎁 Best Casino Bonuses' },
+	];
+
+	// Desktop dropdown
+	const navLinks = document.querySelector('.nav-links');
+	if (navLinks) {
+		const li = document.createElement('li');
+		li.className = 'nav-dropdown';
+		li.innerHTML = `
+			<button class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+				Rankings <span class="nav-dropdown-chevron">▾</span>
+			</button>
+			<ul class="nav-dropdown-menu" role="menu">
+				${guideItems.map(g => `<li><a href="${g.href}" role="menuitem">${g.label}</a></li>`).join('')}
+			</ul>`;
+		navLinks.appendChild(li);
+
+		const toggle = li.querySelector('.nav-dropdown-toggle');
+		toggle.addEventListener('click', (e) => {
+			e.stopPropagation();
+			const isOpen = li.classList.toggle('open');
+			toggle.setAttribute('aria-expanded', isOpen);
+		});
+		document.addEventListener('click', () => {
+			li.classList.remove('open');
+			toggle.setAttribute('aria-expanded', 'false');
+		});
+		document.addEventListener('keydown', (e) => {
+			if (e.key === 'Escape') {
+				li.classList.remove('open');
+				toggle.setAttribute('aria-expanded', 'false');
+			}
+		});
+	}
+
+	// Mobile accordion
+	const mobileMenuLinks = document.querySelector('.mobile-menu-links');
+	if (mobileMenuLinks) {
+		const mobileLi = document.createElement('li');
+		mobileLi.className = 'mobile-guides-toggle';
+		mobileLi.innerHTML = `
+			<button class="mobile-guides-btn">
+				Rankings <span class="mobile-guides-chevron">▾</span>
+			</button>
+			<ul class="mobile-guides-menu">
+				${guideItems.map(g => `<li><a href="${g.href}" class="mobile-nav-link">${g.label}</a></li>`).join('')}
+			</ul>`;
+
+		const themeItem = mobileMenuLinks.querySelector('.mobile-theme-item');
+		if (themeItem) {
+			mobileMenuLinks.insertBefore(mobileLi, themeItem);
+		} else {
+			mobileMenuLinks.appendChild(mobileLi);
+		}
+
+		mobileLi.querySelector('.mobile-guides-btn').addEventListener('click', () => {
+			mobileLi.classList.toggle('open');
+		});
+	}
+});

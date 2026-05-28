@@ -954,6 +954,7 @@ function calculateSpins() {
 	}
 
 	animateResults('spinsResults');
+	showCalcRecommendations('spins', wagering, totalValue);
 }
 
 function calculateMatch() {
@@ -990,7 +991,112 @@ function calculateMatch() {
 	}
 
 	animateResults('matchResults');
+	showCalcRecommendations('match', wagering, amountToWager);
 }
+
+function showCalcRecommendations(type, wagering, totalWagerNeeded) {
+	const panel = document.getElementById('calc-recommendations');
+	const summary = document.getElementById('rec-summary');
+	const cards = document.getElementById('rec-cards');
+	const headline = document.getElementById('rec-headline');
+	if (!panel || !summary || !cards) return;
+
+	const CASINOS = {
+		playojo: {
+			name: 'PlayOJO',
+			bonus: '50 Free Spins — 0x Wagering (keep what you win)',
+			badge: '0x WAGERING',
+			badgeColor: '#10b981',
+			logo: 'images/casinologos/playojo.png',
+			bg: '#17003a',
+			review: '/reviews/playojo',
+			claim: 'https://site.gotoplayojo.com/redirect.aspx?pid=23&bid=2399',
+			tc: '18+. New customers. T&Cs apply.',
+		},
+		boyle: {
+			name: 'Boyle Casino',
+			bonus: '100 Free Spins — 0x Wagering',
+			badge: '0x WAGERING',
+			badgeColor: '#10b981',
+			logo: 'images/casinologos/boyle_square.png',
+			bg: '#ffffff',
+			review: '/reviews/boylecasino',
+			claim: 'https://promo.boylesports.com/gaming/promo/game8?btag=54248|0f036f7746684ebb9a8e6752ee0e068a',
+			tc: '18+. New customers. T&Cs apply.',
+		},
+		luna: {
+			name: 'Luna Casino',
+			bonus: '100% up to \u00a350 + 50 Free Spins (Code: LUNA)',
+			badge: '5/5',
+			badgeColor: '#d4af37',
+			logo: 'images/casinologos/luna.png',
+			bg: '#000000',
+			review: '/reviews/lunacasino',
+			claim: 'https://ads.galaxyaffiliates.com/redirect.aspx?mid=5366&sid=15149&cid=&pid=&affid=8275',
+			tc: '18+. New customers. T&Cs apply.',
+		},
+		netbet: {
+			name: 'NetBet',
+			bonus: '100 Free Spins on \u00a320 Wager',
+			badge: 'LOW WAGERING',
+			badgeColor: '#6366f1',
+			logo: 'images/casinologos/netbet.png',
+			bg: '#101010',
+			review: '/reviews/netbet',
+			claim: 'https://netbet.livepartners.com/click.php?z=186827',
+			tc: '18+. New customers. T&Cs apply.',
+		},
+	};
+
+	function makeCard(casino) {
+		return `<div style="display:flex;align-items:center;gap:0.85rem;padding:0.85rem 1rem;background:var(--bg-card,var(--bg-primary));border:1px solid var(--border);border-radius:12px;">
+			<div style="width:44px;height:44px;min-width:44px;border-radius:8px;background:${casino.bg};display:flex;align-items:center;justify-content:center;overflow:hidden;border:1px solid var(--border);">
+				<img src="${casino.logo}" alt="${casino.name}" width="44" height="44" style="object-fit:contain;padding:4px;" onerror="this.parentElement.innerHTML='\uD83C\uDFB0'" loading="lazy">
+			</div>
+			<div style="flex:1;min-width:0;">
+				<div style="display:flex;align-items:center;gap:6px;margin-bottom:3px;">
+					<span style="font-weight:700;font-size:0.9rem;color:var(--text-primary);">${casino.name}</span>
+					<span style="background:${casino.badgeColor}20;color:${casino.badgeColor};border:1px solid ${casino.badgeColor}40;border-radius:999px;padding:1px 8px;font-size:9px;font-weight:700;letter-spacing:0.4px;">${casino.badge}</span>
+				</div>
+				<div style="font-size:0.8rem;color:var(--text-secondary);">\uD83C\uDF81 ${casino.bonus}</div>
+				<div style="font-size:0.72rem;color:var(--text-muted);margin-top:2px;">${casino.tc}</div>
+			</div>
+			<div style="display:flex;flex-direction:column;gap:5px;flex-shrink:0;">
+				<a href="${casino.review}" style="font-size:11px;padding:0.35rem 0.75rem;border:1px solid var(--border);border-radius:7px;color:var(--text-secondary);text-decoration:none;text-align:center;">Review</a>
+				<a href="${casino.claim}" rel="noopener sponsored" style="font-size:11px;padding:0.35rem 0.75rem;background:var(--gold);border-radius:7px;color:#000;font-weight:700;text-decoration:none;text-align:center;">Claim</a>
+			</div>
+		</div>`;
+	}
+
+	let rec = [];
+	let headlineText = 'Casinos that match your bonus profile:';
+	let summaryText = '';
+
+	if (wagering === 0) {
+		headlineText = 'Perfect — you're looking at wager-free bonuses:';
+		summaryText = 'These casinos offer 0x wagering free spins — winnings are paid as real cash immediately.';
+		rec = ['playojo', 'boyle'];
+	} else if (wagering <= 20) {
+		headlineText = 'Good value — these casinos offer competitive low-wagering bonuses:';
+		summaryText = `With ${wagering}x wagering you need to bet \u00a3${totalWagerNeeded.toFixed(0)} before withdrawing. These casinos offer the best value for your profile.`;
+		rec = ['playojo', 'boyle', 'luna'];
+	} else if (wagering <= 35) {
+		headlineText = 'Standard wagering — consider these well-rated alternatives:';
+		summaryText = `${wagering}x wagering is average for the market. You'd need to wager \u00a3${totalWagerNeeded.toFixed(0)}. Consider a 0x wagering alternative instead.`;
+		rec = ['playojo', 'boyle', 'luna', 'netbet'];
+	} else {
+		headlineText = '\u26a0\ufe0f High wagering — here are better alternatives:';
+		summaryText = `${wagering}x wagering is high — you'd need to bet \u00a3${totalWagerNeeded.toFixed(0)} to withdraw. We recommend these lower-wagering options instead.`;
+		rec = ['playojo', 'boyle'];
+	}
+
+	if (headline) headline.textContent = headlineText;
+	if (summary) summary.textContent = summaryText;
+	cards.innerHTML = rec.map(k => makeCard(CASINOS[k])).join('');
+	panel.style.display = 'block';
+	panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
 
 function animateResults(containerId) {
 	const container = document.getElementById(containerId);
@@ -1013,9 +1119,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	if (hamburger && mobileMenu) {
 		hamburger.addEventListener('click', () => {
-			hamburger.classList.toggle('active');
+			const isOpen = hamburger.classList.toggle('active');
 			mobileMenu.classList.toggle('active');
 			body.classList.toggle('menu-open');
+			hamburger.setAttribute('aria-expanded', isOpen);
 		});
 
 		// Close menu when clicking a link
@@ -1199,70 +1306,88 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 });
 
-// Inject Guides dropdown (desktop + mobile) into every page
+// Wire Rankings dropdown event handlers — HTML is static in each page
 document.addEventListener('DOMContentLoaded', () => {
-	const guideItems = [
-		{ href: '/paypal-casinos', label: '💳 PayPal Casinos' },
-		{ href: '/no-wagering-casinos', label: '🎯 No Wagering Casinos' },
-		{ href: '/fastest-withdrawal-casinos', label: '⚡ Fastest Withdrawals' },
-		{ href: '/new-casinos', label: '🆕 New Casinos 2026' },
-		{ href: '/best-casino-bonuses', label: '🎁 Best Casino Bonuses' },
-	];
-
 	// Desktop dropdown
-	const navLinks = document.querySelector('.nav-links');
-	if (navLinks) {
-		const li = document.createElement('li');
-		li.className = 'nav-dropdown';
-		li.innerHTML = `
-			<button class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
-				Rankings <span class="nav-dropdown-chevron">▾</span>
-			</button>
-			<ul class="nav-dropdown-menu" role="menu">
-				${guideItems.map(g => `<li><a href="${g.href}" role="menuitem">${g.label}</a></li>`).join('')}
-			</ul>`;
-		navLinks.appendChild(li);
-
-		const toggle = li.querySelector('.nav-dropdown-toggle');
+	const desktopDropdown = document.querySelector('.nav-links .nav-dropdown');
+	if (desktopDropdown) {
+		const toggle = desktopDropdown.querySelector('.nav-dropdown-toggle');
 		toggle.addEventListener('click', (e) => {
 			e.stopPropagation();
-			const isOpen = li.classList.toggle('open');
+			const isOpen = desktopDropdown.classList.toggle('open');
 			toggle.setAttribute('aria-expanded', isOpen);
 		});
 		document.addEventListener('click', () => {
-			li.classList.remove('open');
+			desktopDropdown.classList.remove('open');
 			toggle.setAttribute('aria-expanded', 'false');
 		});
 		document.addEventListener('keydown', (e) => {
 			if (e.key === 'Escape') {
-				li.classList.remove('open');
+				desktopDropdown.classList.remove('open');
 				toggle.setAttribute('aria-expanded', 'false');
 			}
 		});
 	}
 
 	// Mobile accordion
-	const mobileMenuLinks = document.querySelector('.mobile-menu-links');
-	if (mobileMenuLinks) {
-		const mobileLi = document.createElement('li');
-		mobileLi.className = 'mobile-guides-toggle';
-		mobileLi.innerHTML = `
-			<button class="mobile-guides-btn">
-				Rankings <span class="mobile-guides-chevron">▾</span>
-			</button>
-			<ul class="mobile-guides-menu">
-				${guideItems.map(g => `<li><a href="${g.href}" class="mobile-nav-link">${g.label}</a></li>`).join('')}
-			</ul>`;
-
-		const themeItem = mobileMenuLinks.querySelector('.mobile-theme-item');
-		if (themeItem) {
-			mobileMenuLinks.insertBefore(mobileLi, themeItem);
-		} else {
-			mobileMenuLinks.appendChild(mobileLi);
-		}
-
-		mobileLi.querySelector('.mobile-guides-btn').addEventListener('click', () => {
-			mobileLi.classList.toggle('open');
+	const mobileGuides = document.querySelector('.mobile-guides-toggle');
+	if (mobileGuides) {
+		mobileGuides.querySelector('.mobile-guides-btn').addEventListener('click', () => {
+			mobileGuides.classList.toggle('open');
 		});
 	}
+});
+
+// Affiliate link click tracking
+document.addEventListener('DOMContentLoaded', () => {
+	document.querySelectorAll('a[rel*="sponsored"], a[href*="/go/"]').forEach(link => {
+		link.addEventListener('click', () => {
+			const casino = link.closest('[data-casino], article, .sc-card, .casino-card')?.dataset?.casino
+				|| link.href.split('/go/')[1]?.split('?')[0]
+				|| link.closest('.review-hero')?.querySelector('h1')?.textContent?.trim()?.split(' ')[0]
+				|| 'unknown';
+			if (typeof gtag === 'function') {
+				gtag('event', 'affiliate_click', {
+					event_category: 'Affiliate',
+					event_label: casino,
+					value: 1
+				});
+			}
+		});
+	});
+
+	// FAQ interaction tracking
+	document.querySelectorAll('.faq-toggle').forEach(btn => {
+		btn.addEventListener('click', () => {
+			const question = btn.closest('.faq-item')?.querySelector('.faq-question')?.textContent?.trim() || 'unknown';
+			if (typeof gtag === 'function') {
+				gtag('event', 'faq_open', {
+					event_category: 'Engagement',
+					event_label: question.substring(0, 50)
+				});
+			}
+		});
+	});
+
+	// Calculator usage tracking
+	const calcForm = document.getElementById('bonusCalcForm') || document.querySelector('.calculator-form');
+	if (calcForm) {
+		calcForm.addEventListener('submit', () => {
+			if (typeof gtag === 'function') {
+				gtag('event', 'calculator_used', { event_category: 'Engagement' });
+			}
+		});
+	}
+
+	// Filter bar usage
+	document.querySelectorAll('.filter-btn').forEach(btn => {
+		btn.addEventListener('click', () => {
+			if (typeof gtag === 'function') {
+				gtag('event', 'filter_used', {
+					event_category: 'Engagement',
+					event_label: btn.dataset.filter || btn.textContent?.trim()
+				});
+			}
+		});
+	});
 });

@@ -19,7 +19,18 @@
       "WebFetch(domain:web.archive.org)",
       "Bash(New-Item -Path \"c:\\\\Users\\\\shxnk\\\\AffiliatePage\\\\best-casino-bonuses.html\" -ItemType File -Force)",
       "Bash(Out-Null)",
-      "Bash(Write-Output \"created\")"
+      "Bash(Write-Output \"created\")",
+      "Bash(ls \"C:\\\\Users\\\\shxnk\\\\.claude\\\\skills\\\\\")",
+      "Read(//c/Users/shxnk/.claude/**)",
+      "Bash(find /mnt/c/Users/shxnk/.claude/skills -maxdepth 1 -type d | sort)",
+      "Read(//mnt/c/Users/shxnk/.claude/**)",
+      "Bash(python3 update_kwiff.py)",
+      "Bash(python3 add_ukgc.py)",
+      "Bash(python3 gen_category_pages.py)",
+      "Bash(python3 gen_sister_sites.py)",
+      "Bash(python3 update_calculator.py)",
+      "Bash(python3 update_script.py)",
+      "Bash(python3 fix_sister_faqs.py)"
     ],
     "additionalDirectories": [
       "c:\\Users\\shxnk\\AffiliatePage"

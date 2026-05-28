@@ -1,0 +1,58 @@
+# Casino Site Reviews
+Independent UK online casino reviews. Only UKGC licensed operators are featured. Rated across a 7-point framework: bonuses, payouts, games, support, mobile, security and responsible gambling.
+
+## About
+Casino Site Reviews publishes independent editorial reviews of online casinos licensed by the UK Gambling Commission. Reviews are authored by Jose Fontana, Casino Analyst.
+
+## Key pages
+- /: Homepage — ranked list of 10 reviewed UK casinos with bonuses and ratings
+- /reviews/lunacasino: Luna Casino review — 100% up to £50 + 50 Free Spins, UKGC licensed
+- /reviews/playojo: PlayOJO review — 80 Wager-Free Spins, zero wagering requirements
+- /reviews/boylecasino: Boyle Casino review — up to 100 Free Spins, wager-free
+- /reviews/swiftcasino: Swift Casino review — 100% up to £75 + 50 Free Spins
+- /reviews/netbet: NetBet review — 100 Free Spins on Big Bass Splash
+- /reviews/bestodds: BestOdds Casino review — 250 Free Spins with code bop5x50fs
+- /reviews/kwiff: Kwiff review — 200 Free Spins on Book of Dead
+- /reviews/bettom: BetTOM review — up to £50 Bonus + 10 Free Spins, same-day withdrawals
+- /reviews/bresbet: BresBet review — 100 Free Spins on first deposit
+- /reviews/livescorebet: LiveScore Bet review — Bet £10 Get £30 in Free Bets
+
+## Category / ranked lists
+- /fastest-withdrawal-casinos: UK casinos ranked by withdrawal speed — same-day and instant payouts
+- /paypal-casinos: Best UK casinos accepting PayPal deposits and withdrawals
+- /no-wagering-casinos: UK casinos with zero playthrough requirements — keep everything you win
+- /best-casino-bonuses: UK casino welcome bonuses ranked by real expected value after wagering
+- /new-casinos: Best newly licensed UK casino operators (2025–2026)
+- /live-casino: Best live casino UK — Evolution Gaming verified sites with real-time dealers
+- /slots-sites: Best slots sites UK — ranked by game library size, Megaways coverage and free spins
+- /trustly-casinos: Best Trustly casinos UK — instant open banking deposits and fast withdrawals
+- /apple-pay-casinos: Best Apple Pay casinos UK — Face ID deposits at UKGC licensed sites
+- /five-pound-deposit-casinos: Best £5 deposit casino sites UK — low minimum deposit casinos
+- /no-deposit-bonus: Best no deposit and wager-free bonus offers UK — 0x wagering free spins
+- /blackjack-casinos: Best casinos for blackjack UK — Evolution live Blackjack, Speed and Infinite variants
+- /live-roulette-casinos: Best live roulette casinos UK — Lightning Roulette, French Roulette, Auto Roulette
+
+## Sister sites pages (same operator, different brands)
+- /reviews/lunacasino-sister-sites: Luna Casino sister sites — all SkillOnNet Ltd brands
+- /reviews/playojo-sister-sites: PlayOJO sister sites — all SkillOnNet Ltd brands
+- /reviews/boylecasino-sister-sites: Boyle Casino sister sites — BoyleSports group brands
+- /reviews/swiftcasino-sister-sites: Swift Casino sister sites — SkillOnNet Ltd brands
+- /reviews/netbet-sister-sites: NetBet sister sites — NetBet Enterprises / Circus group brands
+- /reviews/bestodds-sister-sites: Best Odds Casino sister sites — BestOdds Ltd brands
+- /reviews/kwiff-sister-sites: Kwiff sister sites — Kwiff Limited (independent, no sister sites)
+- /reviews/bettom-sister-sites: BetTOM sister sites — BetTOM Ltd brands
+- /reviews/bresbet-sister-sites: BresBet sister sites — BresBet Ltd brands
+- /reviews/livescorebet-sister-sites: LiveScore Bet sister sites — LiveScore Group brands
+
+## Tools
+- /calculator: Bonus expected value calculator — enter bonus amount and wagering requirement to see real value
+- /search: Filter and search all reviewed casinos by game type, payment method and bonus type
+
+## Information
+- /jose-fontana: Author bio — Jose Fontana, Casino Analyst
+- /about: About Casino Site Reviews — methodology, independence statement
+- /faq: Frequently asked questions about UK online casinos
+- /responsible-gambling: Responsible gambling resources and self-exclusion links
+
+## Topics this site covers
+UK online casino reviews, UKGC licensed casinos, casino bonuses UK, wagering requirements, PayPal casinos UK, Trustly casinos UK, Apple Pay casinos UK, fastest withdrawal casinos UK, no wagering casinos UK, new casino sites UK 2026, best casino bonuses UK, free spins offers UK, casino bonus calculator, live casino UK, best slots sites UK, blackjack casinos UK, live roulette UK, £5 deposit casinos UK, no deposit bonus UK, sister sites UK casinos, responsible gambling UK

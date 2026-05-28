@@ -2,7 +2,16 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-KQ4H2E63YD"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	  gtag('config', 'G-KQ4H2E63YD');
+	</script>
+		<meta name="theme-color" content="#d4af37" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 		<!-- SEO Meta Tags -->
 		<title>Wagering Requirements Calculator — Work Out Casino Bonuses Instantly | Free Tool</title>
@@ -26,12 +35,13 @@
 		<meta name="twitter:description" content="Free wagering requirements calculator: enter your bonus and multiplier to see exactly what you need to wager before withdrawing." />
 		<meta name="twitter:image" content="https://casinositereviews.co.uk/images/casinofavicon.png" />
 <!-- Styles & Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link rel="stylesheet" href="style.css" />
 		<link rel="stylesheet" href="calculator.css" />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-		<link rel="icon" href="/images/casinofavicon.png" type="image/x-icon" />
+		<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet" />
+		<link rel="apple-touch-icon" href="/images/casinofavicon.png" />
+	<link rel="icon" href="/images/casinofavicon.png" type="image/x-icon" />
 		<!-- DNS Prefetch for affiliate partners -->
 		<link rel="dns-prefetch" href="//ads.galaxyaffiliates.com" />
 		<link rel="dns-prefetch" href="//games.swiftcasino.com" />
@@ -122,6 +132,7 @@
 </script>
 </head>
 	<body>
+	<a href="#main" class="skip-link">Skip to main content</a>
 		<script>
 			// Applies saved theme
 			const savedTheme = localStorage.getItem('theme') || 'dark';
@@ -149,6 +160,18 @@
 					<li><a href="/exclusive" class="nav-link">Exclusive</a></li>
 					<li><a href="/search" class="nav-link">Search</a></li>
 					<li><a href="/calculator" class="nav-link active">Calculator</a></li>
+			<li class="nav-dropdown">
+				<button class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+					Rankings <span class="nav-dropdown-chevron">&#9662;</span>
+				</button>
+				<ul class="nav-dropdown-menu" role="menu">
+					<li><a href="/paypal-casinos" role="menuitem">PayPal Casinos</a></li>
+					<li><a href="/no-wagering-casinos" role="menuitem">No Wagering Casinos</a></li>
+					<li><a href="/fastest-withdrawal-casinos" role="menuitem">Fastest Withdrawals</a></li>
+					<li><a href="/new-casinos" role="menuitem">New Casinos 2026</a></li>
+					<li><a href="/best-casino-bonuses" role="menuitem">Best Casino Bonuses</a></li>
+				</ul>
+			</li>
 				</ul>
 
 				<!-- Desktop Theme Toggle -->
@@ -175,6 +198,19 @@
 					<li><a href="/exclusive" class="mobile-nav-link">Exclusive</a></li>
 					<li><a href="/search" class="mobile-nav-link">Search</a></li>
 					<li><a href="/calculator" class="mobile-nav-link active">Calculator</a></li>
+			<li class="mobile-guides-toggle">
+				<button class="mobile-guides-btn">
+					Rankings <span class="mobile-guides-chevron">&#9662;</span>
+				</button>
+				<ul class="mobile-guides-menu">
+					<li><a href="/paypal-casinos" class="mobile-nav-link">PayPal Casinos</a></li>
+					<li><a href="/no-wagering-casinos" class="mobile-nav-link">No Wagering Casinos</a></li>
+					<li><a href="/fastest-withdrawal-casinos" class="mobile-nav-link">Fastest Withdrawals</a></li>
+					<li><a href="/new-casinos" class="mobile-nav-link">New Casinos 2026</a></li>
+					<li><a href="/best-casino-bonuses" class="mobile-nav-link">Best Casino Bonuses</a></li>
+				</ul>
+			</li>
+
 					<li class="mobile-theme-item">
 						<button class="mobile-theme-toggle" id="mobileThemeToggle" aria-label="Toggle theme">
 							<span class="theme-icon">☀</span>
@@ -186,7 +222,7 @@
 		</nav>
 
 		<!-- Hero Section -->
-		<section class="calculator-hero">
+		<section id="main" class="calculator-hero">
 			<div class="container">
 				<h1>Casino Bonus Calculator</h1>
 			<p class="last-updated" style="font-size:0.8rem; color:var(--text-muted); margin:0.25rem 0 0; letter-spacing:0.3px;">Last updated: May 2026</p>
@@ -343,6 +379,16 @@
 					<div class="calculator-tip">
 						<strong>💡 Pro Tip:</strong> Look for bonuses with low or no
 						wagering requirements for the best value!
+					</div>
+
+					<!-- Recommendations panel — shown after calculation -->
+					<div id="calc-recommendations" style="display:none;margin-top:1.5rem;border-top:1px solid var(--border);padding-top:1.5rem;">
+						<h3 style="font-family:var(--font-display);font-size:1.1rem;color:var(--text-primary);margin-bottom:0.5rem;" id="rec-headline">Based on your numbers:</h3>
+						<p style="font-size:0.88rem;color:var(--text-secondary);margin-bottom:1.2rem;" id="rec-summary"></p>
+						<div id="rec-cards" style="display:flex;flex-direction:column;gap:0.75rem;"></div>
+						<p style="margin-top:1rem;font-size:0.82rem;text-align:center;">
+							<a href="/no-wagering-casinos" style="color:var(--gold);">See all 0x wagering casinos &rarr;</a>
+						</p>
 					</div>
 				</div>
 			</div>
@@ -729,6 +775,6 @@
 	}
 }
 </style>
-<script src="script.js"></script>
+<script defer src="script.js"></script>
 	</body>
 </html>

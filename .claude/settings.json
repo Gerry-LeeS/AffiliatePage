@@ -30,7 +30,14 @@
       "Bash(python3 gen_sister_sites.py)",
       "Bash(python3 update_calculator.py)",
       "Bash(python3 update_script.py)",
-      "Bash(python3 fix_sister_faqs.py)"
+      "Bash(python3 fix_sister_faqs.py)",
+      "Bash(python3 fix_category_faqs.py)",
+      "Bash(python3 audit_new_pages.py)",
+      "Bash(python3 audit_deep.py)",
+      "Bash(python3 fix_titles.py)",
+      "Bash(node --check script.js)",
+      "Bash(node -e \"require\\('./script.js'\\)\")",
+      "Bash(python3 fix_review_metas.py)"
     ],
     "additionalDirectories": [
       "c:\\Users\\shxnk\\AffiliatePage"

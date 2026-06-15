@@ -14,7 +14,8 @@
 // 		Poker: '♠️',
 
 // Auto-update copyright year
-document.getElementById('currentYear').textContent = new Date().getFullYear();
+const _yearEl = document.getElementById('currentYear');
+if (_yearEl) _yearEl.textContent = new Date().getFullYear();
 
 // Casino data
 // To add a new casino, copy and paste an array from the { id to the } after exclusive - and fill in details.
@@ -1073,7 +1074,7 @@ function showCalcRecommendations(type, wagering, totalWagerNeeded) {
 	let summaryText = '';
 
 	if (wagering === 0) {
-		headlineText = 'Perfect — you're looking at wager-free bonuses:';
+		headlineText = 'Perfect — you\'re looking at wager-free bonuses:';
 		summaryText = 'These casinos offer 0x wagering free spins — winnings are paid as real cash immediately.';
 		rec = ['playojo', 'boyle'];
 	} else if (wagering <= 20) {
